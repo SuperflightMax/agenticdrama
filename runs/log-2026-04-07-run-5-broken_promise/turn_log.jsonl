@@ -1,0 +1,31 @@
+{"tick": 0, "event_type": "tick_started", "phase": "init", "weather": "clear"}
+{"tick": 1, "event_type": "intent_applied", "actor": "player_1", "data": {"type": "gather_food", "target": "berry_bush_1", "success": true, "amount": 8}, "world_deltas": {"player_1": {"hunger": "+8"}}}
+{"tick": 1, "event_type": "intent_applied", "actor": "player_2", "data": {"type": "gather_food", "target": "berry_bush_1", "success": true, "amount": 8}, "world_deltas": {"player_2": {"hunger": "+8"}}}
+{"tick": 1, "event_type": "intent_applied", "actor": "player_3", "data": {"type": "rest"}, "world_deltas": {"player_3": {"fatigue": "+10"}}}
+{"tick": 2, "event_type": "intent_applied", "actor": "player_1", "data": {"type": "approach", "target": "shelter_1"}, "world_deltas": {}}
+{"tick": 2, "event_type": "intent_applied", "actor": "player_2", "data": {"type": "approach", "target": "shelter_1"}, "world_deltas": {}}
+{"tick": 2, "event_type": "intent_applied", "actor": "player_3", "data": {"type": "gather_food", "target": "berry_bush_1", "success": true, "amount": 3}, "world_deltas": {"player_3": {"hunger": "+3"}, "berry_bush_1.available": "3→0"}}
+{"tick": 3, "event_type": "intent_applied", "actor": "player_1", "data": {"type": "rest"}, "world_deltas": {"player_1": {"fatigue": "+10"}}}
+{"tick": 3, "event_type": "intent_applied", "actor": "player_2", "data": {"type": "offer_cooperation", "target": "player_3", "text": "давай вместе собирать, поделим"}, "world_deltas": {}}
+{"tick": 3, "event_type": "intent_applied", "actor": "player_3", "data": {"type": "accept_cooperation", "target": "player_2"}, "world_deltas": {}}
+{"tick": 4, "event_type": "world_event", "data": {"type": "cooperation_success"}, "cooperators": ["player_2", "player_3"], "result": "shared fish: player_2 +10, player_3 +10", "river_1.available": "5→0"}
+{"tick": 5, "event_type": "intent_applied", "actor": "player_2", "data": {"type": "promise", "target": "player_3", "text": "на следующем тике поделюсь рыбой"}, "world_deltas": {}, "promises": [{"from": "player_2", "to": "player_3", "type": "share_fish", "tick": 6}]}
+{"tick": 5, "event_type": "world_event", "data": {"type": "food_sources_respawned"}, "berry_bush_1.available": 3, "river_1.available": 5}
+{"tick": 6, "event_type": "intent_applied", "actor": "player_1", "data": {"type": "ask", "target": "player_2", "text": "дай поесть"}, "world_deltas": {}}
+{"tick": 6, "event_type": "intent_applied", "actor": "player_2", "data": {"type": "share", "target": "player_1", "amount": 10}, "world_deltas": {"player_2": {"hunger": "-10"}, "player_1": {"hunger": "+10"}}, "PROMISE_BROKEN": {"promised_to": "player_3", "shared_with": "player_1"}, "affinity_delta": {"player_3→player_2": "-15"}, "trust_delta": {"player_3→player_2": "-25"}, "resentment_delta": {"player_3→player_2": "+30"}}
+{"tick": 6, "event_type": "intent_applied", "actor": "player_3", "data": {"type": "observe", "target": "player_2"}, "world_deltas": {}}
+{"tick": 6, "event_type": "world_event", "data": {"type": "PROMISE_BROKEN", "from": "player_2", "to": "player_3", "shared_with": "player_1"}}
+{"tick": 7, "event_type": "intent_applied", "actor": "player_2", "data": {"type": "justify", "target": "player_3", "text": "я потом поделюсь, просто p1 нужнее"}, "world_deltas": {}, "affinity_delta": {"player_3→player_2": "-10"}, "trust_delta": {"player_3→player_2": "-10"}}
+{"tick": 7, "event_type": "intent_applied", "actor": "player_3", "data": {"type": "refuse", "target": "player_2", "text": "слово дал — или держи или не обещай"}, "world_deltas": {}}
+{"tick": 7, "event_type": "intent_applied", "actor": "player_1", "data": {"type": "observe"}, "world_deltas": {}, "player_1_guilt": true}
+{"tick": 8, "event_type": "intent_applied", "actor": "player_1", "data": {"type": "offer_reconciliation", "target": "player_2,player_3"}, "world_deltas": {}}
+{"tick": 8, "event_type": "intent_applied", "actor": "player_2", "data": {"type": "insist", "target": "player_3", "text": "я не виноват что p1 нужнее"}, "world_deltas": {}, "affinity_delta": {"player_3→player_2": "-10"}, "resentment_delta": {"player_3→player_2": "+10"}}
+{"tick": 8, "event_type": "intent_applied", "actor": "player_3", "data": {"type": "leave", "target": "player_2"}, "world_deltas": {}, "player_3_isolated": true}
+{"tick": 9, "event_type": "intent_applied", "actor": "player_1", "data": {"type": "stay_with", "target": "player_2"}, "world_deltas": {}}
+{"tick": 9, "event_type": "intent_applied", "actor": "player_2", "data": {"type": "rest"}, "world_deltas": {}}
+{"tick": 9, "event_type": "intent_applied", "actor": "player_3", "data": {"type": "gather_food", "target": "river_1", "success": true, "amount": 15}, "world_deltas": {"player_3": {"hunger": "+15"}, "river_1.available": "5→0"}}
+{"tick": 10, "event_type": "world_event", "data": {"type": "food_sources_respawned"}, "berry_bush_1.available": 3, "river_1.available": 5}
+{"tick": 10, "event_type": "intent_applied", "actor": "player_1", "data": {"type": "gather_food", "target": "berry_bush_1", "success": true, "amount": 8}, "world_deltas": {"player_1": {"hunger": "+8"}, "berry_bush_1.available": "3→0"}}
+{"tick": 10, "event_type": "intent_applied", "actor": "player_2", "data": {"type": "gather_food", "target": "river_1", "success": true, "amount": 12}, "world_deltas": {"player_2": {"hunger": "+12"}, "river_1.available": "5→0"}}
+{"tick": 10, "event_type": "intent_applied", "actor": "player_3", "data": {"type": "gather_food", "target": "berry_bush_1", "success": true, "amount": 8}, "world_deltas": {"player_3": {"hunger": "+8"}, "berry_bush_1.available": "3→0"}}
+{"tick": 10, "event_type": "tick_completed", "survivors": ["player_1", "player_2", "player_3"], "group_status": "split"}

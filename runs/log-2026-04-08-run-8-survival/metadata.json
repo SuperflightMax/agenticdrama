@@ -1,0 +1,19 @@
+{
+  "run_id": "log-2026-04-08-run-8-survival",
+  "started_at": "2026-04-08 01:00:00",
+  "ended_at": "2026-04-08 01:15:00",
+  "tick_count": 10,
+  "weather": "rain",
+  "players": ["player_1", "player_2", "player_3"],
+  "survivors": ["player_1", "player_2", "player_3"],
+  "key_event": "Shelter capacity 2 created real competition. p1 voluntarily exited for p3.",
+  "new_rules": ["shelter_capacity_2", "food_insufficient", "outside_rain_penalty"],
+  "group_status": "changed: p1 outside (voluntary), p3 inside",
+  "files": [
+    "world_state_end.json",
+    "story_log.md",
+    "summary.md",
+    "tick_snapshots.jsonl",
+    "metadata.json"
+  ]
+}

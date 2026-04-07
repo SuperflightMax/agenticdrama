@@ -1,0 +1,35 @@
+{"tick": 0, "event_type": "tick_started", "phase": "init", "weather": "rain"}
+{"tick": 1, "event_type": "intent_applied", "actor": "player_1", "data": {"type": "move", "target": "shelter"}, "world_deltas": {"player_1": {"stress": "+0"}}}
+{"tick": 1, "event_type": "intent_applied", "actor": "player_2", "data": {"type": "gather_food", "target": "berry_bush_1", "success": true, "amount": 8}, "world_deltas": {"player_2": {"hunger": "+8"}, "berry_bush_1.available": "3→0"}}
+{"tick": 1, "event_type": "intent_applied", "actor": "player_3", "data": {"type": "observe", "target": "rain"}, "world_deltas": {"player_3": {"stress": "+15"}}}
+{"tick": 1, "event_type": "world_updated", "affinity_delta": {}}
+{"tick": 2, "event_type": "intent_applied", "actor": "player_1", "data": {"type": "rest"}, "world_deltas": {"player_1": {"fatigue": "+15", "stress": "-10"}}}
+{"tick": 2, "event_type": "intent_applied", "actor": "player_2", "data": {"type": "move", "target": "shelter"}, "world_deltas": {"player_2": {"stress": "+15"}}}
+{"tick": 2, "event_type": "intent_applied", "actor": "player_3", "data": {"type": "refuse", "reason": "suspicious of shelter invite"}, "world_deltas": {"player_3": {"stress": "+15"}}}
+{"tick": 3, "event_type": "intent_applied", "actor": "player_1", "data": {"type": "share", "target": "player_2", "amount": 10}, "world_deltas": {"player_1": {"hunger": "-10"}, "player_2": {"hunger": "+10"}}, "affinity_delta": {"player_1→player_2": "+5"}}
+{"tick": 3, "event_type": "intent_applied", "actor": "player_2", "data": {"type": "rest"}, "world_deltas": {"player_2": {"fatigue": "+3"}}}
+{"tick": 3, "event_type": "intent_applied", "actor": "player_3", "data": {"type": "approach", "target": "shelter"}, "world_deltas": {"player_3": {"position": "near shelter"}}}
+{"tick": 4, "event_type": "intent_applied", "actor": "player_1", "data": {"type": "rest"}, "world_deltas": {"player_1": {"fatigue": "+5"}}}
+{"tick": 4, "event_type": "intent_applied", "actor": "player_2", "data": {"type": "gather_food", "target": "river_1", "success": true, "amount": 15}, "world_deltas": {"player_2": {"hunger": "+15"}, "river_1.available": "5→0"}}
+{"tick": 4, "event_type": "intent_applied", "actor": "player_3", "data": {"type": "approach", "target": "shelter", "entered": true}, "world_deltas": {"player_3": {"stress": "+5"}}, "affinity_delta": {"player_1→player_3": "+3", "player_2→player_3": "-3"}}
+{"tick": 5, "event_type": "intent_applied", "actor": "player_1", "data": {"type": "observe", "target": "player_3"}, "world_deltas": {}}
+{"tick": 5, "event_type": "intent_applied", "actor": "player_2", "data": {"type": "share", "target": "player_1", "amount": 10}, "world_deltas": {"player_2": {"hunger": "-10"}, "player_1": {"hunger": "+10"}}, "affinity_delta": {"player_2→player_1": "+5"}}
+{"tick": 5, "event_type": "intent_applied", "actor": "player_3", "data": {"type": "share", "target": "player_1", "amount": 10}, "world_deltas": {"player_3": {"hunger": "-10"}, "player_1": {"hunger": "+10"}}, "affinity_delta": {"player_3→player_1": "+5", "player_2→player_3": "+5"}}
+{"tick": 6, "event_type": "world_event", "data": {"type": "weather_change"}, "weather": "clear"}
+{"tick": 6, "event_type": "intent_applied", "actor": "player_1", "data": {"type": "gather_food", "target": "berry_bush_1", "success": true, "amount": 8}, "world_deltas": {"player_1": {"hunger": "+8"}, "berry_bush_1.available": "3→0"}}
+{"tick": 6, "event_type": "intent_applied", "actor": "player_2", "data": {"type": "rest"}, "world_deltas": {"player_2": {"fatigue": "+15", "stress": "-10"}}}
+{"tick": 6, "event_type": "intent_applied", "actor": "player_3", "data": {"type": "gather_food", "target": "river_1", "success": true, "amount": 15}, "world_deltas": {"player_3": {"hunger": "+15"}, "river_1.available": "5→0"}}
+{"tick": 7, "event_type": "intent_applied", "actor": "player_1", "data": {"type": "approach", "target": "river_1"}, "world_deltas": {}}
+{"tick": 7, "event_type": "intent_applied", "actor": "player_2", "data": {"type": "approach", "target": "river_1"}, "world_deltas": {}}
+{"tick": 7, "event_type": "intent_applied", "actor": "player_3", "data": {"type": "rest"}, "world_deltas": {"player_3": {"fatigue": "+10"}}}
+{"tick": 7, "event_type": "world_event", "data": {"type": "food_sources_respawned"}, "berry_bush_1.available": 3, "river_1.available": 5}
+{"tick": 8, "event_type": "intent_applied", "actor": "player_1", "data": {"type": "share", "target": "player_2", "amount": 10}, "world_deltas": {"player_1": {"hunger": "-10"}, "player_2": {"hunger": "+10"}}, "affinity_delta": {"player_1→player_2": "+5"}}
+{"tick": 8, "event_type": "intent_applied", "actor": "player_2", "data": {"type": "share", "target": "player_3", "amount": 10}, "world_deltas": {"player_2": {"hunger": "-10"}, "player_3": {"hunger": "+10"}}, "affinity_delta": {"player_2→player_3": "+15", "player_3→player_2": "+10"}}
+{"tick": 8, "event_type": "intent_applied", "actor": "player_3", "data": {"type": "rest"}, "world_deltas": {"player_3": {"fatigue": "+6"}}}
+{"tick": 9, "event_type": "world_event", "data": {"type": "co_presence_comfort"}, "co_presence_pairs": [["player_1", "player_2"], ["player_1", "player_3"], ["player_2", "player_3"]], "affinity_delta": {"player_1→player_2": "+3", "player_2→player_1": "+3", "player_1→player_3": "+3", "player_3→player_1": "+3", "player_2→player_3": "+3", "player_3→player_2": "+3"}}
+{"tick": 9, "event_type": "intent_applied", "actor": "player_1", "data": {"type": "gather_food", "target": "berry_bush_1", "success": true, "amount": 8}, "world_deltas": {"player_1": {"hunger": "+8"}, "berry_bush_1.available": "3→0"}}
+{"tick": 9, "event_type": "intent_applied", "actor": "player_2", "data": {"type": "gather_food", "target": "river_1", "success": true, "amount": 12}, "world_deltas": {"player_2": {"hunger": "+12"}, "river_1.available": "5→0"}}
+{"tick": 9, "event_type": "intent_applied", "actor": "player_3", "data": {"type": "rest"}, "world_deltas": {"player_3": {"fatigue": "+8"}}}
+{"tick": 10, "event_type": "world_event", "data": {"type": "food_sources_respawned"}, "berry_bush_1.available": 3, "river_1.available": 5}
+{"tick": 10, "event_type": "world_event", "data": {"type": "final_gathering"}, "world_deltas": {"player_1": {"hunger": "+8"}, "player_2": {"hunger": "+12"}, "player_3": {"hunger": "+15"}}
+{"tick": 10, "event_type": "tick_completed", "survivors": ["player_1", "player_2", "player_3"]}

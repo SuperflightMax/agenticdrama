@@ -1,0 +1,18 @@
+{
+  "run_id": "log-2026-04-07-run-4-rain_conflict",
+  "started_at": "2026-04-07 23:00:00",
+  "ended_at": "2026-04-07 23:12:00",
+  "tick_count": 10,
+  "weather": "rain (first 6 ticks), then clear",
+  "players": ["player_1", "player_2", "player_3"],
+  "survivors": ["player_1", "player_2", "player_3"],
+  "key_event": "p2主动ly shared with p3 in tick 8 (emotional choice, not rational)",
+  "files": [
+    "world_state_end.json",
+    "turn_log.jsonl",
+    "story_log.md",
+    "summary.md",
+    "tick_snapshots.jsonl",
+    "metadata.json"
+  ]
+}

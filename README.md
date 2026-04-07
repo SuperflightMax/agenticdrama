@@ -7,16 +7,25 @@ Multi-agent social simulation: one DM + multiple player agents running in a shar
 ```
 agenticdrama/
 ├── dm/                    # DM (Dungeon Master) agent workspace
+│   ├── AGENTS.md
+│   ├── BOOTSTRAP.md
+│   ├── IDENTITY.md
 │   ├── SOUL.md            # DM role & responsibilities
+│   ├── USER.md
+│   ├── TOOLS.md
+│   ├── HEARTBEAT.md
 │   ├── rules.md           # World physics & perception distortion rules
 │   ├── protocol.md        # JSON exchange formats
 │   ├── world_state.json   # Current ground-truth world state
 │   ├── turn_log.jsonl     # Event log (one line per event)
 │   └── dm-runner.js       # Optional Node.js game loop runner
-├── players/               # Player agent SOULs
-│   ├── player_1.md        # Cooperative / social / medium caution
-│   ├── player_2.md        # Calculating / opportunistic / polite
-│   └── player_3.md        # Suspicious / revengeful / independent
+├── players/               # Player agent workspaces
+│   ├── player_1/
+│   │   ├── AGENTS.md, BOOTSTRAP.md, IDENTITY.md, SOUL.md, USER.md, TOOLS.md, HEARTBEAT.md
+│   ├── player_2/
+│   │   └── ...
+│   └── player_3/
+│       └── ...
 └── README.md
 ```
 

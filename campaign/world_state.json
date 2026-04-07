@@ -14,27 +14,33 @@
   "players": {
     "player_1": {
       "position": {"zone": "north", "x": 50, "y": 20}, "status": "alive",
-      "hunger": 85, "fatigue": 80, "stress": 25, "mood": 55, "health": 100,
-      "trust": {"player_2": 5, "player_3": 0},
-      "resentment": {"player_2": 0, "player_3": 0},
-      "affinity": {"player_2": 10, "player_3": -5},
-      "isolation_ticks": 0
+      "hunger": 65, "fatigue": 60, "stress": 45, "mood": 33, "health": 100,
+      "traits": {"sociability": 0.7, "caution": 0.5, "greed": 0.4, "curiosity": 0.8, "impulsivity": 0.6},
+      "trust": {"player_2": 10, "player_3": -5},
+      "resentment": {"player_2": 0, "player_3": 10},
+      "affinity": {"player_2": 10, "player_3": -10},
+      "isolation_ticks": 0,
+      "last_action": "sleep"
     },
     "player_2": {
       "position": {"zone": "north", "x": 52, "y": 20}, "status": "alive",
-      "hunger": 90, "fatigue": 75, "stress": 35, "mood": 50, "health": 100,
-      "trust": {"player_1": 10, "player_3": -5},
-      "resentment": {"player_1": 0, "player_3": 20},
-      "affinity": {"player_1": 15, "player_3": -20},
-      "isolation_ticks": 0
+      "hunger": 70, "fatigue": 55, "stress": 55, "mood": 30, "health": 100,
+      "traits": {"sociability": 0.5, "caution": 0.7, "greed": 0.6, "curiosity": 0.4, "impulsivity": 0.3},
+      "trust": {"player_1": 15, "player_3": -10},
+      "resentment": {"player_1": 0, "player_3": 5},
+      "affinity": {"player_1": 15, "player_3": -15},
+      "isolation_ticks": 0,
+      "last_action": "sleep"
     },
     "player_3": {
       "position": {"zone": "north", "x": 48, "y": 20}, "status": "alive",
-      "hunger": 95, "fatigue": 70, "stress": 55, "mood": 35, "health": 100,
-      "trust": {"player_1": 0, "player_2": -30},
-      "resentment": {"player_1": 0, "player_2": 40},
-      "affinity": {"player_1": 0, "player_2": -35},
-      "isolation_ticks": 2
+      "hunger": 80, "fatigue": 50, "stress": 85, "mood": 15, "health": 100,
+      "traits": {"sociability": 0.3, "caution": 0.8, "greed": 0.5, "curiosity": 0.6, "impulsivity": 0.7},
+      "trust": {"player_1": -5, "player_2": -40},
+      "resentment": {"player_1": 0, "player_2": 60},
+      "affinity": {"player_1": -10, "player_2": -40},
+      "isolation_ticks": 6,
+      "last_action": "sleep"
     }
   },
   "messages": []

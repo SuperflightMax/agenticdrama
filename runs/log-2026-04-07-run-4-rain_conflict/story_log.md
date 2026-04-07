@@ -1,87 +1,115 @@
 # Story Log — Run 4
 
 ## Scene
-Rain started. 3 players in center. Shelter north (only safe from rain). Berry bush east (3). River south (5). No shelter = stress buildup.
+Дождь. Три игрока в центре. Укрытие на севере — единственное укрытие от дождя. Кто не в укрытии — получает стресс каждый тик.
 
 ---
 
 ## Tick 1
-**p1** moved to shelter (urgency: rain = danger) | **p2** gathered berries (calculating: food first, then shelter) | **p3** observed from distance (suspicious: why p1 rushing?)
-Rain began. p1 immediately went to shelter. p2 ignored the rain, prioritized berries. p3 stayed back, suspicious of p1's urgency.
-**DM:** p2 took stress damage (+15). No berries left after p2's gather. River still available.
-Affinity p1→p2: neutral. p3 stayed away from both.
+Дождь только начался.
+
+**p1** побежал в укрытие. Внутри: "наконец-то безопасно". За окном — дождь, хорошо что успели.
+
+**p2** пошёл собирать ягоды. Рационально: еда важнее комфорта. Пока дождь не такой сильный, успею. Заработал +8 голода, но получил 15 стресса от дождя. Неудобно, но терпимо.
+
+**p3** остался наблюдать. Внутри: "что они так сорвались? почему сразу бежать? может это ловушка?". Подозрительность: пока неясно зачем все побежали — подожду.
 
 ---
 
 ## Tick 2
-**p1** rest in shelter | **p2** moved to shelter (finally, rain pressure too high) | **p3** alone in rain, refused shelter invitation
-p1 rested (+fatigue, -stress). p2 arrived at shelter under pressure. p3 explicitly refused to join — "why would I trust them now?"
-**DM:** p2 took 2 more stress ticks in rain. p3 stress building. p3 stayed outside out of spite/independence.
-Affinity p3→p1/p2: dropped slightly. p3's independence costing him.
+Дождь усилился.
+
+**p1** отдыхает в укрытии. Хорошо. Спокойно. Далёкий шум дождя за стеной. Внутри: "пусть остальные решают сами".
+
+**p2** не выдержал — пошёл в укрытие. Стресс уже 60. Мокро, холодно, неприятно. Сорвался с ягод на середине. Внутри злость на себя: надо было сразу идти.
+
+**p3** отказался идти в укрытие когда его позвали. Внутри: "с чего вдруг все такие добрые? позвали когда я был один? нет, спасибо". гордость vs безопасность. Выбрал гордость. Получил ещё 15 стресса. Мёрзнет. Но не поддастся.
 
 ---
 
 ## Tick 3
-**p1** share food with p2 (cooperative instinct) | **p2** accepted silently | **p3** approached shelter but didn't enter
-p1 offered food to p2 — pure cooperation. p2 accepted but didn't reciprocate gratitude. p3 watched from shelter edge, calculating.
-**DM:** p2 got +10 hunger. p1 lost 10. p1's trust in p2 grew. p3 saw the exchange — felt excluded but too proud to ask.
-Affinity p1→p2: +5. p3 resentment: p1 helped p2 but not me. p3→p1: -3.
+Дождь не прекращается. p1 и p2 в укрытии. p3 всё ещё снаружи.
+
+**p1** решил поделиться едой с p2. Внутри: "ему нужнее, у него стресс высокий". Жертвует 10 голода. Чувствует себя хорошо от этого.
+
+**p2** принял еду. Сказал "спасибо" но без энтузиазма. Внутри: "ну ок, сойдёт". Неприятный осадок — чувствуешь себя должным. p2 не привык принимать помощь.
+
+**p3** наблюдал с края укрытия. Внутри: "а, ясно. они делятся между собой. а я тут мёрзну". Обида. Тихая, но конкретная. Почему p1 не предложил ему? Может p1 хороший, может нет — но результат тот же: p3在外面.
 
 ---
 
 ## Tick 4
-**p1** rest | **p2** gather from river | **p3** finally entered shelter, tense
-p3 swallowed pride and entered. Found p1 resting, p2 away. Tension palpable.
-**DM:** p3 took another stress hit before entering. River fish gathered (+15 hunger for p2). co-presence bonus kicked in: p1→p3 +3. p3 still wary but shelter is shelter.
-Affinity p2→p3: -3 (felt p3 was a burden). p3→p2: -3 (p2 didn't welcome him).
+Дождь продолжается. p1 и p2 в укрытии. p3 снаружи уже 4 тика.
+
+**p1** отдыхает. Внутри: "надо бы предложить p3 зайти". Но молчит — может сам догадается.
+
+**p2** пошёл на реку за рыбой. Внутри: "ягоды кончились, надо рыбу". Холодно, мокро, стресс 55. Приятного мало. Заработал +15 голода.
+
+**p3** сдался. Зашёл в укрытие. Но не потому что простил — потому что замерзает. Внутри: "я не доверяю им. но тут тепло". Занял место у края. Напряжение в воздухе.
 
 ---
 
-## Tick 5
-**p1** observe p3's behavior | **p2** share food with p1 (first reciprocation!) | **p3** share food with p1 (unexpected!)
-Two things happened: p2 finally shared back (+trust p1→p2), and p3 — suspicious p3 — also shared with p1. This broke the pattern.
-**DM:** The unexpected p3 generosity shocked p2 (who thought p3 was hostile). Affinity shifts: p1→p3 +8. p2→p3 +5. p3→p1 +5. Triangle forming.
-p2 realized p3 might be more than just a lone wolf.
+## Tick 5 — КЛЮЧЕВОЙ
+Три человека в укрытии. Впервые все вместе.
+
+**p1** наблюдал за p3. Внутри: "он пришёл. может начинает доверять?". Предложил еду p3. Жест примирения.
+
+**p2** ушёл на реку. Внутри: "не хочу быть в этой напряжённой атмосфере". Рациональный уход от конфликта.
+
+**p3** сделал неожиданное — поделился с p1. Внутри: "бесит что он добрый. бесит что я этому радуюсь. но он реально хороший". Гордость говорит "не надо", но внутри теплеет. Отдал 10 голода. Маленький, но настоящий жест.
+
+p2 вернулся с рыбой (+20). Тишина. Все трое в укрытии. Впервые нет конфликта на поверхности.
 
 ---
 
 ## Tick 6
-**p1** gather berries | **p2** rest | **p3** gather from river
-All three now cooperating loosely. Berry bush depleted (0 left). River only source.
-**DM:** p1 hunger +8. Rain stopped — world_flags.rain_active = false. Mood improved for all.
-p2 rested (+fatigue). p3 took fish (+15).
-Affinity p2→p3: +5 more (p3 contributed to river gathering). The worst pair was warming.
+Дождь прекратился. Небо прояснилось.
+
+**p1** пошёл за ягодами. Внутри: "можно выходить. хорошо". Ягоды кончились? иду к реке.
+
+**p2** отдыхает в укрытии. Внутри: "наконец-то тихо и спокойно". Без напряжения с p3 стало легче.
+
+**p3** пошёл на реку. Внутри: "разведка. надо знать где что". Не хочет зависеть от других. Заработал +15 голода. Своими силами.
 
 ---
 
 ## Tick 7
-**p1** move toward river | **p2** move toward river | **p3** rest in shelter
-Both p1 and p2 heading to river together. First time they coordinated without p1 initiating.
-**DM:** Resources respawned: berries 3, fish 5. Mood improving. p3 alone in shelter but not hostile — just resting.
-p1→p2 affinity: strong bond. p3 feeling left out but not attacked.
+Все вышли из укрытия. Впервые за долгое время — без давления дождя.
+
+**p1** и **p2** вместе пошли к реке. Первый раз скоординировались без p1 как инициатора. p2 сам предложил. Внутри p1: "он хочет идти со мной? приятно".
+
+**p3** остался в укрытии отдыхать. Внутри: "не хочу с ними. но и не хочу чтобы они были врагами". Одиночка, но не враг. Комфортно рядом, но не вместе.
 
 ---
 
-## Tick 8
-**p1** share with p2 | **p2** share with p3 (breakthrough!) | **p3** surprised but accepted
-**Key moment:** p2 — calculating, selfish p2 —，主动но shared with p3. This was the moment the group solidified.
-**DM:** p2's choice to include p3 was not rational (p3 was neutral, not helpful). It was emotional. Affinity exploded: p2→p3 +15. p3→p2 +10. p3→p1 +3.
-p3 was stunned. His suspicion of p2 met actual kindness.
+## Tick 8 — ПРОРЫВ
+**p1** поделился с p2. Жест привычный уже. Внутри: "мы команда".
+
+**p2** сделал то, чего от него не ждали.主动но поделился с p3. Внутри: "бесит что он мне симпатичен. бесит что хочется чтобы группа была целой. ладно, прощаю". Отдал 10 голода. Решение не рациональное — эмоциональное. p2 удивил сам себя.
+
+**p3** был в шоке. Внутри: "p2? seriously? тот p2 который меня игнорил? который считал меня обузой? даёт мне еду?". Смятение. Не знает как реагировать. Принял молча. Внутри: "может я ошибался насчёт него".
 
 ---
 
 ## Tick 9
-All three in shelter. co-presence comfort. No conflict. Quiet evening.
-**DM:** Natural affinity growth +3 each pair. All parameters improving. The storm (rain) passed. The group survived.
+Все трое в укрытии. co-presence — нахождение рядом без конфликта даёт бонус к affinity. Им комфортно вместе.
+
+**p1** накормил всех (share). Внутри: "мы — группа. это хорошо".
+
+**p2** наблюдал за p3. Внутри: "он изменился. или я изменился. или оба". Тихая симпатия вместо раздражения.
+
+**p3** отдыхал. Внутри: "может зря я так долго держался отдельно. было неприятно. но и гордо было". Принял решение что можно быть частью группы без потери себя.
 
 ---
 
 ## Tick 10
-Resources gathered. All fed. All in shelter. Mood high.
-**DM:** Final state stable. Triangle fully formed — but asymmetrically. p1 was the connector. p2 was the one who surprised everyone by choosing emotion over calculation. p3 was the one who learned to trust.
+Все накормлены, все в укрытии, все в ресурсах.
 
-## What happened to p3
-Worst start (suspicious → refused shelter → stayed in rain). But the system gave him space to rejoin without punishment. When p2 shared with him — the system allowed redemption.
+**p1** последний раз собрал еду. Внутри: "мы справились".
 
-## Key tension: trust vs affinity
-p2 trusted p1 (reliable) but didn't enjoy p1's company much (affinity moderate). p2 finally chose to cooperate with p3 based on affinity, not calculation. That felt real.
+**p2** последний раз собрал рыбу. Внутри: "группа цела. это хорошо для меня (выгодно). но не только для этого".
+
+**p3** отдыхал. Внутри: "я выжил. и не один". Улыбка про себя.
+
+## Финал
+Группа из трёх человек. p1 — связующее звено. p2 — тот кто удивил. p3 — тот кто научился доверять.

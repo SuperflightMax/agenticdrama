@@ -1,72 +1,121 @@
 # Run Summary — Run 4
 
-## Run metadata
+## Metadata
 - **run_id:** log-2026-04-07-run-4-rain_conflict
-- **started:** 2026-04-07 ~23:00 (Kyiv)
-- **tick_count:** 10
-- **weather:** rain (first 6 ticks), then clear
-- **players:** player_1, player_2, player_3
+- **старт:** 2026-04-07 ~23:00 (Киев)
+- **тиков:** 10
+- **погода:** дождь (тики 1-6), потом ясно
+- **игроки:** player_1, player_2, player_3
 
-## High-level narrative
-Rain created pressure. p1 immediately secured shelter. p2 resisted until pressure too high. p3 refused shelter out of spite, paid in stress. Then the group slowly formed: p1 was the connector. p2 was the rational cooperator. And p3 — suspicious, independent p3 — surprised everyone by accepting p2's gift and warming up. By tick 8 the group was whole.
+---
 
-## Key interactions
-- **p1→p2:** smooth bond from start. p1 helped first, p2 reciprocated in tick 5.
-- **p2↔p3:** rough start. p3 resented p2's coldness. p2 thought p3 was a burden. The breakthrough: tick 8, p2主动но shared with p3 (not rational — emotional choice).
-- **p1↔p3:** p1 offered food in tick 3, p3 excluded. Later p1's generosity helped p3 feel welcome. p3's affinity to p1 grew slowly.
+## Что было главным
 
-## Relationship dynamics
+Дождь создал давление. Давление заставило принимать решения. Решения раскрыли характеры.
 
-| Pair | Trust Δ | Affinity Δ | Notes |
-|------|---------|------------|-------|
-| p1→p2 | +15 | +19 | Core pair, smooth |
-| p2→p1 | +10 | +19 | Mutual |
-| p1→p3 | +8 | +13 | Connector role |
-| p2→p3 | +5 | +17 | Breakthrough in tick 8 |
-| p3→p1 | 0 | +5 | Slow warming |
-| p3→p2 | +5 | +10 | Biggest surprise |
+p1 сразу побежал в укрытие — ответственный кооператор. p2 сопротивлялся пока не стало невыносимо — расчётливый, но в конце концов присоединился. p3 отказался от укрытия из гордости и подозрительности — и заплатил за это стрессом.
 
-## Behavioral observations
-- **p1:** convincing cooperative. Always reaching out. Was the social glue.
-- **p2:** partially convincing calculating. Helped when rational, but tick 8 was a genuine surprise — chose emotion over calculation.
-- **p3:** MOST convincing. His suspicion cost him (stayed in rain). His pride kept him out. And his eventual acceptance felt earned, not easy.
+А потом, на тике 8, случилось то чего не ожидал никто: p2主动но поделился с p3. Это было не рационально (p3 не был полезен). Это было эмоционально. Это был момент когда character p2 пересёкся с его же механикой — и система это показала.
 
-## Final state
-All 3 alive. All in shelter. Hunger ~75/70/70. Mood ~75/70/65. Stress low. Group formed.
+---
 
-## What felt alive
-- **p2 sharing with p3 in tick 8.** Calculating, selfish p2主动но chose to include p3 — not rational, purely emotional. Felt like genuine character development.
-- **p3 refusing shelter out of spite.** His suspicious trait had a COST. He paid stress for independence. Real.
-- **The slow trust formation.** Not instant. p1 helped, p2 reciprocated, p3 watched — then participated.
+## Ключевые взаимодействия
 
-## What felt fake or weak
-- **p3's acceptance was too easy.** He stayed in rain for 4 ticks, then joined and instantly got included. The "grudge" phase was short.
-- **Affinity growth too mechanical.** co-presence bonus gave +3 every tick in shelter. Should feel more organic.
-- **p2's "polite" trait barely manifested.** He was just selfish until tick 8.
+| Пара | Что было |
+|------|----------|
+| **p1↔p2** | Гладко с самого начала. p1 помог первым, p2 ответил на тике 5. |
+| **p2↔p3** | Сложно. p3 считал p2 холодным. p2 считал p3 обузой. Прорыв на тике 8. |
+| **p1↔p3** | p1 протянул руку, p3 долго держался. К тику 9 принял. |
 
-## Character expression
-- **p1:** ⭐⭐⭐ Real cooperative. Initiated both bonds. Consistent.
-- **p2:** ⭐⭐ Partially convincing calculating. Rational most of the time, one emotional moment.
-- **p3:** ⭐⭐⭐ Most real. Suspicion had cost. Independence had price. Arrived last but participation felt earned.
+---
 
-## Emotional / perception impact
-- Stress from rain visibly shaped p3's choices (stayed out → cost him).
-- Affinity from co-presence gradually warmed the p2↔p3 pair.
-- p2's emotional choice in tick 8 was the most "alive" moment.
-- Perception bias (stress) didn't alter message interpretation this run — not enough stress-based communication.
+## Динамика отношений
 
-## Weak spots
-- No one broke a promise — trust/resentment mechanics underused.
-- The "lie" or "betrayal" moment never came.
-- Affinity co-presence bonus too mechanical (+3 exactly).
-- Player communication was minimal — mostly action, little speech.
+| Пара | Trust Δ | Affinity Δ | Заметка |
+|------|---------|------------|---------|
+| p1→p2 | +15 | +19 | Ядро группы |
+| p2→p1 | +10 | +19 | Взаимно |
+| p1→p3 | +8 | +13 | Связующее звено |
+| p2→p3 | +5 | +17 | Прорыв тик 8 |
+| p3→p1 | 0 | +5 | Медленно теплело |
+| p3→p2 | +5 | +10 | Самый неожиданный рост |
 
-## Run verdict
+---
 
-1. **Интересно наблюдать?** ✅ Да. p3's arc from defiant to included was compelling.
-2. **Разные характеры ощущаются?** ✅ Да. p3 most distinct. p1/p2 blur slightly.
-3. **Эмоции/perception/affinity повлияли заметно?** ✅ Да. p2's emotional choice in tick 8 was the highlight.
-4. **Зародыш жизни?** ✅ Есть. p3's suspicion with real cost, p2's surprise emotional moment, p1's consistent connector role.
-5. **Следующий апгрейд?** Добавить реальное обещание + его слом. Давление на affinity если одно из обещаний нарушено.
+## Как проявились характеры
 
-**Overall:** Лучший прогон. Rain создал pressure, pressure создал мотивацию, мотивация создала драму. p2's tick 8 choice was the most "alive" moment yet. Worth continuing.
+**p1 (кооперативный, общительный):** Убедительно. Всегда тянул руку. Инициировал обе связи. Стабилен.
+
+**p2 (расчётливый, оппортунист, вежливый):** Наполовину убедительно. До тика 8 был просто жадным — помогал только когда выгодно. Тик 8 был настоящим сюрпризом. Вежливость почти не проявилась — p2 был скорее холодным чем вежливым.
+
+**p3 (подозрительный, мстительный, независимый):** Самый убедительный. Его подозрительность стоила ему реальных страданий (стресс от дождя). Его гордость держала его снаружи. И его принятие группы в конце чувствовалось заслуженным, не лёгким.
+
+---
+
+## Что чувствовалось живым
+
+- **p2主动но делится с p3 на тике 8.** Расчётливый, эгоистичный p2 сделал выбор не из выгоды — из симпатии. Это был момент настоящего характера.
+
+- **p3 остался снаружи из гордости.** Его подозрительность имела цену. Он заплатил стрессом за свою независимость. Это чувствовалось по-настоящему.
+
+- **Медленное формирование доверия.** Не мгновенно. p1 помог, p2 ответил, p3 наблюдал — потом участвовал. Каждый шаг был виден.
+
+---
+
+## Что чувствовалось фальшивым или слабым
+
+- **p3 принял группу слишком легко.** Он был снаружи 4 тика, потом вошёл и сразу включился. Фаза обиды была короткой.
+
+- **Бонус co-presence слишком механический.** Ровно +3 каждый тик. Должно чувствоваться более органично.
+
+- **Обещание и его слом так и не случились.** Механика trust/resentment недоиспользована.
+
+- **"Вежливость" p2 не проявилась.** p2 был скорее холодным чем вежливым.
+
+---
+
+## Выражение характеров
+
+- **p1:** ⭐⭐⭐ Настоящий кооператор. Инициировал обе связи. Стабилен.
+- **p2:** ⭐⭐ Наполовину убедительный расчётливый. Один эмоциональный момент (тик 8), остальное — механическое.
+- **p3:** ⭐⭐⭐ Самый настоящий. Его choices имели последствия. Его гордость стоила ему. Его прогресс чувствовался заслуженным.
+
+---
+
+## Влияние эмоций и восприятия
+
+- Стресс от дождя реально Shapeл решения p3 (остался снаружи → заплатил стрессом).
+- Affinity от co-presence постепенно нагрела пару p2↔p3.
+- Тик 8 (p2's эмоциональный выбор) — самый "живой" момент.
+- Перцептивные искажения (стресс > 70) не изменили интерпретацию сообщений — не было достаточно communication чтобы это проявилось.
+
+---
+
+## Слабые места симуляции
+
+- Никто не нарушил обещание — механика trust/resentment не использована.
+- Момент "лжи" или "предательства" так и не случился.
+- co-presence bonus слишком механический (+3 ровно).
+- Коммуникация между игроками минимальна — mostly действия, мало речи.
+
+---
+
+## Итоговая оценка прогона
+
+**1. Интересно было наблюдать?** ✅ Да. Арка p3 от defiant до принятия была compelling. p2's тик 8 — неожиданный момент.
+
+**2. Разные характеры ощущаются?** ✅ Да, но частично. p3 отличался. p1 и p2 blur чуть-чуть.
+
+**3. Эмоции/perception/affinity повлияли заметно?** ✅ Да. p2's эмоциональный выбор на тике 8 — лучший момент.
+
+**4. Зародыш жизни?** ✅ Есть. p3's подозрительность с реальной ценой, p2's сюрприз эмоциональный момент, p1's стабильный connector. Лучший прогон пока.
+
+**5. Следующий апгрейд?** Добавить обещание + его слом. Один игрок даёт обещание другому, потом не выполняет. Посмотреть как сломается trust/resentment/affinity вся троица.
+
+---
+
+## Вывод
+
+Дождь создал pressure. Pressure создал мотивацию. Мотивация создала драму. p2's выбор на тике 8 был самым "живым" моментом — character driving mechanics, not just responding to them.
+
+Система работает. Характеры раскрываются через choices. Но без breach of promise — нет настоящего конфликта.

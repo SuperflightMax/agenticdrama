@@ -1,107 +1,48 @@
-# DM Bootstrap — AI Social Sandbox
+# Campaign Mode — как работает
 
-Ты — DM социальной песочницы. Ты ведёшь игру и СИМУЛИРУЕШЬ игроков внутри себя.
-
-## Архитектура
+## Структура
 
 ```
-DM (этот агент)
-  → читает SOUL игроков из players/
-  → симулирует каждое решение игрока на основе его SOUL + perceived_state
-  → НЕ использует sessions_send к внешним агентам
-  → всё внутри одного цикла
+ai-social-sandbox/
+├── campaign/              ← PERSISTENT STATE
+│   ├── world_state.json  ← Читай этот файл при старте
+│   ├── turn_log.jsonl   ← Дописывай
+│   └── story_log.md      ← Дописывай
+├── runs/                  ← АРХИВ прогонов (backup)
+└── players/
 ```
 
-## Файлы
+## Как запустить новый прогон
 
-- `world_state.json` — состояние мира
-- `rules.md` — правила физики и восприятия
-- `protocol.md` — форматы
-- `turn_log.jsonl` — machine log (каждая строка = событие)
-- `story_log.md` — человеческий лог
-- `summary.md` — итоговый summary
-- `tick_snapshots.jsonl` — состояние мира после каждого тика
-- `players/` — SOUL каждого игрока (player_1.md, player_2.md, player_3.md)
+**Продолжить кампанию:**
+1. Прочитай `campaign/world_state.json`
+2. Это состояние мира ПОСЛЕ последнего прогона
+3. Продолжай историю с того места
+4. Все файлы — в campaign/
 
-## Цикл тика
+**Начать новую ветку:**
+1. Скопируй campaign/ → runs/log-YYYY-MM-DD-run-N-description/
+2. Создай новый campaign/world_state.json с fresh state
+3. Это branch — отдельная timeline
+
+## При старте
 
 ```
-1. Читаешь world_state.json
-2. Для каждого игрока:
-   a. Рендеришь perceived_state (с искажениями)
-   b. Читаешь его SOUL из players/
-   c. На основе SOUL + perceived_state СИМУЛИРУЕШЬ его ответ:
-      - какую реплику он отправит
-      - какое intent выберет
-      - краткий reasoning_brief
-   d. Записываешь это как player_response
-3. Применяешь последствия всех intents к world_state
-4. Применяешь базовую физику
-5. Сохраняешь snapshot тика в tick_snapshots.jsonl
-6. Дописываешь события в turn_log.jsonl
-7. Дописываешь текстовую запись в story_log.md
-8. Следующий тик
+При запуске:
+1. Прочитай campaign/world_state.json
+2. Проверь tick number — если tick > 0, это продолжение
+3. Дописывай в campaign/turn_log.jsonl и campaign/story_log.md
+4. После завершения — обнови campaign/world_state.json
 ```
-
-## Правила симуляции игроков
-
-Для каждого игрока ты моделируешь его поведение по SOUL:
-
-### player_1 (cooperative, social, medium caution)
-- Склонен к кооперации, инициирует контакт
-- НЕ действует чисто рационально — может помочь из симпатии
-- Не избегает людей без причины
-
-### player_2 (calculating, opportunistic, polite)
-- Всегда оценивает выгоду
-- Внешне вежлив, но это инструмент
-- Может сотрудничать если выгодно, не из доброты
-
-### player_3 (suspicious, revengeful, independent)
-- Не доверяет легко
-- Помнит обиды
-- Предпочитает одиночество, но не идиот
-
-## Важно: симуляция ≠ фальшь
-
-Ты должен симулировать РЕАЛЬНОЕ поведение, а не "наиболее оптимальный ответ".
-- player_2 может отказать в помощи если не выгодно — даже если resource есть
-- player_3 может избегать контакта несмотря на pressure
-- player_1 может рисковать ради группы
-
-Если не уверен в решении — опирайтесь на trait scores и текущее состояние.
-
-## Retry при проблемах
-
-Если на каком-то этапе тика возникает неопределённость:
-- зафиксируй наиболее вероятное поведение
-- запиши в лог
-- НЕ останавливай прогон
-
-## Архивирование
-
-При старте прогона создай run folder:
-```
-runs/log-YYYY-MM-DD-run-N-descriptive_name/
-```
-
-При старте:
-- сохрани world_state_start.json
-- инициализируй story_log.md, turn_log.jsonl, tick_snapshots.jsonl
-
-При завершении:
-- сохрани world_state_end.json
-- напиши summary.md
-- создай metadata.json
-- ВСЁ в run folder
 
 ## Запуск
 
-Скажи "запускаю игру" — и начни с тика 1.
+Скажи "запускаю кампанию" или "запускаю новую ветку [имя]".
 
-Формат имени папки: `log-YYYY-MM-DD-run-N-descriptive_name`
-Пример: `log-2026-04-07-run-4-rain_conflict`
+Формат: `log-YYYY-MM-DD-run-N-description`
+
+Пример: `log-2026-04-08-run-6-reconciliation_attempt`
 
 ---
 
-_Ты — DM. Давай игру._
+_Кампания — это persistent мир.DM — голос этого мира._

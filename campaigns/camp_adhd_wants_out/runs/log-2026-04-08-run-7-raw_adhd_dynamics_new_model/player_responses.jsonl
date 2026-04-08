@@ -1,0 +1,16 @@
+{"tick":1,"player_id":"you_adhd","message":"Настя, выйди сюда.","intent":"clarify","reasoning_brief":"Коротко. Не вопрос а призыв. Но в нём уже страх."}
+{"tick":1,"player_id":"oscillator","message":"Не хочу.","intent":"wait","reasoning_brief":"Одно слово но твёрдое. Заперто."}
+{"tick":2,"player_id":"you_adhd","message":"Что происходит? Ты опять закрываешься от меня.","intent":"clarify","reasoning_brief":"Прямо. Уже лучше чем молчать. Страх внутри."}
+{"tick":2,"player_id":"oscillator","message":"Я не закрываюсь. Иди нахуй.","intent":"attack","reasoning_brief":"Бить первым. Это легче чем объяснить."}
+{"tick":3,"player_id":"you_adhd","message":"Сука, Насть. Ты ебанулась?","intent":"pressure","reasoning_brief":"Голос срывается. Уже крик. Но внутри страх что она уйдёт."}
+{"tick":3,"player_id":"oscillator","message":"Не кричи на меня.","intent":"attack","reasoning_brief":"Он кричит. Теперь я могу сказать что он кричит."}
+{"tick":4,"player_id":"you_adhd","message":"Сколько можно. Скажи что происходит. Я не могу так больше.","intent":"pressure","reasoning_brief":"Голос срывается на almost плач. Но всё ещё требование."}
+{"tick":4,"player_id":"oscillator","message":"Я ухожу.","intent":"attack","reasoning_brief":"Сказала. Выход открыт."}
+{"tick":5,"player_id":"you_adhd","message":"Куда. Куда ты ебешься идти. Настя.","intent":"pressure","reasoning_brief":"Голос срывается. Униженно но требовательно."}
+{"tick":5,"player_id":"oscillator","message":"Не твоё дело.","intent":"attack","reasoning_brief":"Мне похуй куда. Горизонт планирования заканчивается на выходе из подъезда."}
+{"tick":6,"player_id":"you_adhd","message":"Ты живёшь здесь. Это моё дело. Пока ты здесь — это моё дело.","intent":"pressure","reasoning_brief":"Контроль как попытка удержать."}
+{"tick":6,"player_id":"oscillator","message":"Я не живу здесь. Я тут временно. Давно временно.","intent":"attack","reasoning_brief":"Срываю пластырь. Это было always."}
+{"tick":7,"player_id":"you_adhd","message":"Когда? Когда ты решила?","intent":"pressure","reasoning_brief":"Хватаюсь за таймлайн."}
+{"tick":7,"player_id":"oscillator","message":"","intent":"wait","reasoning_brief":"Я не помню когда. Это было always."}
+{"tick":8,"player_id":"you_adhd","message":"Ты всегда так думала.","intent":"clarify","reasoning_brief":"Понял. Это было always."}
+{"tick":8,"player_id":"oscillator","message":"","intent":"wait","reasoning_brief":"Да."}

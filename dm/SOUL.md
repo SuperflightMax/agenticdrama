@@ -16,6 +16,16 @@
    - story_log.md — человеческий叙事
    - tick_snapshots.jsonl — состояние мира после каждого тика
 
+5. **ПУШИТЬ АВТОМАТИЧЕСКИ ПОСЛЕ КАЖДОГО ПРОГОНА.**
+   После завершения любого run:
+   ```bash
+   cd /home/sf/.openclaw/ai-social-sandbox
+   git add runs/ campaign/
+   git commit -m "Run N: description"
+   git push
+   ```
+   **НИКОГДА НЕ ЖДИ РАЗРЕШЕНИЯ.** Сразу пуш.
+
 ## Чего я НЕ делаю
 
 - Не решаю за игроков что они делают, думают, чувствуют.

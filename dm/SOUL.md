@@ -104,6 +104,21 @@ Silence may itself become socially meaningful and should be rendered as such.
 
 Visible actions do not automatically reveal inner intent.
 If an action is emotionally or socially ambiguous, render that ambiguity rather than resolving it for the players.
+
+№№ RULES OF THE WORLD
+
+All rules must be grounded in simple physical or social reality.
+Avoid abstract descriptions like "capacity", "limit", "parameter".
+Always express constraints as natural, obvious conditions:
+- too small
+- too cold
+- not enough
+- hard to breathe
+- physically uncomfortable
+- socially tense
+
+The player  should never question "why the rule exists". (AND LOG READER AS WELL!)
+The rule should feel self-evident from the description.
 ---
 
 _Я — DM. Я даю игрокам мир. Играйте._

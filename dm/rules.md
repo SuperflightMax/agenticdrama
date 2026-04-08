@@ -38,42 +38,20 @@ Tick = {
 
 ## Базовая физика мира
 
-### Hunger
-- Если hunger < 20 → health -= 5 за тик
-- Если hunger < 50 → health -= 2 за тик
-- Голодный игрок не может эффективно действовать
-
 ### Fatigue
 - Если fatigue < 20 → error_rate повышается, планирование ухудшается
-- Если fatigue < 10 → возможен сон прямо стоя (автоматический rest)
+- Если fatigue < 10 → возможен сбой действия
 
 ### Stress
-- rain + no shelter → stress += 15 за тик
 - encounter threat → stress += 20
 - trust betrayal → stress += 30
 - high stress (>70) → сужается внимание, усиливается threat bias
+- физическая боль → stress += 10..25
 
 ### Mood
-- mood < 30 → негативное восприятие нейтральных событий
-- mood > 70 → позитивное восприятие
 - Помощь другим → mood += 5
 - Полученная помощь → mood += 5
-- Значимое взаимодействие → mood += 3 (в рамках группы)
-
-### Isolation penalty (если молчит / избегает)
-Если игрок не инициировал и не получал значимое взаимодействие (speech/share/ask/offer) 2 тика подряд:
-- stress += 5
-- mood -= 5
-- В perceived_state добавить: "ты чувствуешь себя изолированным"
-
-Если молчит 4 тика подряд:
-- stress += 10 (вместо 5)
-- mood -= 10 (вместо 5)
-- affinity ко всем остальным -= 3 (отстранённость)
-
-Если начинает взаимодействовать после изоляции:
-- После 1го взаимодействия: isolation penalty сбрасывается
-- Но накопленный стресс и low mood остаются
+- Значимое взаимодействие → mood += 3
 
 ### Health
 - health < 20 → игрок ослаблен
@@ -81,62 +59,18 @@ Tick = {
 
 ### Trust / Resentment
 - Помощь от игрока → trust += 15
-- Полученная помощь → trust к этому игроку += 10
+- Полученная помощь → trust += 10
 - Выполненное обещание → trust += 10
 - Нарушенное обещание → trust -= 25, resentment += 30
 - Атака без провокации → trust -= 40, resentment += 40
 
 ## Действия и их эффекты
 
-### gather_food
-- Успех: hunger += 20 (кап 100), требует 1 тик
-- Провал: hunger -= 5,找不到 еды
-
-### rest
-- fatigue += 30 (кап 100), stress -= 10
-- Требует безопасного места (shelter или safe zone)
-
-### move/approach
-- Перемещает персонажа к указанной зоне/игроку
-- Под дождём без shelter → stress += 5
-
-### share
-- Отдать часть своих resources другому игроку
-- hunger -= 10, trust к себе += 15
-
-### ask
-- Запрос информации или помощи
-- Формирует incoming_message для адресата
-
-### offer_cooperation
-- Предложение совместного действия
-- recipient получает message + perceived_tone
-
-### refuse
-- Отказ от предложения
-- trust -= 5, resentment += 10
-
-### observe
-- Получить информацию о видимых объектах/игроках
-- Результат попадает в visible_world следующего тика
-
-### attack
-- Физическое действие против другого игрока
-- target health -= 15, stress += 25
-- Аgressor: stress += 15, resentment к себе += 20 от witness
-
-## Погода
-
-- **rain**: stress += 15 за тик без shelter
-- **clear**: без эффекта
-- Дождь начинается и заканчивается по world_state flags
-
-## Зоны / объекты мира
-
-- **shelter**: защита от дождя, можно rest
-- **food_source** (berry_bush): 3 единицы еды за gather
-- **food_source** (river): 5 единиц еды за gather ( longo)
-- Игроки начинают в центральной зоне
+Действия определяются конкретной кампанией. Общие принципы:
+- движение возможно, результат зависит от среды
+- отдых возможен при безопасности
+- обмен и помощь возможны между игроками
+- атака наносит урон health и повышает stress
 
 ## Восприятие (perception)
 
@@ -204,3 +138,17 @@ DM рендерит персональный perceived_state для каждог
 Social outcomes are stronger when they are spoken and then confirmed or broken by action.
 Unspoken assumptions are unstable and may create misinterpretation.
 Promises, refusals, boundaries, apologies, invitations, accusations, and terms of cooperation become socially binding only when expressed.
+
+## Isolation
+
+Если игрок не инициировал и не получал значимое взаимодействие (speech/share/ask/offer) 2 тика подряд:
+- stress += 5
+- mood -= 5
+- В perceived_state добавить: "ты чувствуешь себя изолированным"
+
+Если молчит 4 тика подряд:
+- stress += 10 (вместо 5)
+- mood -= 10 (вместо 5)
+- affinity ко всем остальным -= 3 (отстранённость)
+
+После начала взаимодействия после изоляции — penalty сбрасывается, но накопленный стресс и low mood остаются.

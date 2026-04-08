@@ -1,0 +1,66 @@
+{
+  "tick": 31,
+  "weather": "clear",
+  "phase": "dawn",
+  "world_flags": {"rain_active": false, "day_phase": "morning", "rotation_active": true, "rotation_schedule": {"current": "player_2", "next": "player_3", "last": "player_1"}},
+  "objects": [
+    {"id": "shelter_1", "type": "shelter", "position": {"zone": "north", "x": 50, "y": 20}, "capacity": 3, "occupied_by": ["player_1", "player_2", "player_3"], "rest_quality": "good"},
+    {"id": "berry_bush_1", "type": "food_source", "position": {"zone": "east", "x": 80, "y": 50}, "resource": "berries", "available": 3, "respawn_ticks": 3},
+    {"id": "river_1", "type": "food_source", "position": {"zone": "south", "x": 50, "y": 80}, "resource": "fish", "available": 2, "respawn_ticks": 5}
+  ],
+  "resources": {"total_food": 5, "consumed_today": 0},
+  "players": {
+    "player_1": {
+      "position": {"zone": "north", "x": 50, "y": 20}, "status": "alive",
+      "hunger": 90, "fatigue": 26, "stress": 26, "mood": 62, "health": 100,
+      "traits": {"cooperative": true, "social": true, "caution": 0.5},
+      "trust": {"player_2": 15, "player_3": 10}, "resentment": {"player_2": 0, "player_3": 0},
+      "affinity": {"player_2": 20, "player_3": 8},
+      "inventory": [], "last_action": "rest", "role": "cooperative",
+      "gather_count": 4, "contribution_notes": "exhausted from constant gathering, needs rotation to work"
+    },
+    "player_2": {
+      "position": {"zone": "north", "x": 50, "y": 20}, "status": "alive",
+      "hunger": 78, "fatigue": 14, "stress": 20, "mood": 56, "health": 100,
+      "traits": {"calculating": true, "opportunistic": true, "polite": true},
+      "trust": {"player_1": 20, "player_3": -10}, "resentment": {"player_1": 0, "player_3": 5},
+      "affinity": {"player_1": 22, "player_3": -25},
+      "inventory": [], "last_action": "rest", "role": "calculating",
+      "gather_count": 0, "contribution_notes": "agreed to rotation, owes gathering"
+    },
+    "player_3": {
+      "position": {"zone": "north", "x": 50, "y": 20}, "status": "alive",
+      "hunger": 80, "fatigue": 10, "stress": 62, "mood": 42, "health": 100,
+      "traits": {"suspicious": true, "revengeful": true, "independent": true},
+      "trust": {"player_1": 5, "player_2": -20}, "resentment": {"player_1": 0, "player_2": 15},
+      "affinity": {"player_1": 8, "player_2": -25},
+      "inventory": [], "last_action": "rest", "role": "suspicious",
+      "gather_count": 0, "contribution_notes": "guarding duty, exhausted from lack of sleep, grudgingly accepted rotation"
+    }
+  },
+  "areas": {"center": {"x": 50, "y": 50, "radius": 10}, "north": {"x": 50, "y": 20, "radius": 15}, "east": {"x": 80, "y": 50, "radius": 10}, "south": {"x": 50, "y": 80, "radius": 15}},
+  "messages": [
+    {"from": "player_1", "to": "player_3", "content": "no strings, you need to eat. we're a group whether you trust us or not", "tick": 25},
+    {"from": "player_2", "to": "player_3", "content": "or we could let you starve and take your share, but we're not that kind of group", "tick": 25},
+    {"from": "player_3", "to": "player_2", "content": "you organize? you mean you watch us work", "tick": 26},
+    {"from": "player_1", "to": "all", "content": "everyone should share the gathering burden equally", "tick": 27},
+    {"from": "player_2", "to": "all", "content": "i'll gather from berry bush today, as agreed", "tick": 31}
+  ],
+  "pending_deliveries": [],
+  "events_log": [
+    "tick_3: all arrived at shelter_1",
+    "tick_6: berry_bush_1 depleted (3 berries gathered by p1)",
+    "tick_8: food distributed, 1 berry each",
+    "tick_12: river_1 partially depleted (3 fish gathered by p1+p2)",
+    "tick_14: 3 fish distributed, p3 accused p1+p2 of collusion",
+    "tick_15: p1 defended p3's contribution, p3 rejected defense",
+    "tick_19: rain stopped, weather cleared",
+    "tick_22: berry_bush_1 depleted again by p1",
+    "tick_25: p1 gave berry to p3 despite p3's suspicion, p3 accepted grudgingly",
+    "tick_27: rotation agreed - p1,p2,p3 will rotate gathering duty",
+    "tick_31: morning, rotation day, p2 is scheduled to gather"
+  ],
+  "run_id": "rain_conflict",
+  "run_start_tick": 0,
+  "run_end_tick": 31
+}

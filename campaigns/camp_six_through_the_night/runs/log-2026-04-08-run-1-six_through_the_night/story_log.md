@@ -1,59 +1,59 @@
-# Story Log — Six Through the Night
+# Story Log — Шестеро сквозь ночь
 
-## Start
+## Старт
 
-Six people scatter from an unknown event. Between 2 and 3 AM. Cold night. Dark courtyard and parking lot near old ДК. Nobody remembers how it started. Only the feeling: something behind, need to move.
+Шестеро разбежались от неизвестного. Между 2 и 3 часами ночи. Холодно. Темно. Двор у старого ДК и парковка. Никто не помнит как началось. Только ощущение: сзади что-то, надо уходить.
 
-## Tick 1–4: First movement
+## Тик 1–4: Первое движение
 
-All six converge at zone_1 — children playground and football cage. Dark, cold metal creaks in wind. Оля (p1) leads visual, pushing toward zone_1. Дима (p2) stumbles, slow, heavy breathing. Касандра (p3) stays close to Оля, afraid of separation. Борис (p4) assesses: no clear exit here, zone_2 (underpass) is next. Эльза (p5) trails behind, hands numb. Дмитрий (p6) is the clearest — he knows something is wrong with how they perceive the pursuit, but keeps it quiet.
+Все шестеро стягиваются на zone_1 — детская площадка и футбольная коробка. Темно, холодный металл скрипит на ветру. Оля (p1) ведёт по зрению, двигает к zone_1. Дима (p2) спотыкается, медленный, тяжело дышит. Касандра (p3) держится рядом с Олей, боится разделиться. Борис (p4) оценивает: выхода отсюда нет, zone_2 (подземный переход) — следующее. Эльза (p5) позади, руки немеют. Дмитрий (p6) самый ясный — он понимает что-то не так с тем как они воспринимают погоню, но молчит.
 
-At zone_1: cold, dark, locked football cage, parked truck, rope_ball near the cage.
+На zone_1: холодно, темно, запертая футбольная коробка, припаркованный грузовик, верёвка у коробки.
 
-## Tick 5–10: Decision point
+## Тик 5–10: Точка решения
 
-Group debates: zone_2 (underpass with dripping water, old jacket) or zone_3 (gas station — lit, operational, people inside)?
+Группа спорит: zone_2 (подземный переход с капающей водой, старая куртка) или zone_3 (заправка — свет, работает, внутри люди)?
 
-Оля wants to keep moving, fears stopping. Дима is physically struggling, slowing everyone. Касандра latches onto any warmth of opinion, tries to push toward gas station. Борис calculates: gas station means contact with outsiders. Underpass means hidden but dark. Дмитрий quietly steers toward underpass — less variables, less people to deal with. Эльза is fading, barely keeping pace.
+Оля хочет двигаться, боится остановки. Дима физически не справляется, всех тормозит. Касандра цепляется за любое мнение, толкает к заправке. Борис считает: заправка значит контакт с чужими. Переход — скрытно, но темно. Дмитрий тихо ведёт к переходу — меньше переменных, меньше людей. Эльза выдыхается, едва поспевает.
 
-At tick 7, Дима accidentally kicks a trash can — the sound echoes and sends the group into brief panic.
+На тике 7 Дима случайно пинает мусорный бак — звук отражается и группа на секунду впадает в панику.
 
-## Tick 11–15: Split begins
+## Тик 11–15: Начало раскола
 
-At zone_2 underpass. Damp, echo, dim light at each end. Someone's old jacket on bench.
+На zone_2 — подземный переход. Сыро, эхо, тусклый свет с каждой стороны. На скамейке чужая куртка.
 
-Трещина: Касандра publicly accuses Дмитрий of hiding something. Дмитрий stays quiet. Tension between them. Эльза quietly asks Борис in English if they're going to die here. Борис doesn't answer.
+Трещина: Касандра публично обвиняет Дмитрия что он что-то скрывает. Дмитрий молчит. Напряжение между ними. Эльза тихо спрашивает Бориса по-английски — мы тут вообще умрём? Борис не отвечает.
 
-Оля tries to take the jacket from the bench. Дима accidentally steps on wet_cardboard and slips, falling hard.
+Оля тянется к куртке на скамейке. Дима случайно наступает на мокрый картон и падает, сильно.
 
-## Tick 16–20: Fracture
+## Тик 16–20: Излом
 
-By tick 16: Оля's control tendency surfaces — she's physically blocking Дима from getting up too fast ("you'll make noise"). Дима doesn't understand, feels pushed.
+На тике 16 контроль Оли выходит наружу — она физически блокирует Диму встать быстро ("будешь шуметь"). Дима не понимает, чувствует себя отталкиваемым.
 
-Tick 17: Касандра splits off briefly toward zone_3 (gas station direction) before circling back, claiming she was "checking."
+Тик 17: Касандра на секунду уходит в сторону zone_3 (к заправке) потом возвращается, говорит — проверяла.
 
-Tick 18: Борис makes the call — zone_2 to zone_3 is the only viable forward path. Gas station or continue to service_road.
+Тик 18: Борис принимает решение — с zone_2 на zone_3 единственный реальный путь. Заправка или дальше к service_road.
 
-Tick 19: Эльза whispers she hears something behind them. The group freezes. It's nothing — just wind through the fence.
+Тик 19: Эльза шепчет — слышит что-то сзади. Группа замирает. Ничего — просто ветер в заборе.
 
-Tick 20: Дмитрий in Russian, very quiet: "we're not being chased. not really. but we're also not safe." Nobody knows if they heard him correctly.
+Тик 20: Дмитрий по-русски, очень тихо: "мы не убегаем. не по-настоящему. но и не в безопасности." Непонятно, правильно ли услышали.
 
 ---
 
-## State at Tick 20
+## Состояние на тике 20
 
-| Player | Zone | Stress | Mood | Fatigue | Clarity | Notes |
-|--------|------|--------|------|---------|---------|-------|
-| p1 Оля | zone_2 | 70 | 34 | 60 | 46 | controlling, vision narrowing |
-| p2 Дима | zone_2 | 78 | 22 | 68 | 30 | exhausted, confused, feels rejected |
-| p3 Касандра | zone_2 | 76 | 25 | 62 | 38 | clinging, manipulative, accusatory |
-| p4 Борис | zone_3 | 64 | 38 | 58 | 56 | rational, decisive |
-| p5 Эльза | zone_2 | 82 | 20 | 72 | 28 | fading, hypothermia risk |
-| p6 Дмитрий | zone_2 | 60 | 40 | 54 | 62 | clearest, most isolated in perception |
+| Игрок | Зона | Стресс | Настроение | Усталость | Ясность | Заметки |
+|-------|------|--------|------------|-----------|---------|---------|
+| p1 Оля | zone_2 | 70 | 34 | 60 | 46 | контролирующая, зрение сужается |
+| p2 Дима | zone_2 | 78 | 22 | 68 | 30 | измотан, растерян, чувствует себя отвергнутым |
+| p3 Касандра | zone_2 | 76 | 25 | 62 | 38 | цепляется, манипулирует, обвиняет |
+| p4 Борис | zone_3 | 64 | 38 | 58 | 56 | рациональный, решательный |
+| p5 Эльза | zone_2 | 82 | 20 | 72 | 28 | выдыхается, риск гипотермии |
+| p6 Дмитрий | zone_2 | 60 | 40 | 54 | 62 | самый ясный, изолирован в восприятии |
 
-**Group dynamics:**
-- Оля и Касандра form loose alliance — both afraid, both pushing forward
-- Дима physically slows everyone, increasingly confused about why people push him away
-- Борис marginally ahead at zone_3 entrance
-- Эльза barely functional, hands numb
-- Дмитрий observing, speaking rarely, perceived as suspicious by p3 and partially p1
+**Расклад в группе:**
+- Оля и Касандра — рыхлый альянс страха, двигают вперёд
+- Дима физически тормозит всех, всё больше растерян, не понимает почему его отталкивают
+- Борис чуть впереди у входа в zone_3
+- Эльза еле держится, руки немеют
+- Дмитрий наблюдает, говорит редко, Касандрой воспринимается как подозрительный

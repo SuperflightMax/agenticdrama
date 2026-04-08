@@ -1,50 +1,50 @@
-# Summary — Six Through the Night, Run 1
+# Итоги — Шестеро сквозь ночь, Прогон 1
 
-## Outcome
+## Результат
 
-20 ticks simulated. Group partially split between zone_2 (underpass) and zone_3 (gas station). No casualties. No clear resolution — tension ongoing.
+20 тиков. Группа частично разделилась между zone_2 (подземный переход) и zone_3 (заправка). Потерь нет. Ничего не разрешилось — напряжение нарастает.
 
-## Key Events
+## Ключевые события
 
-- **Tick 1-4:** All six converge at zone_1 from split start positions. Move to zone_2 underpass.
-- **Tick 7:** Дима kicks trash can — loud echo, brief panic spike.
-- **Tick 8:** Касандра accuses Дмитрий of hiding something. He stays quiet.
-- **Tick 9:** Эльза asks Борис if they're going to die. He doesn't answer.
-- **Tick 12:** Дима falls on wet cardboard — pain spike, confusion.
-- **Tick 13:** Оля physically blocks Дима from getting up. He doesn't understand.
-- **Tick 15:** Касандра briefly splits toward zone_3, circles back.
-- **Tick 18:** Эльза hears "something behind" — group freezes. Wind.
-- **Tick 20:** Дмитрий speaks: "мы не убегаем. не по-настоящему. но и не в безопасности."
+- **Тик 1–4:** Все шестеро со старта стягиваются на zone_1. Движение в zone_2 (переход).
+- **Тик 7:** Дима пинает мусорный бак — громкое эхо, вспышка паники.
+- **Тик 8:** Касандра обвиняет Дмитрия что он что-то скрывает. Он молчит.
+- **Тик 9:** Эльза спрашивает Бориса — мы тут умрём? Он не отвечает.
+- **Тик 12:** Дима падает на мокрой картонке — пик боли, растерянность.
+- **Тик 13:** Оля физически блокирует Диму встать. Он не понимает.
+- **Тик 15:** Касандра на секунду уходит к zone_3, возвращается.
+- **Тик 18:** Эльза слышит "что-то сзади". Группа замирает. Ветер.
+- **Тик 20:** Дмитрий: "мы не убегаем. не по-настоящему. но и не в безопасности." Никто толком не услышал.
 
-## State at End (Tick 20)
+## Состояние в конце (Тик 20)
 
-| Player | Zone | Stress | Mood | Fatigue | Clarity | Notes |
-|--------|------|--------|------|---------|---------|-------|
-| p1 Оля | zone_2 | 70 | 34 | 60 | 46 | controlling, vision narrowing |
-| p2 Дима | zone_2 | 78 | 22 | 68 | 30 | exhausted, confused, feels rejected |
-| p3 Касандра | zone_2 | 76 | 25 | 62 | 38 | clinging, manipulative, accusatory |
-| p4 Борис | zone_3 | 64 | 38 | 58 | 56 | rational, decisive |
-| p5 Эльза | zone_2 | 82 | 20 | 72 | 28 | fading, hypothermia risk |
-| p6 Дмитрий | zone_2 | 60 | 40 | 54 | 62 | clearest, most isolated in perception |
+| Игрок | Зона | Стресс | Настроение | Усталость | Ясность | Заметки |
+|-------|------|--------|------------|-----------|---------|---------|
+| p1 Оля | zone_2 | 70 | 34 | 60 | 46 | контролирующая, зрение сужается |
+| p2 Дима | zone_2 | 78 | 22 | 68 | 30 | измотан, растерян, чувствует себя отвергнутым |
+| p3 Касандра | zone_2 | 76 | 25 | 62 | 38 | цепляется, манипулирует, обвиняет |
+| p4 Борис | zone_3 | 64 | 38 | 58 | 56 | рациональный, решательный |
+| p5 Эльза | zone_2 | 82 | 20 | 72 | 28 | выдыхается, риск гипотермии |
+| p6 Дмитрий | zone_2 | 60 | 40 | 54 | 62 | самый ясный, изолирован в восприятии |
 
-## Group Dynamics
+## Расклад в группе
 
-- **p1 + p3:** loose fear-based alliance, pushing forward
-- **p2:** physically slowing everyone, increasingly isolated, doesn't understand why p1 blocks him
-- **p4:** ahead at zone_3, rational call-maker
-- **p5:** fading fast, hands numb, at hypothermia threshold
-- **p6:** clearest perception, seen as suspicious by p3, speaks rarely but accurately
+- **p1 + p3:** рыхлый альянс страха, двигают вперёд
+- **p2:** физически тормозит всех, всё больше изолирован, не понимает почему p1 его блокирует
+- **p4:** впереди у zone_3, рациональный голос
+- **p5:** выдыхается быстро, руки немеют, ясность 28
+- **p6:** самое ясное восприятие, p3 считает его подозрительным, говорит редко но точно
 
-## Faction Lines
+## Линии раскола
 
-- p1 physically restrained p2 (tick 13) — p2 feels rejected
-- p3 accused p6 of hiding truth (tick 8) — no resolution
-- p4 ignored p5's direct question (tick 9) — p5 noticed
-- p6's final statement (tick 20) heard by no one clearly
+- p1 физически заблокировал p2 (тик 13) — p2 чувствует себя отвергнутым
+- p3 обвинила p6 во лжи (тик 8) — без resolution
+- p4 проигнорировал прямой вопрос p5 (тик 9) — p5 заметила
+- p6 финальная фраза (тик 20) никем толком не услышана
 
-## Where They Stand
+## Где они
 
-Zone_2 underpass: p1, p2, p3, p5, p6
-Zone_3 gas station entrance: p4
+zone_2 (подземный переход): p1, p2, p3, p5, p6
+zone_3 (вход к заправке): p4
 
-Next decision: enter gas station (lit, people inside, delivery van) or continue to service_road (dark, quiet, bridge ahead)?
+Следующее решение: зайти на заправку (свет, люди внутри, грузовик) или двигаться к service_road (темно, тихо, мост ahead)?

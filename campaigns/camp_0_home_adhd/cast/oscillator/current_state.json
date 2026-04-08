@@ -1,0 +1,9 @@
+{
+  "position": {"zone": "kitchen", "x": 30, "y": 60},
+  "status": "alive",
+  "hunger": 50,
+  "fatigue": 50,
+  "stress": 65,
+  "mood": 35,
+  "health": 100
+}

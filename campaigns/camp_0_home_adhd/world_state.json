@@ -1,0 +1,20 @@
+{
+  "tick": 0,
+  "weather": "clear",
+  "phase": "setup",
+  "world_flags": {
+    "day_phase": "evening"
+  },
+  "objects": [
+    {"id": "living_room", "type": "room", "position": {"zone": "center"}},
+    {"id": "kitchen", "type": "room", "position": {"zone": "east"}},
+    {"id": "sofa", "type": "furniture", "position": {"zone": "living_room"}}
+  ],
+  "players": {
+    "you_adhd": {"position": {"zone": "living_room"}},
+    "oscillator": {"position": {"zone": "kitchen"}},
+    "impostor": {"position": {"zone": "sofa"}}
+  },
+  "messages": [],
+  "note": "Initial setup. Трое в квартире. Напряжение не явное."
+}

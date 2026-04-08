@@ -16,14 +16,17 @@ campaigns/
 │   ├── characters/    ← your character roster
 │   └── README.md
 └── <campaign_name>/   ← your actual campaign
+    ├── intent.yaml
     ├── world_state.json
     ├── WORLD.md
     ├── protocol.md
     ├── rules.md
-    ├── characters/
+    ├── cast/
+    ├── world/
+    ├── state/
     ├── turn_log.jsonl
     ├── story_log.md
-    └── runs/           ← archived runs
+    └── runs/           ← archived runs (per campaign)
 ```
 
 ## Starting a new campaign

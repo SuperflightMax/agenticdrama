@@ -23,7 +23,7 @@ TEMPLATE/
 │   ├── relationship_matrix.yaml
 │   ├── active_tensions.yaml
 │   └── timeline.yaml
-├── runs/               ← archived runs
+├── runs/               ← archived runs (per campaign timeline)
 └── README.md
 ```
 

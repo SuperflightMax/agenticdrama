@@ -1,17 +1,14 @@
 {
   "tick": 0,
   "weather": "clear",
-  "phase": "late_morning",
+  "phase": "evening",
   "world_flags": {
-    "day_phase": "late_morning",
+    "day_phase": "evening",
+    "pre_trigger_state": true,
     "they_havent_talked_yet": true,
-    "tension_building": true,
-    "not_first_time": true,
-    "both_know_the_pattern": true,
-    "both_on_high_cortisol": true,
+    "tension_pre_existing": true,
     "valera_not_present": true,
-    "nastya_in_room": true,
-    "max_in_living_room": true
+    "high_emotional_intensity": true
   },
   "objects": [
     {"id": "living_room", "type": "room", "position": {"zone": "center"}},
@@ -21,8 +18,30 @@
     {"id": "front_door", "type": "exit", "position": {"zone": "corridor"}, "state": "closed"}
   ],
   "players": {
-    "you_adhd": {"position": {"zone": "living_room"}, "status": "alive", "hunger": 60, "fatigue": 50, "stress": 68, "mood": 32, "health": 100},
-    "oscillator": {"position": {"zone": "bedroom_nastya"}, "status": "alive", "hunger": 58, "fatigue": 48, "stress": 70, "mood": 30, "health": 100}
+    "you_adhd": {
+      "position": {"zone": "living_room"},
+      "status": "alive",
+      "hunger": 55,
+      "fatigue": 48,
+      "stress": 72,
+      "mood": 28,
+      "health": 100,
+      "irritation": 58,
+      "need_for_clarity": 88,
+      "fear_of_loss": 78
+    },
+    "oscillator": {
+      "position": {"zone": "bedroom_nastya"},
+      "status": "alive",
+      "hunger": 52,
+      "fatigue": 46,
+      "stress": 78,
+      "mood": 24,
+      "health": 100,
+      "anxiety": 82,
+      "readiness_to_talk": 15,
+      "urge_to_escape": 75
+    }
   },
   "messages": []
 }

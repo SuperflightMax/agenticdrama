@@ -1,0 +1,6 @@
+{"tick":1,"players":{"you_adhd":{"stress":72,"mood":28},"oscillator":{"stress":78,"mood":24}},"events":["вечер, они в квартире, напряжение уже есть","Макс: Насть.","Настя: Что."]}
+{"tick":2,"players":{"you_adhd":{"stress":75,"mood":26},"oscillator":{"stress":76,"mood":22}},"events":["Макс: Что происходит? Ты опять закрываешься.","Настя: Я не закрываюсь. Иди нахуй."]}
+{"tick":3,"players":{"you_adhd":{"stress":80,"mood":22},"oscillator":{"stress":74,"mood":20}},"events":["Макс: Сука, Насть. Ты ебанулась?","Настя: Не кричи на меня."]}
+{"tick":4,"players":{"you_adhd":{"stress":84,"mood":18},"oscillator":{"stress":72,"mood":18}},"events":["Макс: Сколько можно. Скажи что происходит.","Настя: Я ухожу."]}
+{"tick":5,"players":{"you_adhd":{"stress":90,"mood":12},"oscillator":{"stress":68,"mood":16}},"events":["Макс: Куда. Куда ты ебешься идти. Настя.","Настя молчит."]}
+{"tick":6,"players":{"you_adhd":{"stress":92,"mood":10},"oscillator":{"stress":64,"mood":14}},"events":["Макс: Ты не знаешь куда. Ты не думала. Ты просто хочешь свалить.","Настя молчит — он прав."]}

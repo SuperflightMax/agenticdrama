@@ -21,7 +21,8 @@
 ## Canonical Source of Truth
 
 **dm/SOUL.md** — ЕДИНСТВЕННЫЙ источник инструкций для DM.
-Все остальные SOUL файлы — копии или наследие. Правим только этот.
+
+**md/** — рабочие файлы workspace (AGENTS.md, USER.md, etc). Корневые файлы — редиректы. Читай из md/.
 
 ## Workspace structure
 

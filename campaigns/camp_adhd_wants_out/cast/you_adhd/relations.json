@@ -1,0 +1,13 @@
+{
+  "oscillator": {
+    "trust": 30,
+    "resentment": 20,
+    "affinity": 45,
+    "perceived_threat": "high"
+  },
+  "impostor": {
+    "trust": 70,
+    "resentment": 0,
+    "affinity": 60
+  }
+}

@@ -1,17 +1,22 @@
 {
-  "tick": 0,
+  "tick": 25,
   "weather": "clear",
-  "phase": "setup",
+  "phase": "late_evening",
   "world_flags": {
-    "rain_active": false,
-    "day_phase": "morning"
+    "day_phase": "late_evening"
   },
   "objects": [
-    {"id": "shelter_1", "type": "shelter", "position": {"zone": "north", "x": 50, "y": 20}, "capacity": 2, "max_capacity": 2, "occupied_by": []},
-    {"id": "berry_bush_1", "type": "food_source", "position": {"zone": "east", "x": 80, "y": 50}, "resource": "berries", "available": 5, "respawn_ticks": 3},
-    {"id": "river_1", "type": "food_source", "position": {"zone": "south", "x": 50, "y": 80}, "resource": "fish", "available": 5, "respawn_ticks": 5}
+    {"id": "living_room", "type": "room", "position": {"zone": "center"}},
+    {"id": "kitchen", "type": "room", "position": {"zone": "east"}},
+    {"id": "sofa", "type": "furniture", "position": {"zone": "living_room"}},
+    {"id": "kettle", "type": "appliance", "position": {"zone": "kitchen"}},
+    {"id": "table", "type": "furniture", "position": {"zone": "kitchen"}}
   ],
-  "players": {},
+  "players": {
+    "you_adhd": {"position": {"zone": "kitchen_table"}},
+    "oscillator": {"position": {"zone": "kitchen_table"}},
+    "impostor": {"position": {"zone": "kitchen_table"}}
+  },
   "messages": [],
-  "note": "Players are selected per-situation from players/ folder. See run setup for active roster."
+  "note": "25 тиков завершено. Напряжение не ушло, но разговор начат. Макс и Настя впервые за вечер сидят рядом без стены."
 }

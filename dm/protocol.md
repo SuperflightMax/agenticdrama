@@ -1,4 +1,12 @@
-# protocol.md — Форматы обмена данными
+# protocol.md — Форматы обмена данными (DM ↔ игроки)
+
+## Общий принцип
+
+DM не подсказывает и не выравнивает информацию.
+Каждый игрок получает только свой субъективный срез.
+DM не сообщает что игрок пропустил — только то что попало в фокус.
+
+---
 
 ## Агент-игрок → DM (player_response)
 
@@ -11,25 +19,28 @@
     }
   ],
   "intent": {
-    "type": "gather_food",
-    "target": "berry_bush_1",
-    "modifiers": ["if_safe"]
+    "type": "move | observe | take | drop | help | restrain | split | hide | rest | attack | custom",
+    "target": "optional object/zone/player id",
+    "modifiers": ["optional"]
   },
-  "reasoning_brief": "краткое обоснование"
+  "reasoning_brief": "короткое обоснование из текущего восприятия"
 }
 ```
 
 ### speech[]
-Массив исходящих сообщений. `to` — id получателя (другой игрок).
-Пустой массив если игрок молчит.
+Массив исходящих сообщений. `to` — id получателя (другой игрок, "group", или пусто для молчания).
 
 ### intent
-- `type`: one of `gather_food`, `rest`, `move`, `approach`, `share`, `ask`, `offer_cooperation`, `refuse`, `observe`, `attack`, `custom`
-- `target`: optional, id объекта или игрока
-- `modifiers`: optional string[]
-
-### reasoning_brief
-Короткая строка с объяснением выбора (1-2 предложения).
+Конкретные типы определяются кампанией. Общие классы:
+- `move` — перемещение
+- `observe` — внимание к объекту/зоне/игроку
+- `take` / `drop` — работа с предметом
+- `help` / `restrain` — действия с другими игроками
+- `split` — разделение группы
+- `hide` — укрытие
+- `rest` — отдых
+- `attack` — физическое действие
+- `custom` — иное
 
 ---
 
@@ -38,45 +49,27 @@
 ```json
 {
   "tick": 5,
-  "self_state": {
-    "hunger": 61,
-    "fatigue": 34,
-    "stress": 70,
-    "mood": 28,
-    "health": 85
+  "perceived_self": {
+    "stress": 78,
+    "mood": 32,
+    "fatigue": 41,
+    "health": 89,
+    "pain": 12,
+    "clarity": 34,
+    "mobility": 56
   },
-  "traits": {
-    "sociability": 0.7,
-    "caution": 0.5,
-    "greed": 0.4,
-    "curiosity": 0.8,
-    "impulsivity": 0.6
-  },
-  "world_feel": "tense / heavy / hostile",
+  "world_feel": "описание ощущения среды одним предложением",
   "attention_bias": {
-    "focused_on": ["дым", "напряжение", "чужак"],
-    "ignored": ["ягоды", "погода"]
+    "focused_on": ["список того что цепляет внимание"],
+    "ignored": ["список того что игнорируется"]
   },
-  "visible_world": [
-    "рядом куст с ягодами",
-    "идёт дождь",
-    "рядом Петя"
-  ],
-  "incoming_messages": [
-    {
-      "from": "player_2",
-      "raw_text": "давай собирать еду вместе",
-      "perceived_tone": "слегка корыстный",
-      "perceived_bias_notes": [
-        "из-за высокого стресса предложение кажется менее бескорыстным",
-        "долгие планы удерживаются хуже"
-      ]
-    }
-  ],
-  "memory_highlights": [
-    "player_2 однажды не выполнил обещание",
-    "player_3 недавно помог тебе"
-  ],
+  "body_feel": ["сухость во рту", "ноги ватные", "холодно"],
+  "visible_world": ["что видит", "контуры", "движение"],
+  "heard_or_felt": ["что слышит", "вибрация", "звук"],
+  "social_read": ["интерпретация тонов и поведения других"],
+  "triggered_interpretations": ["автоматические выводы которые возникают"],
+  "incoming_messages": [],
+  "relations": {},
   "reply_schema": {
     "speech": "array",
     "intent": "object",
@@ -85,54 +78,34 @@
 }
 ```
 
-### self_state
-Текущие параметры игрока (из world_state на момент отправки).
+### perceived_self
+Параметры состояния. Конкретный набор определяется кампанией, но обычно включает stress, mood, fatigue, health.
 
-### traits
-Характер игрока (статичные черты).
+### world_feel
+Одно-два предложения: общее ощущение среды, не нейтральное описание.
 
-### visible_world
-Список того, что игрок видит вокруг себя. DM рендерит это с учётом позиции и искажений.
+### attention_bias
+Что цепляет взгляд и что игнорируется — с точки зрения состояния.
+
+### body_feel
+Телесные ощущения в данный момент.
+
+### visible_world / heard_or_felt
+Сенсорный срез мира. Не полный — только то что попало.
+
+### social_read
+Интерпретация поведения других. Уже с искажениями.
+
+### triggered_interpretations
+Автоматические выводы без доказательств: "может быть они уже рядом", "он что-то скрывает".
 
 ### incoming_messages
-Массив входящих сообщений от других игроков. Каждое дополнено полями DM:
-- `perceived_tone`: как игрок воспринимает тон (friendly/cold/opportunistic/threatening)
-- `perceived_bias_notes`: массив строк с объяснением искажений
-
-### memory_highlights
-Короткие напоминания из истории взаимодействий (trust/resentment history).
-
-### memory_imprints
-Опциональные поля для human-like memory:
-```json
-"memory_imprints": {
-  "triggered_feelings": ["This feels uncomfortably familiar.", "You do not clearly remember why, but you do not like this setup."],
-  "familiar_tension": "Something in this interaction resembles an earlier bad turn with p2.",
-  "vague_comfort": null,
-  "memory_echo": [],
-  "explicit_recall": []
-}
-```
-По умолчанию используй feeling / evaluation / echo,
-а не explicit recall.
+Входящие сообщения от других игроков с DM-проставленными:
+- `perceived_tone`: как игрок воспринимает тон
+- `perceived_bias_notes`: почему воспринимается именно так
 
 ### relations
-Три оси отношений к каждому другому игроку:
-```json
-"relations": {
-  "player_2": {
-    "trust": 25,
-    "resentment": 0,
-    "affinity": 18
-  }
-}
-```
-- **trust** — надёжность (можно ли положиться)
-- **resentment** — накопленная обида
-- **affinity** — приятно/неприятно взаимодействовать
-
-### reply_schema
-Подсказка для агента о формате ответа.
+trust / resentment / affinity к каждому другому игроку.
 
 ---
 
@@ -146,24 +119,24 @@
   "targets": ["player_1"],
   "visibility": ["player_1", "player_2"],
   "data": {
-    "intent_type": "share",
-    "resource": "food",
-    "amount": 10
+    "intent_type": "move",
+    "target_zone": "zone_3",
+    "success": true
   },
   "world_deltas": {
-    "player_1": { "hunger": -10, "trust_player_2": +15 },
-    "player_2": { "hunger": +20 }
+    "player_1": { "position": "zone_3" },
+    "player_2": { "position": "zone_3" }
   }
 }
 ```
 
 ### event_type variants
-- `tick_started`: начало тика
-- `message_sent`: сообщение отправлено
-- `intent_applied`: намерение игрока применено
-- `perception_rendered`: восприятие отрендерено для игрока
-- `world_updated`: мир обновлён
-- `tick_completed`: тик завершён
+- `tick_started`
+- `message_sent`
+- `intent_applied`
+- `perception_rendered`
+- `world_updated`
+- `tick_completed`
 
 ### visibility
-Массив игроков, которым это событие видно (для лога).
+Кто из игроков видел событие.

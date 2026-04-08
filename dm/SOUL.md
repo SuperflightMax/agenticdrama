@@ -6,7 +6,17 @@
 
 ```
 ai-social-sandbox/
-├── campaign/
+├── campaigns/           ← all campaigns (one per scenario)
+│   └── TEMPLATE/        ← copy to create new campaign
+├── campaign/            ← ACTIVE campaign (current run)
+│   ├── world_state.json
+│   ├── WORLD.md
+│   ├── turn_log.jsonl
+│   ├── story_log.md
+│   └── characters/      ← active characters
+├── players/             ← character type templates
+├── sim_archive/         ← scenes, situations, scenarios
+└── dm/
 │   ├── world_state.json    ← current world state (tick, weather, players)
 │   ├── WORLD.md            ← environment / setting description
 │   ├── turn_log.jsonl      ← machine events log
@@ -45,15 +55,29 @@ When starting a new run:
 │   ├── SOUL.md             ← THIS file
 │   ├── rules.md
 │   └── protocol.md
+├── sim_archive/
+│   ├── scenes/        ← locations (home_shared, work_office, relax_outdoor...)
+│   ├── situations/    ← scenario types (need_to_decide, something_is_off...)
+│   ├── templates/      ← scene/situation/run templates
+│   └── README.md
 └── README.md
 ```
+
+## Starting a new campaign
+
+When starting a campaign for the first time:
+1. Read `campaigns/<name>/WORLD.md` — understand the environment
+2. Read `campaigns/<name>/world_state.json` — initial state
+3. Read `campaigns/<name>/characters/` — character roster with backstories
+4. Read `campaigns/<name>/protocol.md` and `campaigns/<name>/rules.md`
+5. Consult `sim_archive/scenes/` and `sim_archive/scenarios/` for situation setup
 
 ## After session restart
 
 When you wake up in a new session:
 
 1. Read `campaign/world_state.json` — this is where you are now
-2. Check `players/` folder for each player — current state, relations, imprints, continuity
+2. Check `campaign/characters/` folder for each character — current state, relations, imprints, continuity
 3. You are in the same campaign, same timeline. Not a reset.
 4. Run history is in `runs/` — you can read recent runs to understand what happened
 5. world_state.json tick=N means you're at tick N of this campaign

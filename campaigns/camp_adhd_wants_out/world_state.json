@@ -4,10 +4,11 @@
   "phase": "morning",
   "world_flags": {
     "day_phase": "morning",
-    "nastya_approached_door_three_times": true,
-    "max_noticed_but_not_asked": true,
-    "valera_made_tea": true,
-    "pattern_locked_in": true
+    "nastya_in_room": true,
+    "nastya_not_left_room": true,
+    "nastya_three_times_to_door_and_back": true,
+    "max_noticed": true,
+    "valera_made_tea": true
   },
   "objects": [
     {"id": "living_room", "type": "room", "position": {"zone": "center"}},

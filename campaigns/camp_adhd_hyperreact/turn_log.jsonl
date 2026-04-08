@@ -1,7 +1,48 @@
-{"tick": 1, "max": {"intent": "clarify", "action": "approach_bedroom", "reasoning": "need to know what's happening"}, "nastya": {"intent": "avoid", "action": "silence", "reasoning": "can't talk yet"}, "valera": {"intent": "smooth", "action": "offer_tea", "reasoning": "reduce tension"}}
-{"tick": 2, "max": {"intent": "pressure", "action": "enter_bedroom", "reasoning": "need answer"}, "nastya": {"intent": "provoke", "action": "sharp_what", "reasoning": "defensive posture"}, "valera": {"intent": "smooth", "action": "offer_kitchen", "reasoning": "give space"}}
-{"tick": 3, "max": {"intent": "pressure", "action": "step_closer", "reasoning": "she finally speaks"}, "nastya": {"intent": "reveal", "action": "you_never_listen", "reasoning": "couldn't stop"}, "valera": {"intent": "observe", "action": "intervene", "reasoning": "tension rising"}}
-{"tick": 4, "max": {"intent": "clarify", "action": "ask_what_she_means", "reasoning": "don't understand"}, "nastya": {"intent": "escalate", "action": "raise_voice", "reasoning": "provoke_reaction"}, "valera": {"intent": "smooth", "action": "interrupt", "reasoning": "try_to_help"}}
-{"tick": 5, "max": {"intent": "retreat", "action": "step_back", "reasoning": "saw_her_pain"}, "nastya": {"intent": "escape", "action": "leave_building", "reasoning": "need_out_now"}}
-{"tick": 6, "max": {"intent": "urgency", "action": "call_her", "reasoning": "can't_let_her_go"}, "valera": {"intent": "advise", "action": "don't_call", "reasoning": "give_space"}}
-{"tick": 7, "nastya": {"intent": "avoid", "action": "ignore_calls", "reasoning": "can't_answer_yet"}, "location": "street"}}
+{"tick":1,"you_adhd":{"intent":"clarify","action":"approach_bedroom","reasoning":"need to know what's happening"},"oscillator":{"intent":"avoid","action":"silence","reasoning":"can't talk yet"},"impostor":{"intent":"smooth","action":"offer_tea","reasoning":"reduce tension"}}
+{"tick":2,"you_adhd":{"intent":"pressure","action":"enter_bedroom","reasoning":"need answer"},"oscillator":{"intent":"provoke","action":"sharp_what","reasoning":"defensive posture"},"impostor":{"intent":"smooth","action":"offer_kitchen","reasoning":"give space"}}
+{"tick":3,"you_adhd":{"intent":"pressure","action":"step_closer","reasoning":"she finally speaks"},"oscillator":{"intent":"reveal","action":"you_never_listen","reasoning":"couldn't stop"},"impostor":{"intent":"observe","action":"intervene","reasoning":"tension rising"}}
+{"tick":4,"you_adhd":{"intent":"clarify","action":"ask_what_she_means","reasoning":"don't understand"},"oscillator":{"intent":"escalate","action":"raise_voice","reasoning":"provoke_reaction"},"impostor":{"intent":"smooth","action":"interrupt","reasoning":"try_to_help"}}
+{"tick":5,"you_adhd":{"intent":"retreat","action":"step_back","reasoning":"saw_her_pain"},"oscillator":{"intent":"escape","action":"leave_building","reasoning":"need_out_now"}}
+{"tick":6,"you_adhd":{"intent":"urgency","action":"call_her","reasoning":"can't_let_her_go"},"impostor":{"intent":"advise","action":"don't_call","reasoning":"give_space"}}
+{"tick":7,"oscillator":{"intent":"avoid","action":"ignore_calls","reasoning":"can't_answer_yet"},"location":"street"}
+{"tick":8,"you_adhd":{"intent":"wait","action":"sit_silent","reasoning":"hoping she'll_write"},"impostor":{"intent":"advise","action":"write_not_call","reasoning":"less_pressure"}}
+{"tick":9,"you_adhd":{"intent":"clarify","action":"re_read_message","reasoning":"what_does_it_mean"},"oscillator":{"intent":"contact","action":"send_short_message","reasoning":"guilt_relief"},"impostor":{"intent":"wait","action":"watching","reasoning":"don't_know_what_to_do"}}
+{"tick":10,"you_adhd":{"intent":"urgency","action":"ask_valera_to_call","reasoning":"need_to_know_where"},"impostor":{"intent":"reluctant","action":"call_nastya","reasoning":"forced_by_max"},"oscillator":{"intent":"avoid","action":"refuse_to_talk","reasoning":"not_ready"}}
+{"tick":11,"you_adhd":{"intent":"panic","action":"hit_phone","reasoning":"frustration_overwhelm"},"oscillator":{"intent":"contact_valera","action":"ask_to_stay_there","reasoning":"need_safe_place"}}
+{"tick":12,"you_adhd":{"intent":"breakdown","action":"sit_on_floor","reasoning":"can't_cope"},"impostor":{"intent":"comfort","action":"sit_with_him","reasoning":"he_needs_support"}}
+{"tick":13,"oscillator":{"intent":"accept_help","action":"go_to_valera","reasoning":"no_other_option"}}
+{"tick":14,"you_adhd":{"intent":"despair","action":"lying_on_couch","reasoning":"no_energy_left"},"oscillator":{"intent":"stay","action":"at_valera","reasoning":"safe"}}
+{"tick":15,"you_adhd":{"intent":"desperation","action":"go_to_valera","reasoning":"need_to_see_her"}}
+{"tick":16,"you_adhd":{"intent":"confront","action":"show_up_at_valera","reasoning":"can't_wait"},"oscillator":{"intent":"withdraw","action":"freeze","reasoning":"not_ready_for_this"}}
+{"tick":17,"you_adhd":{"intent":"clarify","action":"ask_directly","reasoning":"need_truth"},"oscillator":{"intent":"resist","action":"refuse_to_talk","reasoning":"afraid_of_answer"}}
+{"tick":18,"you_adhd":{"intent":"wait","action":"sit_on_chair","reasoning":"not_leaving"},"oscillator":{"intent":"confused","action":"watching_him","reasoning":"didn't_expect_this"}}
+{"tick":19,"you_adhd":{"intent":"clarify","action":"ask_if_she_wants_to_leave","reasoning":"need_answer"},"oscillator":{"intent":"confess","action":"say_yes","reasoning":"can't_lie_anymore"}}
+{"tick":20,"you_adhd":{"intent":"accept","action":"leave","reasoning":"she_made_her_choice"},"oscillator":{"intent":"shock","action":"didn't_expect_him_to_accept","reasoning":"thought_he'd_fight"}}
+{"tick":21,"oscillator":{"intent":"process","action":"stay_at_valera","reasoning":"realize_what_happened"}}
+{"tick":22,"you_adhd":{"intent":"wait","action":"alone_in_apartment","reasoning":"processing"}}
+{"tick":23,"you_adhd":{"intent":"wait","action":"in_bedroom","reasoning":"empty_room"}}
+{"tick":24,"oscillator":{"intent":"settle","action":"stay_at_valera","reasoning":"waiting_to_return"}}
+{"tick":25,"you_adhd":{"intent":"wait","action":"check_phone","reasoning":"hoping_for_message"},"oscillator":{"intent":"reach_out","action":"ask_about_things","reasoning":"need_to_collect"}}
+{"tick":26,"oscillator":{"intent":"collect","action":"come_for_things","reasoning":"moving_out"},"you_adhd":{"intent":"watch","action":"let_her_go","reasoning":"not_fighting"}}
+{"tick":27,"oscillator":{"intent":"leave","action":"final_goodbye","reasoning":"this_is_it"},"you_adhd":{"intent":"accept","action":"close_door","reasoning":"it's_over"}}
+{"tick":28,"you_adhd":{"intent":"process","action":"sit_on_floor","reasoning":"alone"},"impostor":{"intent":"comfort","action":"come_over","reasoning":"he_needs_someone"}}
+{"tick":29,"oscillator":{"intent":"process","action":"alone_at_valera","reasoning":"wondering_if_right"}}
+{"tick":30,"you_adhd":{"intent":"recover","action":"go_to_work","reasoning":"structure_helps"}}
+{"tick":31,"oscillator":{"intent":"settle","action":"new_room","reasoning":"starting_fresh"}}
+{"tick":32,"you_adhd":{"intent":"process","action":"alone_eating","reasoning":"mechanical"}}
+{"tick":33,"oscillator":{"intent":"stabilize","action":"at_friend","reasoning":"almost_ok"}}
+{"tick":34,"you_adhd":{"intent":"recover","action":"at_valera","reasoning":"almost_normal"}}
+{"tick":35,"oscillator":{"intent":"process","action":"alone_night","reasoning":"dreams_come"}}
+{"tick":36,"you_adhd":{"intent":"recover","action":"back_to_work","reasoning":"structure_helps"}}
+{"tick":37,"oscillator":{"intent":"settle","action":"new_job","reasoning":"moving_on"}}
+{"tick":38,"you_adhd":{"intent":"reflect","action":"alone_evening","reasoning":"did_I_not_notice"}}
+{"tick":39,"oscillator":{"intent":"process","action":"at_friend_tea","reasoning":"wondering"}}
+{"tick":40,"you_adhd":{"intent":"accept","action":"at_valera","reasoning":"not_his_fault"}}
+{"tick":41,"status":"month_passed","you_adhd":{"mood":52,"stress":32},"oscillator":{"mood":54,"stress":26}}
+{"tick":42,"you_adhd":{"intent":"reach_out","action":"send_message","reasoning":"trying"},"oscillator":{"intent":"respond","action":"reply","reasoning":"not_enemies"}}
+{"tick":43,"you_adhd":{"intent":"stabilize","action":"at_valera","reasoning":"all_three"},"oscillator":{"intent":"stabilize","action":"at_valera","reasoning":"all_three"},"impostor":{"intent":"bridge","action":"hosting","reasoning":"keeping_together"}}
+{"tick":44,"status":"three_months_passed","you_adhd":{"mood":56,"stress":24},"oscillator":{"mood":58,"stress":18}}
+{"tick":45,"oscillator":{"intent":"reflect","action":"alone","reasoning":"sometimes_painful"}}
+{"tick":46,"you_adhd":{"intent":"stabilize","action":"new_apartment","reasoning":"moving_on"},"impostor":{"intent":"visit","action":"come_over","reasoning":"normal_life"}}
+{"tick":47,"oscillator":{"intent":"accept","action":"learns_about_him","reasoning":"he_deserves_happiness"}}
+{"tick":48,"status":"equilibrium","you_adhd":{"position":"valera_apartment","mood":54,"stress":28},"oscillator":{"position":"new_apartment","mood":56,"stress":22},"impostor":{"position":"valera_apartment","mood":58,"stress":18},"situation_exhausted":true,"run_completed_early":true}

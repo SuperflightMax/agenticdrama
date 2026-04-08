@@ -1,14 +1,17 @@
 {
   "position": {"zone": "living_room"},
   "status": "alive",
-  "stress": 85,
-  "irritation": 70,
-  "mood": 20,
-  "fatigue": 50,
-  "need_for_clarity": 95,
-  "fear_of_loss": 95,
-  "pressure": "high",
-  "calls_made": 3,
+  "stress": 95,
+  "irritation": 60,
+  "mood": 10,
+  "fatigue": 75,
+  "need_for_clarity": 90,
+  "fear_of_loss": 100,
+  "pressure": "overwhelming",
+  "calls_made": 5,
   "calls_answered": 0,
-  "last_action": "calling"
+  "messages_sent": 0,
+  "messages_deleted": 3,
+  "breakdown": true,
+  "phone_screen": "cracked"
 }

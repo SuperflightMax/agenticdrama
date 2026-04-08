@@ -1,0 +1,14 @@
+{
+  "imprints": [
+    {
+      "id": "valera_smoothing_failure",
+      "cues": ["raised voices", "closed room tension", "being between two people"],
+      "state_signature": {"stress": 58, "mood": 40},
+      "evaluation": "if I don't smooth fast enough, conflict may become irreversible",
+      "fragments": ["offer tea", "change subject", "say something neutral"],
+      "strength": 54,
+      "valence": "mixed",
+      "clarity": "vague"
+    }
+  ]
+}

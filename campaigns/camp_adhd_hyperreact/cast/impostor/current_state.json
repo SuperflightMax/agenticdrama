@@ -1,12 +1,12 @@
 {
-  "position": {"zone": "corridor"},
+  "position": {"zone": "valera_apartment"},
   "status": "alive",
   "stress": 55,
-  "tension": 65,
-  "mood": 40,
-  "fatigue": 35,
-  "smoothing_drive": 70,
-  "alertness": 60,
-  "intervention_attempted": true,
-  "intervention_failed": true
+  "tension": 60,
+  "mood": 35,
+  "fatigue": 50,
+  "smoothing_drive": 60,
+  "alertness": 70,
+  "supporting_nastya": true,
+  "concerned_about_max": true
 }

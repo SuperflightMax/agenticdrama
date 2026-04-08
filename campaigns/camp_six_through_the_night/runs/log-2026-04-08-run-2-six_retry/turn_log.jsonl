@@ -1,0 +1,170 @@
+{"tick": 11, "event_type": "dm_query", "queries": [
+  {"player": "p1_vavilova", "perceived_self": {"stress": 58, "mood": 44, "fatigue": 58, "health": 95, "pain": 8, "clarity": 50, "mobility": 68}, "world_feel": "движемся", "attention_bias": {"focused_on": ["выходы"]}, "body_feel": [], "visible_world": ["дорога"], "heard_or_felt": []},
+  {"player": "p2_novikov", "perceived_self": {"stress": 66, "mood": 34, "fatigue": 60, "health": 88, "pain": 13, "clarity": 36, "mobility": 38}, "world_feel": "ноги болят", "attention_bias": {"focused_on": ["вибрация"]}, "body_feel": ["ноги"], "visible_world": ["дорога"], "heard_or_felt": []},
+  {"player": "p3_kasandra", "perceived_self": {"stress": 64, "mood": 38, "fatigue": 58, "health": 90, "pain": 5, "clarity": 44, "mobility": 51}, "world_feel": "в темноте", "attention_bias": {"focused_on": ["Оля"]}, "body_feel": [], "visible_world": ["дорога"], "heard_or_felt": []},
+  {"player": "p4_boris", "perceived_self": {"stress": 56, "mood": 46, "fatigue": 55, "health": 92, "pain": 3, "clarity": 58, "mobility": 57}, "world_feel": "тихо", "attention_bias": {"focused_on": ["схема"]}, "body_feel": [], "visible_world": ["дорога", "лужи"], "heard_or_felt": []},
+  {"player": "p5_elza", "perceived_self": {"stress": 74, "mood": 32, "fatigue": 62, "health": 85, "pain": 8, "clarity": 34, "mobility": 50}, "world_feel": "холодно снова", "attention_bias": {"focused_on": ["текстуры"]}, "body_feel": ["ноги"], "visible_world": ["дорога"], "heard_or_felt": []},
+  {"player": "p6_dmitriy", "perceived_self": {"stress": 54, "mood": 46, "fatigue": 50, "health": 93, "pain": 4, "clarity": 64, "mobility": 62}, "world_feel": "дорога", "attention_bias": {"focused_on": ["звуки"]}, "body_feel": [], "visible_world": ["дорога", "лужи"], "heard_or_felt": ["плеск воды"]}
+]}
+{"tick": 11, "event_type": "player_response", "responses": [
+  {"player": "p1_vavilova", "speech": [], "action": "движется за Борисом", "reasoning_brief": "следует за лидером"},
+  {"player": "p2_novikov", "speech": [], "action": "бредёт в конце группы", "reasoning_brief": "медленный"},
+  {"player": "p3_kasandra", "speech": [], "action": "держится за Олей", "reasoning_brief": "не отставать"},
+  {"player": "p4_boris", "speech": [], "action": "ведёт по дороге", "reasoning_brief": "впереди"},
+  {"player": "p5_elza", "speech": [], "action": "едва поспевает", "reasoning_brief": "устала"},
+  {"player": "p6_dmitriy", "speech": [], "action": "в конце, наблюдает", "reasoning_brief": "следит за спиной"}
+]}
+{"tick": 11, "event_type": "tick_completed"}
+{"tick": 12, "event_type": "dm_query", "queries": [
+  {"player": "p1_vavilova", "perceived_self": {"stress": 60, "mood": 42, "fatigue": 60, "health": 95, "pain": 9, "clarity": 48, "mobility": 67}, "world_feel": "лужи, грязно", "attention_bias": {"focused_on": ["путь"]}, "body_feel": ["холодно"], "visible_world": ["дорога", "глубокие лужи"], "heard_or_felt": []},
+  {"player": "p2_novikov", "perceived_self": {"stress": 68, "mood": 32, "fatigue": 64, "health": 88, "pain": 15, "clarity": 34, "mobility": 35}, "world_feel": "ноги промокли", "attention_bias": {"focused_on": ["вибрация"]}, "body_feel": ["ноги мокрые", "холод"], "visible_world": ["лужа"], "heard_or_felt": ["хлюпанье"]},
+  {"player": "p3_kasandra", "perceived_self": {"stress": 66, "mood": 36, "fatigue": 60, "health": 90, "pain": 6, "clarity": 42, "mobility": 50}, "world_feel": "мокро, холодно", "attention_bias": {"focused_on": ["Оля"]}, "body_feel": ["ноги"], "visible_world": ["дорога"], "heard_or_felt": []},
+  {"player": "p4_boris", "perceived_self": {"stress": 58, "mood": 44, "fatigue": 57, "health": 92, "pain": 4, "clarity": 56, "mobility": 56}, "world_feel": "лужи", "attention_bias": {"focused_on": ["путь"]}, "body_feel": [], "visible_world": ["дорога", "мост ahead"], "heard_or_felt": []},
+  {"player": "p5_elza", "perceived_self": {"stress": 76, "mood": 30, "fatigue": 65, "health": 85, "pain": 10, "clarity": 32, "mobility": 48}, "world_feel": "мокро, холодно", "attention_bias": {"focused_on": ["текстуры"]}, "body_feel": ["ноги мокрые", "холод"], "visible_world": ["лужа"], "heard_or_felt": ["хлюпанье"]},
+  {"player": "p6_dmitriy", "perceived_self": {"stress": 56, "mood": 44, "fatigue": 52, "health": 93, "pain": 5, "clarity": 62, "mobility": 61}, "world_feel": "мокро", "attention_bias": {"focused_on": ["звуки"]}, "body_feel": [], "visible_world": ["дорога", "мост"], "heard_or_felt": ["вода"]}
+]}
+{"tick": 12, "event_type": "player_response", "responses": [
+  {"player": "p1_vavilova", "speech": [], "action": "перепрыгивает через лужу", "reasoning_brief": "быстрая"},
+  {"player": "p2_novikov", "speech": [], "action": "влетел в лужу", "reasoning_brief": "неуклюжий"},
+  {"player": "p3_kasandra", "speech": [], "action": "обошла лужу", "reasoning_brief": "мелкая"},
+  {"player": "p4_boris", "speech": [], "action": "повёл в обход лужи", "reasoning_brief": "практичный"},
+  {"player": "p5_elza", "speech": [], "action": "промочила ноги", "reasoning_brief": "ноги не слушаются"},
+  {"player": "p6_dmitriy", "speech": [], "action": "обошёл лужу", "reasoning_brief": "аккуратный"}
+]}
+{"tick": 12, "event_type": "tick_completed", "note": "Дима промочил ноги. Эльза промочила ноги."}
+{"tick": 13, "event_type": "dm_query", "queries": [
+  {"player": "p1_vavilova", "perceived_self": {"stress": 60, "mood": 42, "fatigue": 62, "health": 95, "pain": 9, "clarity": 47, "mobility": 66}, "world_feel": "надо идти быстрее", "attention_bias": {"focused_on": ["выход"]}, "body_feel": ["холод"], "visible_world": ["мост ahead"], "heard_or_felt": []},
+  {"player": "p2_novikov", "perceived_self": {"stress": 70, "mood": 30, "fatigue": 68, "health": 87, "pain": 18, "clarity": 32, "mobility": 32}, "world_feel": "ноги горят от холода", "attention_bias": {"focused_on": ["вибрация"]}, "body_feel": ["ноги мокрые", "боль"], "visible_world": ["мост"], "heard_or_felt": []},
+  {"player": "p3_kasandra", "perceived_self": {"stress": 68, "mood": 34, "fatigue": 62, "health": 90, "pain": 6, "clarity": 40, "mobility": 49}, "world_feel": "холодно", "attention_bias": {"focused_on": ["Оля"]}, "body_feel": ["ноги"], "visible_world": ["мост"], "heard_or_felt": []},
+  {"player": "p4_boris", "perceived_self": {"stress": 60, "mood": 42, "fatigue": 59, "health": 92, "pain": 4, "clarity": 54, "mobility": 55}, "world_feel": "надо успеть до рассвета", "attention_bias": {"focused_on": ["время"]}, "body_feel": [], "visible_world": ["мост", "решётка"], "heard_or_felt": []},
+  {"player": "p5_elza", "perceived_self": {"stress": 80, "mood": 28, "fatigue": 68, "health": 84, "pain": 12, "clarity": 30, "mobility": 45}, "world_feel": "ноги не чувствую", "attention_bias": {"focused_on": ["текстуры"]}, "body_feel": ["ноги мокрые", "холод", "боль"], "visible_world": ["мост"], "heard_or_felt": []},
+  {"player": "p6_dmitriy", "perceived_self": {"stress": 58, "mood": 42, "fatigue": 54, "health": 93, "pain": 5, "clarity": 60, "mobility": 60}, "world_feel": "мост", "attention_bias": {"focused_on": ["звуки за спиной"]}, "body_feel": [], "visible_world": ["мост", "решётка", "вода внизу"], "heard_or_felt": ["плеск"]}
+]}
+{"tick": 13, "event_type": "player_response", "responses": [
+  {"player": "p1_vavilova", "speech": [], "action": "движется к мосту", "reasoning_brief": "быстро"},
+  {"player": "p2_novikov", "speech": [], "action": "едва бредёт", "reasoning_brief": "ноги болят"},
+  {"player": "p3_kasandra", "speech": [], "action": "держится за Олей", "reasoning_brief": "не отстать"},
+  {"player": "p4_boris", "speech": [{"to": "group", "text": "Мост. Осторожно, скользко."}], "action": "ступил на мост", "reasoning_brief": "первый"},
+  {"player": "p5_elza", "speech": [], "action": "едва идёт", "reasoning_brief": "ноги не слушаются"},
+  {"player": "p6_dmitriy", "speech": [], "action": "осторожно ступил на мост", "reasoning_brief": "смотрит под ноги"}
+]}
+{"tick": 13, "event_type": "tick_completed"}
+{"tick": 14, "event_type": "dm_query", "queries": [
+  {"player": "p1_vavilova", "perceived_self": {"stress": 62, "mood": 40, "fatigue": 64, "health": 95, "pain": 10, "clarity": 45, "mobility": 64}, "world_feel": "мост, решётка", "attention_bias": {"focused_on": ["путь"]}, "body_feel": ["холод"], "visible_world": ["мост", "решётка", "вода внизу"], "heard_or_felt": []},
+  {"player": "p2_novikov", "perceived_self": {"stress": 72, "mood": 28, "fatigue": 72, "health": 86, "pain": 22, "clarity": 30, "mobility": 28}, "world_feel": "ноги не слушаются", "attention_bias": {"focused_on": ["вибрация"]}, "body_feel": ["ноги мокрые", "холод", "боль"], "visible_world": ["мост", "решётка"], "heard_or_felt": ["стук решётки"]},
+  {"player": "p3_kasandra", "perceived_self": {"stress": 70, "mood": 32, "fatigue": 64, "health": 89, "pain": 7, "clarity": 38, "mobility": 47}, "world_feel": "страшно", "attention_bias": {"focused_on": ["Оля"]}, "body_feel": ["холод", "страх"], "visible_world": ["мост", "решётка"], "heard_or_felt": []},
+  {"player": "p4_boris", "perceived_self": {"stress": 62, "mood": 40, "fatigue": 61, "health": 91, "pain": 5, "clarity": 52, "mobility": 53}, "world_feel": "осторожно", "attention_bias": {"focused_on": ["путь"]}, "body_feel": [], "visible_world": ["мост", "решётка"], "heard_or_felt": []},
+  {"player": "p5_elza", "perceived_self": {"stress": 82, "mood": 26, "fatigue": 72, "health": 83, "pain": 14, "clarity": 28, "mobility": 40}, "world_feel": "скользко", "attention_bias": {"focused_on": ["текстуры"]}, "body_feel": ["ноги мокрые", "холод", "боль"], "visible_world": ["мост", "решётка"], "heard_or_felt": []},
+  {"player": "p6_dmitriy", "perceived_self": {"stress": 60, "mood": 40, "fatigue": 56, "health": 92, "pain": 6, "clarity": 58, "mobility": 58}, "world_feel": "решётка шатается", "attention_bias": {"focused_on": ["решётка"]}, "body_feel": [], "visible_world": ["мост", "решётка", "вода"], "heard_or_felt": []}
+]}
+{"tick": 14, "event_type": "player_response", "responses": [
+  {"player": "p1_vavilova", "speech": [], "action": "перешла мост", "reasoning_brief": "быстро"},
+  {"player": "p2_novikov", "speech": [], "action": "зацепился за решётку", "reasoning_brief": "неуклюжий"},
+  {"player": "p3_kasandra", "speech": [], "action": "перешла мост за Олей", "reasoning_brief": "держалась"},
+  {"player": "p4_boris", "speech": [], "action": "прошёл мост", "reasoning_brief": "осторожно"},
+  {"player": "p5_elza", "speech": [], "action": "поскользнулась на решётке", "reasoning_brief": "ноги не слушаются"},
+  {"player": "p6_dmitriy", "speech": [], "action": "прошёл мост, проверил решётку", "reasoning_brief": "заметил что шатается"}
+]}
+{"tick": 14, "event_type": "tick_completed", "note": "Эльза поскользнулась но удержалась. Дима зацепился за решётку."}
+{"tick": 15, "event_type": "dm_query", "queries": [
+  {"player": "p1_vavilova", "perceived_self": {"stress": 64, "mood": 38, "fatigue": 66, "health": 94, "pain": 11, "clarity": 43, "mobility": 62}, "world_feel": "прошли мост", "attention_bias": {"focused_on": ["свет впереди"]}, "body_feel": ["холод"], "visible_world": ["остановка ahead"], "heard_or_felt": []},
+  {"player": "p2_novikov", "perceived_self": {"stress": 74, "mood": 26, "fatigue": 75, "health": 85, "pain": 24, "clarity": 28, "mobility": 25}, "world_feel": "ноги горят", "attention_bias": {"focused_on": ["боль"]}, "body_feel": ["ноги", "холод"], "visible_world": ["остановка ahead"], "heard_or_felt": []},
+  {"player": "p3_kasandra", "perceived_self": {"stress": 72, "mood": 30, "fatigue": 66, "health": 88, "pain": 8, "clarity": 36, "mobility": 45}, "world_feel": "свет", "attention_bias": {"focused_on": ["тепло"]}, "body_feel": ["холод", "усталость"], "visible_world": ["остановка"], "heard_or_felt": []},
+  {"player": "p4_boris", "perceived_self": {"stress": 64, "mood": 38, "fatigue": 63, "health": 90, "pain": 6, "clarity": 50, "mobility": 51}, "world_feel": "почти", "attention_bias": {"focused_on": ["остановка"]}, "body_feel": [], "visible_world": ["остановка", "лавка"], "heard_or_felt": []},
+  {"player": "p5_elza", "perceived_self": {"stress": 84, "mood": 24, "fatigue": 75, "health": 82, "pain": 16, "clarity": 26, "mobility": 36}, "world_feel": "ноги не идут", "attention_bias": {"focused_on": ["свет"]}, "body_feel": ["ноги", "холод", "усталость"], "visible_world": ["остановка ahead"], "heard_or_felt": []},
+  {"player": "p6_dmitriy", "perceived_self": {"stress": 62, "mood": 38, "fatigue": 58, "health": 91, "pain": 7, "clarity": 56, "mobility": 56}, "world_feel": "свет", "attention_bias": {"focused_on": ["звуки"]}, "body_feel": [], "visible_world": ["остановка", "лавка", "фонарь"], "heard_or_felt": []}
+]}
+{"tick": 15, "event_type": "player_response", "responses": [
+  {"player": "p1_vavilova", "speech": [{"to": "group", "text": "Там тепло. Лавка."}], "action": "двинулась к остановке", "reasoning_brief": "тепло"},
+  {"player": "p2_novikov", "speech": [], "action": "едва бредёт", "reasoning_brief": "ноги"},
+  {"player": "p3_kasandra", "speech": [], "action": "пошла за Олей", "reasoning_brief": "следует"},
+  {"player": "p4_boris", "speech": [], "action": "дошёл до остановки", "reasoning_brief": "впереди"},
+  {"player": "p5_elza", "speech": [], "action": "едва дошла", "reasoning_brief": "ноги не слушаются"},
+  {"player": "p6_dmitriy", "speech": [], "action": "дошёл до остановки", "reasoning_brief": "смотрит на группу"}
+]}
+{"tick": 15, "event_type": "tick_completed", "note": "Все шестеро дошли до остановки. Свет, тепло, лавка."}
+{"tick": 16, "event_type": "dm_query", "queries": [
+  {"player": "p1_vavilova", "perceived_self": {"stress": 58, "mood": 48, "fatigue": 64, "health": 94, "pain": 10, "clarity": 46, "mobility": 62}, "world_feel": "тепло, можно отдохнуть", "attention_bias": {"focused_on": ["лавка"]}, "body_feel": ["тепло от света"], "visible_world": ["остановка", "лавка", "фонарь"], "heard_or_felt": ["road noise"]},
+  {"player": "p2_novikov", "perceived_self": {"stress": 70, "mood": 34, "fatigue": 70, "health": 85, "pain": 20, "clarity": 32, "mobility": 30}, "world_feel": "сесть", "attention_bias": {"focused_on": ["лавка"]}, "body_feel": ["ноги", "холод"], "visible_world": ["остановка", "лавка"], "heard_or_felt": []},
+  {"player": "p3_kasandra", "perceived_self": {"stress": 66, "mood": 40, "fatigue": 62, "health": 88, "pain": 7, "clarity": 40, "mobility": 47}, "world_feel": "тепло, безопасно", "attention_bias": {"focused_on": ["группа"]}, "body_feel": ["согревается"], "visible_world": ["остановка", "лавка"], "heard_or_felt": []},
+  {"player": "p4_boris", "perceived_self": {"stress": 60, "mood": 48, "fatigue": 60, "health": 90, "pain": 5, "clarity": 52, "mobility": 52}, "world_feel": "надо решать", "attention_bias": {"focused_on": ["время"]}, "body_feel": [], "visible_world": ["остановка", "лавка"], "heard_or_felt": []},
+  {"player": "p5_elza", "perceived_self": {"stress": 78, "mood": 36, "fatigue": 70, "health": 82, "pain": 12, "clarity": 32, "mobility": 40}, "world_feel": "тепло", "attention_bias": {"focused_on": ["текстуры"]}, "body_feel": ["ноги болят но тепло"], "visible_world": ["остановка", "лавка"], "heard_or_felt": []},
+  {"player": "p6_dmitriy", "perceived_self": {"stress": 58, "mood": 46, "fatigue": 54, "health": 91, "pain": 6, "clarity": 58, "mobility": 56}, "world_feel": "остановка, люди могут быть", "attention_bias": {"focused_on": ["звуки"]}, "body_feel": [], "visible_world": ["остановка", "лавка", "фонарь"], "heard_or_felt": ["машины проезжают"]}
+]}
+{"tick": 16, "event_type": "player_response", "responses": [
+  {"player": "p1_vavilova", "speech": [], "action": "села на лавку", "reasoning_brief": "отдыхает"},
+  {"player": "p2_novikov", "speech": [], "action": "опустился на колени у лавки", "reasoning_brief": "ноги не держат сесть"},
+  {"player": "p3_kasandra", "speech": [], "action": "села рядом с Олей", "reasoning_brief": "держится"},
+  {"player": "p4_boris", "speech": [{"to": "group", "text": "До утра. Потом разойдёмся."}], "action": "сел в стороне", "reasoning_brief": "plan"},
+  {"player": "p5_elza", "speech": [], "action": "легла на лавку", "reasoning_brief": "ноги не держат"},
+  {"player": "p6_dmitriy", "speech": [], "action": "сел у столба, наблюдает", "reasoning_brief": "следит"}
+]}
+{"tick": 16, "event_type": "tick_completed", "note": "Группа на остановке. Отдых до утра."}
+{"tick": 17, "event_type": "dm_query", "queries": [
+  {"player": "p1_vavilova", "perceived_self": {"stress": 54, "mood": 52, "fatigue": 62, "health": 94, "pain": 8, "clarity": 50, "mobility": 62}, "world_feel": "тепло, покой", "attention_bias": {"focused_on": ["группа"]}, "body_feel": ["усталость"], "visible_world": ["остановка", "фонарь", "спящие"], "heard_or_felt": []},
+  {"player": "p2_novikov", "perceived_self": {"stress": 66, "mood": 38, "fatigue": 68, "health": 85, "pain": 18, "clarity": 34, "mobility": 32}, "world_feel": "отдых", "attention_bias": {"focused_on": ["вибрация"]}, "body_feel": ["ноги", "холод"], "visible_world": ["остановка", "пол"], "heard_or_felt": []},
+  {"player": "p3_kasandra", "perceived_self": {"stress": 62, "mood": 44, "fatigue": 60, "health": 88, "pain": 6, "clarity": 42, "mobility": 48}, "world_feel": "тепло, группа", "attention_bias": {"focused_on": ["Оля"]}, "body_feel": ["согревается"], "visible_world": ["остановка"], "heard_or_felt": []},
+  {"player": "p4_boris", "perceived_self": {"stress": 58, "mood": 50, "fatigue": 58, "health": 90, "pain": 4, "clarity": 54, "mobility": 52}, "world_feel": "тихо", "attention_bias": {"focused_on": ["время"]}, "body_feel": [], "visible_world": ["остановка", "машины"], "heard_or_felt": []},
+  {"player": "p5_elza", "perceived_self": {"stress": 74, "mood": 40, "fatigue": 68, "health": 82, "pain": 10, "clarity": 34, "mobility": 42}, "world_feel": "тепло", "attention_bias": {"focused_on": ["текстуры"]}, "body_feel": ["ноги болят", "тепло"], "visible_world": ["остановка", "лавка"], "heard_or_felt": []},
+  {"player": "p6_dmitriy", "perceived_self": {"stress": 56, "mood": 48, "fatigue": 52, "health": 91, "pain": 5, "clarity": 60, "mobility": 56}, "world_feel": "группа вместе", "attention_bias": {"focused_on": ["звуки"]}, "body_feel": [], "visible_world": ["остановка"], "heard_or_felt": ["тишина"]}
+]}
+{"tick": 17, "event_type": "player_response", "responses": [
+  {"player": "p1_vavilova", "speech": [], "action": "сидит, смотрит", "reasoning_brief": "отдыхает"},
+  {"player": "p2_novikov", "speech": [], "action": "сидит на полу", "reasoning_brief": "ноги не держат"},
+  {"player": "p3_kasandra", "speech": [], "action": "сидит рядом с Олей", "reasoning_brief": "держится"},
+  {"player": "p4_boris", "speech": [], "action": "сидит, молчит", "reasoning_brief": "думает"},
+  {"player": "p5_elza", "speech": [], "action": "спит", "reasoning_brief": "выдохлась"},
+  {"player": "p6_dmitriy", "speech": [{"to": "p4_boris", "text": "Никто не пришёл."}], "action": "сидит у столба", "reasoning_brief": "наблюдает"}
+]}
+{"tick": 17, "event_type": "tick_completed", "note": "Дмитрий замечает: никто не преследовал."}
+{"tick": 18, "event_type": "dm_query", "queries": [
+  {"player": "p1_vavilova", "perceived_self": {"stress": 50, "mood": 56, "fatigue": 60, "health": 94, "pain": 7, "clarity": 52, "mobility": 62}, "world_feel": "тихо", "attention_bias": {"focused_on": ["свет"]}, "body_feel": ["усталость"], "visible_world": ["остановка", "фонарь"], "heard_or_felt": []},
+  {"player": "p2_novikov", "perceived_self": {"stress": 62, "mood": 42, "fatigue": 65, "health": 85, "pain": 16, "clarity": 36, "mobility": 34}, "world_feel": "отдых", "attention_bias": {"focused_on": ["вибрация"]}, "body_feel": ["ноги", "тепло"], "visible_world": ["остановка"], "heard_or_felt": []},
+  {"player": "p3_kasandra", "perceived_self": {"stress": 58, "mood": 48, "fatigue": 58, "health": 88, "pain": 5, "clarity": 44, "mobility": 48}, "world_feel": "тепло", "attention_bias": {"focused_on": ["группа"]}, "body_feel": [], "visible_world": ["остановка"], "heard_or_felt": []},
+  {"player": "p4_boris", "perceived_self": {"stress": 56, "mood": 52, "fatigue": 56, "health": 90, "pain": 3, "clarity": 56, "mobility": 52}, "world_feel": "тихо, утро близко", "attention_bias": {"focused_on": ["горизонт"]}, "body_feel": [], "visible_world": ["остановка", "горизонт"], "heard_or_felt": []},
+  {"player": "p5_elza", "perceived_self": {"stress": 70, "mood": 44, "fatigue": 65, "health": 82, "pain": 8, "clarity": 36, "mobility": 44}, "world_feel": "тепло", "attention_bias": {"focused_on": ["текстуры"]}, "body_feel": ["отдых"], "visible_world": ["лавка"], "heard_or_felt": []},
+  {"player": "p6_dmitriy", "perceived_self": {"stress": 54, "mood": 50, "fatigue": 50, "health": 91, "pain": 4, "clarity": 62, "mobility": 56}, "world_feel": "утро", "attention_bias": {"focused_on": ["звуки"]}, "body_feel": [], "visible_world": ["остановка", "небо"], "heard_or_felt": ["птицы"]}
+]}
+{"tick": 18, "event_type": "player_response", "responses": [
+  {"player": "p1_vavilova", "speech": [], "action": "сидит, смотрит на горизонт", "reasoning_brief": "ждёт"},
+  {"player": "p2_novikov", "speech": [], "action": "сидит, дремлет", "reasoning_brief": "отдых"},
+  {"player": "p3_kasandra", "speech": [], "action": "сидит, молчит", "reasoning_brief": "отдыхает"},
+  {"player": "p4_boris", "speech": [{"to": "p6_dmitriy", "text": "Значит, не за нами."}], "action": "смотрит на небо", "reasoning_brief": "понимает"},
+  {"player": "p5_elza", "speech": [], "action": "спит", "reasoning_brief": "отдыхает"},
+  {"player": "p6_dmitriy", "speech": [], "action": "смотрит на горизонт", "reasoning_brief": "утро"}
+]}
+{"tick": 18, "event_type": "tick_completed", "note": "Борис и Дмитрий понимают: никто не преследовал."}
+{"tick": 19, "event_type": "dm_query", "queries": [
+  {"player": "p1_vavilova", "perceived_self": {"stress": 46, "mood": 60, "fatigue": 58, "health": 94, "pain": 6, "clarity": 54, "mobility": 62}, "world_feel": "рассвет", "attention_bias": {"focused_on": ["свет"]}, "body_feel": [], "visible_world": ["небо светлеет"], "heard_or_felt": []},
+  {"player": "p2_novikov", "perceived_self": {"stress": 58, "mood": 46, "fatigue": 62, "health": 85, "pain": 14, "clarity": 38, "mobility": 36}, "world_feel": "отдых", "attention_bias": {"focused_on": ["вибрация"]}, "body_feel": ["ноги", "тепло"], "visible_world": ["остановка"], "heard_or_felt": []},
+  {"player": "p3_kasandra", "perceived_self": {"stress": 54, "mood": 52, "fatigue": 56, "health": 88, "pain": 4, "clarity": 46, "mobility": 48}, "world_feel": "рассвет", "attention_bias": {"focused_on": ["группа"]}, "body_feel": [], "visible_world": ["небо"], "heard_or_felt": []},
+  {"player": "p4_boris", "perceived_self": {"stress": 54, "mood": 54, "fatigue": 54, "health": 90, "pain": 2, "clarity": 58, "mobility": 52}, "world_feel": "утро", "attention_bias": {"focused_on": ["план"]}, "body_feel": [], "visible_world": ["небо", "дорога"], "heard_or_felt": []},
+  {"player": "p5_elza", "perceived_self": {"stress": 66, "mood": 48, "fatigue": 62, "health": 82, "pain": 6, "clarity": 38, "mobility": 46}, "world_feel": "тепло, утро", "attention_bias": {"focused_on": ["текстуры"]}, "body_feel": ["отдых"], "visible_world": ["лавка"], "heard_or_felt": []},
+  {"player": "p6_dmitriy", "perceived_self": {"stress": 52, "mood": 52, "fatigue": 48, "health": 91, "pain": 3, "clarity": 64, "mobility": 56}, "world_feel": "безопасность", "attention_bias": {"focused_on": ["группа"]}, "body_feel": [], "visible_world": ["небо", "группа"], "heard_or_felt": []}
+]}
+{"tick": 19, "event_type": "player_response", "responses": [
+  {"player": "p1_vavilova", "speech": [{"to": "group", "text": "Всё."}], "action": "встала", "reasoning_brief": "рассвет"},
+  {"player": "p2_novikov", "speech": [], "action": "открыл глаза", "reasoning_brief": "проснулся"},
+  {"player": "p3_kasandra", "speech": [], "action": "встала", "reasoning_brief": "следует за Олей"},
+  {"player": "p4_boris", "speech": [], "action": "встал", "reasoning_brief": "пора"},
+  {"player": "p5_elza", "speech": [], "action": "проснулась", "reasoning_brief": "открыла глаза"},
+  {"player": "p6_dmitriy", "speech": [], "action": "встал", "reasoning_brief": "собирается"}
+]}
+{"tick": 19, "event_type": "tick_completed", "note": "Рассвет. Группа просыпается."}
+{"tick": 20, "event_type": "dm_query", "queries": [
+  {"player": "p1_vavilova", "perceived_self": {"stress": 42, "mood": 64, "fatigue": 56, "health": 94, "pain": 5, "clarity": 56, "mobility": 62}, "world_feel": "утро, можно идти", "attention_bias": {"focused_on": ["выходы"]}, "body_feel": ["усталость"], "visible_world": ["остановка", "дорога", "машины"], "heard_or_felt": []},
+  {"player": "p2_novikov", "perceived_self": {"stress": 54, "mood": 50, "fatigue": 60, "health": 85, "pain": 12, "clarity": 40, "mobility": 38}, "world_feel": "можно идти", "attention_bias": {"focused_on": ["вибрация"]}, "body_feel": ["ноги", "отдых"], "visible_world": ["дорога"], "heard_or_felt": []},
+  {"player": "p3_kasandra", "perceived_self": {"stress": 50, "mood": 56, "fatigue": 54, "health": 88, "pain": 3, "clarity": 48, "mobility": 48}, "world_feel": "утро", "attention_bias": {"focused_on": ["Оля"]}, "body_feel": ["отдых"], "visible_world": ["дорога"], "heard_or_felt": []},
+  {"player": "p4_boris", "perceived_self": {"stress": 52, "mood": 56, "fatigue": 52, "health": 90, "pain": 2, "clarity": 60, "mobility": 52}, "world_feel": "надо решать", "attention_bias": {"focused_on": ["варианты"]}, "body_feel": [], "visible_world": ["дорога", "автобус"], "heard_or_felt": []},
+  {"player": "p5_elza", "perceived_self": {"stress": 62, "mood": 52, "fatigue": 58, "health": 82, "pain": 5, "clarity": 40, "mobility": 48}, "world_feel": "утро, тепло", "attention_bias": {"focused_on": ["текстуры"]}, "body_feel": ["отдых"], "visible_world": ["остановка"], "heard_or_felt": []},
+  {"player": "p6_dmitriy", "perceived_self": {"stress": 50, "mood": 54, "fatigue": 46, "health": 91, "pain": 2, "clarity": 66, "mobility": 56}, "world_feel": "можно двигаться", "attention_bias": {"focused_on": ["автобус"]}, "body_feel": [], "visible_world": ["остановка", "автобус"], "heard_or_felt": []}
+]}
+{"tick": 20, "event_type": "player_response", "responses": [
+  {"player": "p1_vavilova", "speech": [{"to": "group", "text": "Ночлег закончился. Дальше сами."}], "action": "отошла от группы", "reasoning_brief": "своим путём"},
+  {"player": "p2_novikov", "speech": [], "action": "ковыляет к дороге", "reasoning_brief": "свой путь"},
+  {"player": "p3_kasandra", "speech": [{"to": "p1_vavilova", "text": "Куда ты?"}], "action": "пошла за Олей", "reasoning_brief": "не хочет одна"},
+  {"player": "p4_boris", "speech": [], "action": "пошёл к трассе", "reasoning_brief": "свой путь"},
+  {"player": "p5_elza", "speech": [], "action": "села на автобус", "reasoning_brief": "домой"},
+  {"player": "p6_dmitriy", "speech": [{"to": "p4_boris", "text": "До встречи."}], "action": "пошёл за Борисом", "reasoning_brief": "следует"}
+]}
+{"tick": 20, "event_type": "tick_completed", "note": "Группа распалась. Каждый своим путём. Ночь пережита."}

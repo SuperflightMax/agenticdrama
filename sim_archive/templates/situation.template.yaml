@@ -1,0 +1,17 @@
+situation:
+  id: your_situation_id
+  title: "Название ситуации"
+
+  type: "decision | tension | mismatch | boundary | resource"
+
+  visible_prompt: "что снаружи происходит"
+
+  hidden_tension:
+    - "что реально делает ситуацию напряжённой"
+
+  likely_axes:
+    - "логика vs эмоции"
+    - "контроль vs свобода"
+
+  notes:
+    - "свободные замечания"

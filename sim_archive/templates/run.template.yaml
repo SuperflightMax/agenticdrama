@@ -1,0 +1,26 @@
+run:
+  id: your_run_id
+
+  scene_id: your_scene_id
+  situation_id: your_situation_id
+
+  cast:
+    - character_a
+    - character_b
+    - character_c
+
+  states:
+    character_a:
+      fatigue: 0
+      tension: 0
+      openness: 0
+      expectation: ""
+
+    character_b:
+      fatigue: 0
+      tension: 0
+      openness: 0
+      expectation: ""
+
+  notes:
+    - "без прямых указаний по поведению"

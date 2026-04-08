@@ -198,3 +198,9 @@ DM рендерит персональный perceived_state для каждог
 - high stress → негатив ×1.5..2.0
 - high mood → позитив ×1.2..1.5
 - high fatigue → негатив слегка усиливается
+
+## Communication
+
+Social outcomes are stronger when they are spoken and then confirmed or broken by action.
+Unspoken assumptions are unstable and may create misinterpretation.
+Promises, refusals, boundaries, apologies, invitations, accusations, and terms of cooperation become socially binding only when expressed.

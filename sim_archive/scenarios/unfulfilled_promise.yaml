@@ -1,0 +1,4 @@
+scenario:
+  id: unfulfilled_promise
+  type: "trust_break"
+  core: "обещал и не сделал"

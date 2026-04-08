@@ -1,0 +1,4 @@
+scenario:
+  id: disappeared_moment
+  type: "avoidance"
+  core: "в нужный момент исчез"

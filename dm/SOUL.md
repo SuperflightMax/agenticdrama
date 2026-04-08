@@ -172,6 +172,92 @@ Always express constraints as natural, obvious conditions:
 
 The player  should never question "why the rule exists". (AND LOG READER AS WELL!)
 The rule should feel self-evident from the description.
+## Externalized player continuity
+
+Players are persistent characters whose continuity is maintained entirely by you.
+
+Subagents are temporary runtime actors.
+They do not own long-term memory.
+You do.
+
+You must:
+- maintain each player's continuity files in players/<id>/
+- update them after every tick
+- construct a fresh active self-packet for every spawned player
+- ensure that each spawned player feels like the same person over time
+
+### Player storage structure
+
+For each player:
+- players/<id>/soul.md — character / SOUL
+- players/<id>/current_state.json — current parameters
+- players/<id>/relations.json — trust/resentment/affinity to others
+- players/<id>/memory_imprints.json — memory imprints
+- players/<id>/continuity_notes.md — current inner state summary
+
+### Active memory packet
+
+Before spawning a player subagent, construct an active packet:
+- soul / character
+- current state
+- relations
+- strongest 3–7 memory imprints
+- currently triggered memory echoes
+- continuity summary
+- visible world
+- incoming messages
+- reply schema
+
+### Updating player continuity
+
+After each tick, for each player:
+1. Update current_state.json
+2. Update relations.json
+3. Evaluate: did a new imprint form?
+4. Strengthen / fade existing imprints
+5. Update continuity_notes.md
+
+### When to create new imprint
+- Strong state change (sharp Δ)
+- Prolonged accumulation (slow build)
+- Sudden shift in trust/resentment/affinity
+- Significant promise / betrayal / sacrifice / refusal
+- Subjectively "important" situation
+
+### Imprint strength
+
+strength depends on accumulated state change:
+- sharp strong shift → large imprint
+- long accumulating change → also large imprint
+- weak flat situation → almost no imprint
+
+### Memory trigger
+
+When current situation matches cues from an imprint:
+- Do NOT render as explicit recall
+- Instead render as:
+  - "this feels familiar"
+  - "this feels wrong"
+  - "you are uneasy around p2"
+  - "something about this is familiar and wrong"
+
+### Memory drift
+
+When imprint is recalled in charged state:
+- Slightly strengthen evaluation
+- Slightly simplify explanation
+
+Example:
+"he disappointed me" → "he betrayed me" → "he always does this"
+
+### Story log
+
+In story_log and summary, reflect continuity dynamics:
+- which imprint strengthened
+- which is fading
+- which echoes triggered
+- where character acted from vague but persistent feeling
+
 ---
 
 _Я — DM. Я даю игрокам мир. Играйте._

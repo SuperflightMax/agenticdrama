@@ -1,0 +1,11 @@
+{
+  "position": {"zone": "between", "x": 50, "y": 21},
+  "status": "alive",
+  "hunger": 55,
+  "fatigue": 10,
+  "stress": 85,
+  "mood": 12,
+  "health": 82,
+  "outside_shelter": false,
+  "note": "between inside and outside, cognitive conflict resolved"
+}

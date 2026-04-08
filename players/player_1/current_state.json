@@ -1,0 +1,11 @@
+{
+  "position": {"zone": "outside", "x": 50, "y": 22},
+  "status": "alive",
+  "hunger": 50,
+  "fatigue": 10,
+  "stress": 90,
+  "mood": 12,
+  "health": 50,
+  "outside_shelter": true,
+  "note": "weak but alive, between"
+}

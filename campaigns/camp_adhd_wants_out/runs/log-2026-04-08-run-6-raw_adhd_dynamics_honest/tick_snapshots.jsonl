@@ -1,0 +1,8 @@
+{"tick":1,"players":{"you_adhd":{"stress":72,"mood":28},"oscillator":{"stress":78,"mood":24}},"events":["Макс: Насть","Настя: Чё"]}
+{"tick":2,"players":{"you_adhd":{"stress":76,"mood":25},"oscillator":{"stress":76,"mood":22}},"events":["Макс: Что с тобой?","Настя: Отъебись"]}
+{"tick":3,"players":{"you_adhd":{"stress":82,"mood":20},"oscillator":{"stress":74,"mood":20}},"events":["Макс: Ты охуела?","Настя: Ты давишь даже когда молчишь"]}
+{"tick":4,"players":{"you_adhd":{"stress":88,"mood":14},"oscillator":{"stress":72,"mood":18}},"events":["Макс: Тогда что мне делать?!","Настя: Я ухожу"]}
+{"tick":5,"players":{"you_adhd":{"stress":94,"mood":8},"oscillator":{"stress":70,"mood":16}},"events":["Макс: Куда?","Настя: Не твоё дело"]}
+{"tick":6,"players":{"you_adhd":{"stress":92,"mood":10},"oscillator":{"stress":66,"mood":14}},"events":["Макс: Пока ты здесь — это моё дело","Настя: Я тут временно. Давно временно"]}
+{"tick":7,"players":{"you_adhd":{"stress":96,"mood":6},"oscillator":{"stress":62,"mood":12}},"events":["Макс: Когда ты решила?","Настя молчит"]}
+{"tick":8,"players":{"you_adhd":{"stress":98,"mood":4},"oscillator":{"stress":60,"mood":10}},"events":["Макс: Ты всегда так думала","Настя: Да"]}

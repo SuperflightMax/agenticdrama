@@ -1,0 +1,16 @@
+{"tick":1,"player_id":"you_adhd","message":"Насть.","intent":"clarify","reasoning_brief":"Её имя. Просто имя. Но уже с этим ебаным напряжением. Не знаю зачем говорю но не могу молчать."}
+{"tick":1,"player_id":"oscillator","message":"Что.","intent":"wait","reasoning_brief":"Одно слово. Не вопрос а отмах. Как от мухи."}
+{"tick":2,"player_id":"you_adhd","message":"Что происходит? Ты опять закрываешься.","intent":"clarify","reasoning_brief":"Уже знаю что лучше не спрашивать. Но не могу. Эта хуйня убивает меня."}
+{"tick":2,"player_id":"oscillator","message":"Я не закрываюсь. Иди нахуй.","intent":"attack","reasoning_brief":"Бить первым. Проще чем объяснять. И он заслужил."}
+{"tick":3,"player_id":"you_adhd","message":"Сука, Насть. Ты ебанулась?","intent":"pressure","reasoning_brief":"Сука. Сука. Он не может так. Она не имеет права. Но он escalating."}
+{"tick":3,"player_id":"oscillator","message":"Не кричи на меня.","intent":"attack","reasoning_brief":"Он кричит. Теперь я могу сказать что он кричит. Это оправдает."}
+{"tick":4,"player_id":"you_adhd","message":"Сколько можно. Скажи что происходит. Ты не разговариваешь три дня. Я не могу так.","intent":"pressure","reasoning_brief":"Голос срывается. Уже not крик а almost плач. Но всё ещё требование."}
+{"tick":4,"player_id":"oscillator","message":"Я ухожу.","intent":"attack","reasoning_brief":"Сказала. Всё. Теперь можно."}
+{"tick":5,"player_id":"you_adhd","message":"Куда. Куда ты ебешься идти. Настя.","intent":"pressure","reasoning_brief":"Голос срывается. Уже almost униженно. Но всё ещё требование."}
+{"tick":5,"player_id":"oscillator","message":"Не твоё дело.","intent":"attack","reasoning_brief":"Он спрашивает куда. Но мне абсолютно похуй. Горизонт планирования заканчивается на выходе из подъезда."}
+{"tick":6,"player_id":"you_adhd","message":"Не моё дело? Сука. Ты живёшь здесь. Это моё дело. Пока ты здесь — это моё дело.","intent":"pressure","reasoning_brief":"Голос срывается но я не могу остановиться. Она не уйдёт вот так просто."}
+{"tick":6,"player_id":"oscillator","message":"Я не живу здесь. Я тут временно. Давно временно.","intent":"attack","reasoning_brief":"Вот оно. Сказала. Я не живу здесь. Я тут временно. Это было давно."}
+{"tick":7,"player_id":"you_adhd","message":"Когда. Когда ты решила. Что значит давно. Настя.","intent":"pressure","reasoning_brief":"Когда. КОГДА. Блядь. Кто решил. Когда она успела."}
+{"tick":7,"player_id":"oscillator","message":"","intent":"wait","reasoning_brief":"Он спрашивает когда. Но я не помню когда. Это было always."}
+{"tick":8,"player_id":"you_adhd","message":"Так вот оно что. Ты всегда так думала. Ты не помнишь когда потому что это было always.","intent":"clarify","reasoning_brief":"Всё. Понял. Это было always. Она всегда хотела уйти."}
+{"tick":8,"player_id":"oscillator","message":"","intent":"wait","reasoning_brief":"Он понял. Он понял и мне now всё равно."}

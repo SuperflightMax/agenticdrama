@@ -52,6 +52,11 @@
     "curiosity": 0.8,
     "impulsivity": 0.6
   },
+  "world_feel": "tense / heavy / hostile",
+  "attention_bias": {
+    "focused_on": ["дым", "напряжение", "чужак"],
+    "ignored": ["ягоды", "погода"]
+  },
   "visible_world": [
     "рядом куст с ягодами",
     "идёт дождь",

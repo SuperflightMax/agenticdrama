@@ -1,0 +1,12 @@
+{
+  "position": {"zone": "bedroom"},
+  "status": "alive",
+  "stress": 85,
+  "anxiety": 80,
+  "mood": 25,
+  "fatigue": 40,
+  "readiness_to_talk": 15,
+  "urge_to_escape": 75,
+  "irritability": 45,
+  "impulse_to_provoke": 70
+}

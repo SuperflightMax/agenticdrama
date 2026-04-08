@@ -1,0 +1,13 @@
+{
+  "you_adhd": {
+    "trust": 25,
+    "resentment": 45,
+    "affinity": 30,
+    "fear": "high"
+  },
+  "impostor": {
+    "trust": 50,
+    "resentment": 0,
+    "affinity": 40
+  }
+}

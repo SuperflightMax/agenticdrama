@@ -1,0 +1,11 @@
+{
+  "position": {"zone": "valera_apartment"},
+  "status": "alive",
+  "stress": 45,
+  "tension": 50,
+  "mood": 45,
+  "fatigue": 35,
+  "smoothing_drive": 70,
+  "false_confidence": 60,
+  "belief": "ignoring_is_better"
+}

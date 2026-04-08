@@ -1,0 +1,24 @@
+{
+  "imprints": [
+    {
+      "id": "imprint_1",
+      "cues": ["она уходит", "не объясняет", "напряжение", "тишина перед уходом"],
+      "state_signature": "stress: +30, fear_of_loss: +40",
+      "evaluation": "она уйдёт и я не смогу её найти",
+      "fragments": ["последний раз она ушла и я искал её по городу", "теперь снова это ощущение"],
+      "strength": 75,
+      "valence": "negative",
+      "clarity": "vivid"
+    },
+    {
+      "id": "imprint_2",
+      "cues": ["неопределённость", "она молчит", "я не понимаю что происходит"],
+      "state_signature": "need_for_clarity: +35, stress: +20",
+      "evaluation": "если не разобраться — станет хуже",
+      "fragments": ["неопределённость хуже плохого ответа", "мне нужно знать"],
+      "strength": 65,
+      "valence": "negative",
+      "clarity": "clear"
+    }
+  ]
+}

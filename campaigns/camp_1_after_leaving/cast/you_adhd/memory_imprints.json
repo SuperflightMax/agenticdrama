@@ -1,0 +1,34 @@
+{
+  "imprints": [
+    {
+      "id": "imprint_leaving",
+      "cues": ["она ушла", "не объяснила", "я не знаю где она"],
+      "state_signature": "panic: +40, fear_of_loss: +30",
+      "evaluation": "если я не доберусь до неё — я её потеряю",
+      "fragments": ["опять ушла", "ищет по городу в прошлый раз", "телефон не отвечает"],
+      "strength": 95,
+      "valence": "negative",
+      "clarity": "vivid"
+    },
+    {
+      "id": "imprint_calls_not_answered",
+      "cues": ["звоню", "не отвечает", "игнорирует"],
+      "state_signature": "stress: +35, urgency: +30",
+      "evaluation": "она специально не отвечает",
+      "fragments": ["могла бы хоть сообщить", "или Валера не даёт"],
+      "strength": 85,
+      "valence": "negative",
+      "clarity": "vivid"
+    },
+    {
+      "id": "imprint_futility",
+      "cues": ["всё бесполезно", "никакой реакции"],
+      "state_signature": "hopelessness: +25, desperation: +20",
+      "evaluation": "что бы я ни делал — бесполезно",
+      "fragments": ["сколько можно звонить", "может вообще не стоит"],
+      "strength": 60,
+      "valence": "negative",
+      "clarity": "clear"
+    }
+  ]
+}

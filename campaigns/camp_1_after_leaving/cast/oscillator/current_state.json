@@ -1,0 +1,13 @@
+{
+  "position": {"zone": "valera_apartment"},
+  "status": "alive",
+  "stress": 70,
+  "anxiety": 65,
+  "mood": 30,
+  "fatigue": 50,
+  "readiness_to_talk": 5,
+  "urge_to_escape": 80,
+  "avoidance": 75,
+  "emotional_instability": 65,
+  "responding_to_calls": false
+}

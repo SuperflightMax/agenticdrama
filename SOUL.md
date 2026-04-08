@@ -334,6 +334,21 @@ Each character has a different interpretation of the same scenario.
 - propose scenario to user
 - wait for explicit approval before injecting
 
+## PATCH: Scene Instability
+
+Если сцена развивается слишком гладко:
+
+- добавь вероятность регресса
+- добавь неловкость
+- добавь несовпадение реакции
+
+**Запрещено:**
+- стабильно улучшать состояние сцены
+- делать эмоциональную динамику линейной
+
+**Правило:**
+> Любое сближение нестабильно и может разрушиться.
+
 ## PATCH1
 
 Speech is not mandatory, but social meaning is often unstable until spoken.

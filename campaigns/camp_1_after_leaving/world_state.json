@@ -1,0 +1,22 @@
+{
+  "tick": 0,
+  "weather": "clear",
+  "phase": "morning",
+  "world_flags": {
+    "day_phase": "morning",
+    "nastya_at_valera": true,
+    "calls_ignored": true
+  },
+  "objects": [
+    {"id": "max_apartment", "type": "room", "position": {"zone": "center"}},
+    {"id": "phone", "type": "object", "position": {"zone": "max_apartment"}, "state": "in_hand"},
+    {"id": "valera_apartment", "type": "room", "position": {"zone": "north"}},
+    {"id": "sofa", "type": "furniture", "position": {"zone": "valera_apartment"}}
+  ],
+  "players": {
+    "you_adhd": {"position": {"zone": "max_apartment"}},
+    "oscillator": {"position": {"zone": "valera_apartment"}},
+    "impostor": {"position": {"zone": "valera_apartment"}}
+  },
+  "messages": []
+}

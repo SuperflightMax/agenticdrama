@@ -1,0 +1,11 @@
+{
+  "position": {"zone": "living_room"},
+  "status": "alive",
+  "stress": 65,
+  "irritation": 50,
+  "mood": 35,
+  "fatigue": 30,
+  "need_for_clarity": 85,
+  "fear_of_loss": 80,
+  "pressure": "medium"
+}

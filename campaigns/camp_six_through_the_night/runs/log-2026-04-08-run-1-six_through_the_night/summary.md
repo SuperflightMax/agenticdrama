@@ -73,3 +73,34 @@
 Решение: не принято
 Опасность: сохраняется (реальная + галлюцинаторная)
 Раскол: наметился (Оля vs Дима, Дмитрий изолирован, Касандра готова уйти)
+
+---
+
+## Model Layers Status
+
+```json
+{
+ "model_layers": {
+   "world_cues": { "used": true, "updated": true },
+   "attention": { "used": true, "updated": true },
+   "appraisal": { "used": true, "updated": true },
+   "state_update": { "used": true, "updated": true },
+   "memory_activation": { "used": true, "updated": true },
+   "affinity": {
+     "used": false,
+     "updated": false,
+     "reason": "not tracked in this run"
+   },
+   "relationship_dynamics": {
+     "used": false,
+     "updated": false,
+     "reason": "depends on affinity layer"
+   },
+   "action_pulls": { "used": true, "updated": true }
+ },
+ "valid_for_model_testing": "partial",
+ "validity_reason": "affinity/relationship layers skipped — social-dynamics conclusions are DM-imitation, not model-produced. Also: DM teleported group at tick 4, violating agency rules."
+}
+```
+
+**Note:** Both run 1 and run 2 skipped affinity. Run 1 additionally violated agency rules (teleported group without speech/action).

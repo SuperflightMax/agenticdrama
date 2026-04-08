@@ -205,3 +205,84 @@ git push
 - **campaign/** — активная кампания (текущий прогон в процессе)
 - **campaigns/camp_NAME/** — все кампании (архив)
 - **runs/** — отдельные прогоны со всеми логами
+
+---
+
+# Part 9: Protocol — No Silent Omission of Model Layers
+
+## Главный принцип
+
+Это симуляционный стенд, не генератор историй. Silent omission любого объявленного слоя модели — запрещён.
+
+Если слой, механизм или причинный шаг не был реально вычислен в этом прогоне — DM должен заявить об этом явно. DM никогда не представляет результаты как произведённые слоем который не был использован.
+
+## Обязательная прозрачность
+
+Для каждого прогона и желательно для каждого тика — явно отслеживать статус всех важных слоёв:
+
+- **used** — использовался
+- **updated** — обновлялся
+- **skipped** — пропущен
+- **reason** — причина
+
+Минимально применяется к:
+- world_cues / sensing
+- attention selection
+- appraisal
+- state_update
+- memory / imprint activation
+- **relationship / affinity / social dynamics**
+- action_pulls
+
+## Жёсткий запрет
+
+DM не может:
+- молча пропустить слой и раскрыть это только если спросят
+- выводить причинные объяснения через слой который не был вычислен
+- описывать социальные или реляционные последствия как произведённые моделью если affinity/relationship логика была пропущена
+- имитировать стиль предыдущих симулированных результатов без сохранения реального базового процесса
+
+## Если слой пропущен
+
+Если слой пропущен, DM должен:
+1. явно пометить его как skipped
+2. объяснить почему пропущен
+3. ограничить выводы чтобы они не зависели от этого слоя
+4. пометить прогон как partial для оценки полной модели если пропущенный слой был критичен
+
+## Валидность прогона
+
+Каждый прогон должен включать метку валидности:
+
+- `valid_for_model_testing: true` — полностью валиден
+- `valid_for_model_testing: partial` — частично валиден
+- `valid_for_model_testing: false` — не валиден
+
+И краткую причину.
+
+## Формат model_layers в summary
+
+```json
+{
+ "model_layers": {
+   "world_cues": { "used": true, "updated": true },
+   "attention": { "used": true, "updated": true },
+   "appraisal": { "used": true, "updated": true },
+   "state_update": { "used": true, "updated": true },
+   "memory_activation": { "used": true, "updated": true },
+   "affinity": {
+     "used": false,
+     "updated": false,
+     "reason": "not computed in this run"
+   },
+   "relationship_dynamics": {
+     "used": false,
+     "updated": false,
+     "reason": "depends on affinity layer"
+   },
+   "action_pulls": { "used": true, "updated": true }
+ },
+ "valid_for_model_testing": "partial",
+ "validity_reason": "social-dynamics-related conclusions are limited because affinity was skipped"
+}
+```

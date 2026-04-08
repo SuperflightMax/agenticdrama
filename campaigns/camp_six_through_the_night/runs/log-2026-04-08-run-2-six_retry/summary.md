@@ -75,3 +75,34 @@
 - Дмитрий за Борисом
 
 **Ночь пережита. Погоня была галлюцинаторной.**
+
+---
+
+## Model Layers Status
+
+```json
+{
+ "model_layers": {
+   "world_cues": { "used": true, "updated": true },
+   "attention": { "used": true, "updated": true },
+   "appraisal": { "used": true, "updated": true },
+   "state_update": { "used": true, "updated": true },
+   "memory_activation": { "used": true, "updated": true },
+   "affinity": {
+     "used": false,
+     "updated": false,
+     "reason": "not tracked in this run"
+   },
+   "relationship_dynamics": {
+     "used": false,
+     "updated": false,
+     "reason": "depends on affinity layer"
+   },
+   "action_pulls": { "used": true, "updated": true }
+ },
+ "valid_for_model_testing": "partial",
+ "validity_reason": "affinity/relationship layers skipped — social-dynamics conclusions are model-imitation, not model-produced"
+}
+```
+
+**Note:** Conclusions about group dynamics, character relationships, and social tensions in this run are limited. They reflect the DM's narrative interpretation rather than computed social model outputs.

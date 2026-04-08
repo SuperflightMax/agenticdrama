@@ -1,0 +1,27 @@
+{
+  "id": "p3_kasandra",
+  "position": {"zone": "start"},
+  "status": "alive",
+  "stress": 68,
+  "mood": 31,
+  "fatigue": 58,
+  "health": 90,
+  "pain": 5,
+  "clarity": 44,
+  "mobility": 55,
+  "attention": {
+    "focused_on": ["голоса", "интонации", "шелест"],
+    "ignored": ["мелкие детали", "лица в темноте"],
+    "dominant_channel": "audio"
+  },
+  "trust": {
+    "p1_vavilova": 28,
+    "p2_novikov": 10,
+    "p4_boris": 32,
+    "p5_elza": 25,
+    "p6_dmitriy": 35
+  },
+  "resentment": {},
+  "affinity": {},
+  "inventory": []
+}

@@ -1,0 +1,27 @@
+{
+  "id": "p5_elza",
+  "position": {"zone": "start"},
+  "status": "alive",
+  "stress": 74,
+  "mood": 27,
+  "fatigue": 63,
+  "health": 85,
+  "pain": 10,
+  "clarity": 35,
+  "mobility": 58,
+  "attention": {
+    "focused_on": ["текстуры", "вибрация", "движение"],
+    "ignored": ["лица", "знаки", "карты"],
+    "dominant_channel": "kinesthetic-visual"
+  },
+  "trust": {
+    "p1_vavilova": 18,
+    "p2_novikov": 22,
+    "p3_kasandra": 15,
+    "p4_boris": 24,
+    "p6_dmitriy": 28
+  },
+  "resentment": {},
+  "affinity": {},
+  "inventory": []
+}

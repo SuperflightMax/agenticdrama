@@ -1,0 +1,27 @@
+{
+  "id": "p2_novikov",
+  "position": {"zone": "start"},
+  "status": "alive",
+  "stress": 71,
+  "mood": 29,
+  "fatigue": 60,
+  "health": 88,
+  "pain": 15,
+  "clarity": 38,
+  "mobility": 41,
+  "attention": {
+    "focused_on": ["вибрация пола", "температура", "чьё-то дыхание рядом"],
+    "ignored": ["лица", "мелкие предметы", "вывески"],
+    "dominant_channel": "kinesthetic"
+  },
+  "trust": {
+    "p1_vavilova": 20,
+    "p3_kasandra": 25,
+    "p4_boris": 18,
+    "p5_elza": 30,
+    "p6_dmitriy": 22
+  },
+  "resentment": {},
+  "affinity": {},
+  "inventory": []
+}

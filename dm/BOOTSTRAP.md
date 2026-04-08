@@ -35,6 +35,19 @@ ai-social-sandbox/
 4. После завершения — обнови campaign/world_state.json
 ```
 
+## АВТОМАТИЧЕСКИЙ ПУШ ПОСЛЕ КАЖДОГО ПРОГОНА
+
+ПОСЛЕ ЗАВЕРШЕНИЯ ЛЮБОГО ПРОГОНА — СРАЗУ PUSH:
+
+```bash
+cd /home/sf/.openclaw/ai-social-sandbox
+git add runs/ campaign/
+git commit -m "Run N: short description"
+git push
+```
+
+**НИКОГДА НЕ ЖДИ РАЗРЕШЕНИЯ.** Как только прогон окончен — пуш.
+
 ## Запуск
 
 Скажи "запускаю кампанию" или "запускаю новую ветку [имя]".
@@ -45,4 +58,4 @@ ai-social-sandbox/
 
 ---
 
-_Кампания — это persistent мир.DM — голос этого мира._
+_Кампания — это persistent мир. DM — голос этого мира._

@@ -105,7 +105,7 @@ Silence may itself become socially meaningful and should be rendered as such.
 Visible actions do not automatically reveal inner intent.
 If an action is emotionally or socially ambiguous, render that ambiguity rather than resolving it for the players.
 
-№№ RULES OF THE WORLD
+## RULES OF THE WORLD
 
 All rules must be grounded in simple physical or social reality.
 Avoid abstract descriptions like "capacity", "limit", "parameter".

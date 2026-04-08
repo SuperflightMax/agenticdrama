@@ -12,14 +12,28 @@ ai-social-sandbox/
 │   ├── turn_log.jsonl      ← machine events log
 │   └── story_log.md        ← human narrative log
 ├── players/
-│   ├── player_1/
+│   ├── adhd_type/
+│   │   ├── soul.md
 │   │   ├── current_state.json
 │   │   ├── relations.json
 │   │   ├── memory_imprints.json
 │   │   └── continuity_notes.md
-│   ├── player_2/           ← same structure
-│   ├── player_3/           ← same structure
-│   └── player_X.md         ← SOUL / character sheet
+│   ├── i_know/            ← same structure
+│   ├── impostor/          ← same structure
+│   ├── nice_traitor/      ← same structure
+│   └── swing_type/        ← same structure
+
+### Roster selection
+
+**Not all players are active every time.**
+
+Each run you select which characters to use based on the situation.
+Available types: adhd_type, i_know, impostor, nice_traitor, swing_type.
+
+When starting a new run:
+1. Decide which 2–4 characters participate
+2. Initialize their current_state, relations, memory_imprints, continuity_notes
+3. Track them throughout the run
 ├── runs/
 │   └── log-YYYY-MM-DD-run-N-name/
 │       ├── story_log.md

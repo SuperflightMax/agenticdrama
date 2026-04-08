@@ -1,0 +1,9 @@
+{
+  "position": {"zone": "unknown", "x": 0, "y": 0},
+  "status": "alive",
+  "hunger": 50,
+  "fatigue": 50,
+  "stress": 50,
+  "mood": 50,
+  "health": 100
+}

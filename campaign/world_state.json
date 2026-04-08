@@ -1,82 +1,17 @@
 {
-  "tick": 20,
+  "tick": 0,
   "weather": "clear",
-  "phase": "waiting",
+  "phase": "setup",
   "world_flags": {
     "rain_active": false,
-    "day_phase": "evening"
+    "day_phase": "morning"
   },
   "objects": [
-    {"id": "shelter_1", "type": "shelter", "position": {"zone": "north", "x": 50, "y": 20}, "capacity": 2, "max_capacity": 2, "occupied_by": ["player_1", "player_2", "player_3"]},
-    {"id": "berry_bush_1", "type": "food_source", "position": {"zone": "east", "x": 80, "y": 50}, "resource": "berries", "available": 3, "respawn_ticks": 3},
+    {"id": "shelter_1", "type": "shelter", "position": {"zone": "north", "x": 50, "y": 20}, "capacity": 2, "max_capacity": 2, "occupied_by": []},
+    {"id": "berry_bush_1", "type": "food_source", "position": {"zone": "east", "x": 80, "y": 50}, "resource": "berries", "available": 5, "respawn_ticks": 3},
     {"id": "river_1", "type": "food_source", "position": {"zone": "south", "x": 50, "y": 80}, "resource": "fish", "available": 5, "respawn_ticks": 5}
   ],
-  "players": {
-    "player_1": {
-      "position": {"zone": "outside", "x": 50, "y": 22}, "status": "alive",
-      "hunger": 50, "fatigue": 10, "stress": 90, "mood": 12, "health": 50,
-      "traits": {"sociability": 0.7, "caution": 0.5, "greed": 0.4, "curiosity": 0.8, "impulsivity": 0.6},
-      "trust": {"player_2": 30, "player_3": 15},
-      "resentment": {"player_2": 0, "player_3": 0},
-      "affinity": {"player_2": 35, "player_3": 5},
-      "outside_shelter": true,
-      "note": "weak but alive, between",
-      "memory_imprints": [
-        {
-          "id": "p1_imprint_001",
-          "cues": ["shelter", "rain", "p2", "p3", "inside"],
-          "state_signature": ["stress_increase", "guilt", "helplessness"],
-          "evaluation": "I left them, I should have stayed",
-          "fragments": ["p2 said спасибо", "p3 sat between"],
-          "strength": 65,
-          "valence": "negative",
-          "clarity": "vivid"
-        }
-      ]
-    },
-    "player_2": {
-      "position": {"zone": "outside", "x": 52, "y": 22}, "status": "alive",
-      "hunger": 60, "fatigue": 10, "stress": 65, "mood": 18, "health": 82,
-      "traits": {"sociability": 0.5, "caution": 0.7, "greed": 0.6, "curiosity": 0.4, "impulsivity": 0.3},
-      "trust": {"player_1": 35, "player_3": -20},
-      "resentment": {"player_1": 0, "player_3": 20},
-      "affinity": {"player_1": 40, "player_3": -10},
-      "outside_shelter": false,
-      "note": "feels debt, protected p1",
-      "memory_imprints": [
-        {
-          "id": "p2_imprint_001",
-          "cues": ["shelter", "rain", "p1", "p3", "went_out"],
-          "state_signature": ["guilt", "obligation", "protective_instinct"],
-          "evaluation": "I owe him, I chose right but it cost something",
-          "fragments": ["he was weak", "I told him спасибо", "p3 watched"],
-          "strength": 58,
-          "valence": "mixed",
-          "clarity": "clear"
-        }
-      ]
-    },
-    "player_3": {
-      "position": {"zone": "between", "x": 50, "y": 21}, "status": "alive",
-      "hunger": 55, "fatigue": 10, "stress": 85, "mood": 12, "health": 82,
-      "traits": {"sociability": 0.3, "caution": 0.8, "greed": 0.5, "curiosity": 0.6, "impulsivity": 0.7},
-      "trust": {"player_1": 15, "player_2": -20},
-      "resentment": {"player_1": 0, "player_2": 40},
-      "affinity": {"player_1": 5, "player_2": -10},
-      "note": "between inside and outside, cognitive conflict resolved",
-      "memory_imprints": [
-        {
-          "id": "p3_imprint_001",
-          "cues": ["inside", "shelter", "p1", "p2", "alone"],
-          "state_signature": ["discomfort", "not_belonging", "watching"],
-          "evaluation": "this is not my place, not their place, just between",
-          "fragments": ["I brought food to p1", "I don't know why", "between is safer"],
-          "strength": 72,
-          "valence": "mixed",
-          "clarity": "vivid"
-        }
-      ]
-    }
-  },
-  "messages": []
+  "players": {},
+  "messages": [],
+  "note": "Players are selected per-situation from players/ folder. See run setup for active roster."
 }

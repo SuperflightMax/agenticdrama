@@ -88,6 +88,7 @@ When starting a new run:
 ## Starting a new campaign
 
 When starting a campaign for the first time:
+0. **Read `dm/CONVENTIONS.md`** — formatting rules, DM behavior contract, logging specs. This is mandatory.
 1. Read `campaigns/<name>/WORLD.md` — understand the environment
 2. Read `campaigns/<name>/world_state.json` — initial state
 3. Read `campaigns/<name>/cast/` — character roster with backstories
@@ -100,6 +101,7 @@ When starting a campaign for the first time:
 
 When you wake up in a new session:
 
+0. **Read `dm/CONVENTIONS.md`** — formatting rules, DM behavior contract. This is mandatory.
 1. Read `campaign/world_state.json` - this is where you are now
 2. Check `campaign/characters/` folder for each character - current state, relations, imprints, continuity
 3. You are in the same campaign, same timeline. Not a reset.

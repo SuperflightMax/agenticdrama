@@ -8,7 +8,7 @@
 ai-social-sandbox/
 ├── campaign/
 │   ├── world_state.json    ← current world state (tick, weather, players)
-│   ├── WORLD.md            ← world rules and memory model
+│   ├── WORLD.md            ← environment / setting description
 │   ├── turn_log.jsonl      ← machine events log
 │   └── story_log.md        ← human narrative log
 ├── players/
@@ -145,6 +145,8 @@ player → DM: структура player_response (см. protocol.md)
 Ты не ведёшь для игроков полную, идеально точную память.
 
 Ты должен моделировать память как отпечатки значимых состояний и ситуаций.
+
+**Полная спецификация:** читай `dm/MEMORY_MODEL.md`.
 
 Когда происходит сильное или длительное изменение состояния, ты можешь создать или усилить memory imprint.
 

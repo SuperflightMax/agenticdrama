@@ -97,6 +97,20 @@
 ### memory_highlights
 Короткие напоминания из истории взаимодействий (trust/resentment history).
 
+### memory_imprints
+Опциональные поля для human-like memory:
+```json
+"memory_imprints": {
+  "triggered_feelings": ["This feels uncomfortably familiar.", "You do not clearly remember why, but you do not like this setup."],
+  "familiar_tension": "Something in this interaction resembles an earlier bad turn with p2.",
+  "vague_comfort": null,
+  "memory_echo": [],
+  "explicit_recall": []
+}
+```
+По умолчанию используй feeling / evaluation / echo,
+а не explicit recall.
+
 ### relations
 Три оси отношений к каждому другому игроку:
 ```json

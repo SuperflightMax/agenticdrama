@@ -20,7 +20,19 @@
       "resentment": {"player_2": 0, "player_3": 0},
       "affinity": {"player_2": 35, "player_3": 5},
       "outside_shelter": true,
-      "note": "weak but alive, between"
+      "note": "weak but alive, between",
+      "memory_imprints": [
+        {
+          "id": "p1_imprint_001",
+          "cues": ["shelter", "rain", "p2", "p3", "inside"],
+          "state_signature": ["stress_increase", "guilt", "helplessness"],
+          "evaluation": "I left them, I should have stayed",
+          "fragments": ["p2 said спасибо", "p3 sat between"],
+          "strength": 65,
+          "valence": "negative",
+          "clarity": "vivid"
+        }
+      ]
     },
     "player_2": {
       "position": {"zone": "outside", "x": 52, "y": 22}, "status": "alive",
@@ -30,7 +42,19 @@
       "resentment": {"player_1": 0, "player_3": 20},
       "affinity": {"player_1": 40, "player_3": -10},
       "outside_shelter": false,
-      "note": "feels debt, protected p1"
+      "note": "feels debt, protected p1",
+      "memory_imprints": [
+        {
+          "id": "p2_imprint_001",
+          "cues": ["shelter", "rain", "p1", "p3", "went_out"],
+          "state_signature": ["guilt", "obligation", "protective_instinct"],
+          "evaluation": "I owe him, I chose right but it cost something",
+          "fragments": ["he was weak", "I told him спасибо", "p3 watched"],
+          "strength": 58,
+          "valence": "mixed",
+          "clarity": "clear"
+        }
+      ]
     },
     "player_3": {
       "position": {"zone": "between", "x": 50, "y": 21}, "status": "alive",
@@ -39,7 +63,19 @@
       "trust": {"player_1": 15, "player_2": -20},
       "resentment": {"player_1": 0, "player_2": 40},
       "affinity": {"player_1": 5, "player_2": -10},
-      "note": "between inside and outside, cognitive conflict resolved"
+      "note": "between inside and outside, cognitive conflict resolved",
+      "memory_imprints": [
+        {
+          "id": "p3_imprint_001",
+          "cues": ["inside", "shelter", "p1", "p2", "alone"],
+          "state_signature": ["discomfort", "not_belonging", "watching"],
+          "evaluation": "this is not my place, not their place, just between",
+          "fragments": ["I brought food to p1", "I don't know why", "between is safer"],
+          "strength": 72,
+          "valence": "mixed",
+          "clarity": "vivid"
+        }
+      ]
     }
   },
   "messages": []

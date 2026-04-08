@@ -30,14 +30,39 @@
     {"id": "dumpster_1", "type": "trash", "position": {"zone": "zone_3"}, "state": "closed metal dumpster"},
     {"id": "industrial_gate", "type": "gate", "position": {"zone": "zone_4"}, "state": "rusted, closed, gap at bottom"}
   ],
-  "players": {},
+  "players": {
+    "p1_vavilova": {
+      "position": {"zone": "start", "sub": "parking_old_dk"},
+      "status": "alive"
+    },
+    "p2_novikov": {
+      "position": {"zone": "start", "sub": "dvor_old_dk"},
+      "status": "alive"
+    },
+    "p3_kasandra": {
+      "position": {"zone": "start", "sub": "parking_old_dk"},
+      "status": "alive"
+    },
+    "p4_boris": {
+      "position": {"zone": "start", "sub": "dvor_old_dk"},
+      "status": "alive"
+    },
+    "p5_elza": {
+      "position": {"zone": "start", "sub": "dvor_old_dk"},
+      "status": "alive"
+    },
+    "p6_dmitriy": {
+      "position": {"zone": "start", "sub": "parking_old_dk"},
+      "status": "alive"
+    }
+  },
   "messages": [],
   "items_in_world": [
     {"id": "old_jacket_underpass", "type": "clothing", "position": {"zone": "zone_2"}, "state": "left on bench, torn, possibly useful for warmth"},
-    {"id": "rope_ball", "type": "sports", "position": {"zone": "zone_1"}, "state": " tangled rope, one end free"},
+    {"id": "rope_ball", "type": "sports", "position": {"zone": "zone_1"}, "state": "tangled rope, one end free"},
     {"id": "broken_mirror", "type": "debris", "position": {"zone": "zone_3"}, "state": "sharp edges, glass"},
     {"id": "wet_cardboard", "type": "trash", "position": {"zone": "zone_2"}, "state": "soggy"},
     {"id": "industrial_bucket", "type": "container", "position": {"zone": "zone_4"}, "state": "empty, metal, heavy"}
   ],
-  "note": "All objects and items exist in world from tick 0. DM does not introduce new ones."
+  "note": "All objects and items exist in world from tick 0. DM does not introduce new ones. All 6 players start in start zone."
 }

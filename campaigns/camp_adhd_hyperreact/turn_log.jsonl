@@ -1,1 +1,7 @@
-[]
+{"tick": 1, "max": {"intent": "clarify", "action": "approach_bedroom", "reasoning": "need to know what's happening"}, "nastya": {"intent": "avoid", "action": "silence", "reasoning": "can't talk yet"}, "valera": {"intent": "smooth", "action": "offer_tea", "reasoning": "reduce tension"}}
+{"tick": 2, "max": {"intent": "pressure", "action": "enter_bedroom", "reasoning": "need answer"}, "nastya": {"intent": "provoke", "action": "sharp_what", "reasoning": "defensive posture"}, "valera": {"intent": "smooth", "action": "offer_kitchen", "reasoning": "give space"}}
+{"tick": 3, "max": {"intent": "pressure", "action": "step_closer", "reasoning": "she finally speaks"}, "nastya": {"intent": "reveal", "action": "you_never_listen", "reasoning": "couldn't stop"}, "valera": {"intent": "observe", "action": "intervene", "reasoning": "tension rising"}}
+{"tick": 4, "max": {"intent": "clarify", "action": "ask_what_she_means", "reasoning": "don't understand"}, "nastya": {"intent": "escalate", "action": "raise_voice", "reasoning": "provoke_reaction"}, "valera": {"intent": "smooth", "action": "interrupt", "reasoning": "try_to_help"}}
+{"tick": 5, "max": {"intent": "retreat", "action": "step_back", "reasoning": "saw_her_pain"}, "nastya": {"intent": "escape", "action": "leave_building", "reasoning": "need_out_now"}}
+{"tick": 6, "max": {"intent": "urgency", "action": "call_her", "reasoning": "can't_let_her_go"}, "valera": {"intent": "advise", "action": "don't_call", "reasoning": "give_space"}}
+{"tick": 7, "nastya": {"intent": "avoid", "action": "ignore_calls", "reasoning": "can't_answer_yet"}, "location": "street"}}

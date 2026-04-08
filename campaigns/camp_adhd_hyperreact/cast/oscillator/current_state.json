@@ -1,12 +1,15 @@
 {
-  "position": {"zone": "bedroom"},
+  "position": {"zone": "outside_near_building"},
   "status": "alive",
-  "stress": 85,
-  "anxiety": 80,
-  "mood": 25,
-  "fatigue": 40,
-  "readiness_to_talk": 15,
-  "urge_to_escape": 75,
-  "irritability": 45,
-  "impulse_to_provoke": 70
+  "stress": 75,
+  "anxiety": 85,
+  "mood": 35,
+  "fatigue": 50,
+  "readiness_to_talk": 10,
+  "urge_to_escape": 90,
+  "irritability": 60,
+  "impulse_to_provoke": 50,
+  "calls_missed": 3,
+  "calls_read_but_not_answered": 3,
+  "location": "street_near_house"
 }

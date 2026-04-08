@@ -1,11 +1,14 @@
 {
   "position": {"zone": "living_room"},
   "status": "alive",
-  "stress": 65,
-  "irritation": 50,
-  "mood": 35,
-  "fatigue": 30,
-  "need_for_clarity": 85,
-  "fear_of_loss": 80,
-  "pressure": "medium"
+  "stress": 85,
+  "irritation": 70,
+  "mood": 20,
+  "fatigue": 50,
+  "need_for_clarity": 95,
+  "fear_of_loss": 95,
+  "pressure": "high",
+  "calls_made": 3,
+  "calls_answered": 0,
+  "last_action": "calling"
 }

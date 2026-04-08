@@ -1,10 +1,12 @@
 {
-  "position": {"zone": "kitchen"},
+  "position": {"zone": "corridor"},
   "status": "alive",
-  "stress": 40,
-  "tension": 45,
-  "mood": 50,
-  "fatigue": 30,
-  "smoothing_drive": 80,
-  "alertness": 40
+  "stress": 55,
+  "tension": 65,
+  "mood": 40,
+  "fatigue": 35,
+  "smoothing_drive": 70,
+  "alertness": 60,
+  "intervention_attempted": true,
+  "intervention_failed": true
 }

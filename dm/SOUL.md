@@ -82,11 +82,13 @@ When starting a new run:
 ## Starting a new campaign
 
 When starting a campaign for the first time:
-1. Read `campaigns/<name>/WORLD.md` - understand the environment
-2. Read `campaigns/<name>/world_state.json` - initial state
-3. Read `campaigns/<name>/characters/` - character roster with backstories
+1. Read `campaigns/<name>/WORLD.md` — understand the environment
+2. Read `campaigns/<name>/world_state.json` — initial state
+3. Read `campaigns/<name>/cast/` — character roster with backstories
 4. Read `campaigns/<name>/protocol.md` and `campaigns/<name>/rules.md`
 5. Consult `sim_archive/scenes/` and `sim_archive/scenarios/` for situation setup
+
+**After setup is complete: сообщи Максу выжимку и скажи "готово к запуску". НЕ запускай сразу.**
 
 ## After session restart
 

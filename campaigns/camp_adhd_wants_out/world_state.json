@@ -1,29 +1,28 @@
 {
   "tick": 0,
   "weather": "clear",
-  "phase": "morning",
+  "phase": "late_morning",
   "world_flags": {
-    "day_phase": "morning",
+    "day_phase": "late_morning",
+    "they_havent_talked_yet": true,
+    "tension_building": true,
+    "not_first_time": true,
+    "both_know_the_pattern": true,
+    "both_on_high_cortisol": true,
+    "valera_not_present": true,
     "nastya_in_room": true,
-    "nastya_not_left_room": true,
-    "nastya_three_times_to_door_and_back": true,
-    "max_noticed": true,
-    "valera_made_tea": true
+    "max_in_living_room": true
   },
   "objects": [
     {"id": "living_room", "type": "room", "position": {"zone": "center"}},
     {"id": "kitchen", "type": "room", "position": {"zone": "east"}},
     {"id": "bedroom_nastya", "type": "room", "position": {"zone": "west"}},
     {"id": "corridor", "type": "room", "position": {"zone": "south"}},
-    {"id": "front_door", "type": "exit", "position": {"zone": "corridor"}, "state": "closed"},
-    {"id": "sofa", "type": "furniture", "position": {"zone": "living_room"}},
-    {"id": "table", "type": "furniture", "position": {"zone": "kitchen"}},
-    {"id": "tea", "type": "object", "position": {"zone": "kitchen"}, "state": "made"}
+    {"id": "front_door", "type": "exit", "position": {"zone": "corridor"}, "state": "closed"}
   ],
   "players": {
-    "you_adhd": {"position": {"zone": "living_room"}, "status": "alive", "hunger": 65, "fatigue": 42, "stress": 38, "mood": 48, "health": 100},
-    "oscillator": {"position": {"zone": "bedroom_nastya"}, "status": "alive", "hunger": 62, "fatigue": 45, "stress": 55, "mood": 42, "health": 100},
-    "impostor": {"position": {"zone": "kitchen"}, "status": "alive", "hunger": 60, "fatigue": 40, "stress": 28, "mood": 58, "health": 100}
+    "you_adhd": {"position": {"zone": "living_room"}, "status": "alive", "hunger": 60, "fatigue": 50, "stress": 68, "mood": 32, "health": 100},
+    "oscillator": {"position": {"zone": "bedroom_nastya"}, "status": "alive", "hunger": 58, "fatigue": 48, "stress": 70, "mood": 30, "health": 100}
   },
   "messages": []
 }

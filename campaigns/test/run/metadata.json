@@ -1,0 +1,52 @@
+{
+  "campaign_id": "trust_pressure_test",
+  "run_id": "test_bootstrap",
+  "status": "ready_not_started",
+  "valid_for_model_testing": "not_run_yet",
+  "active_cast": [
+    "anya",
+    "nikita",
+    "rita"
+  ],
+  "source_campaign": "campaigns/test",
+  "model_layers": {
+    "world_cues": {
+      "used": false,
+      "updated": false
+    },
+    "attention": {
+      "used": false,
+      "updated": false
+    },
+    "appraisal": {
+      "used": false,
+      "updated": false
+    },
+    "state_update": {
+      "used": false,
+      "updated": false
+    },
+    "memory_activation": {
+      "used": false,
+      "updated": false
+    },
+    "relationship_dynamics": {
+      "used": false,
+      "updated": false
+    },
+    "action_pulls": {
+      "used": false,
+      "updated": false
+    }
+  },
+  "suggested_scenarios": [
+    "unmet_promise",
+    "uneven_burden",
+    "moved_shared_resource"
+  ],
+  "notes": [
+    "Campaign prepared for first run.",
+    "No runtime ticks have been executed yet."
+  ],
+  "unresolved_issues": []
+}

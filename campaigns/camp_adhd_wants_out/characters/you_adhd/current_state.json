@@ -1,9 +1,0 @@
-{
-  "position": {"zone": "valera_apartment", "x": 0, "y": 0},
-  "status": "alive",
-  "hunger": 52,
-  "fatigue": 38,
-  "stress": 28,
-  "mood": 54,
-  "health": 100
-}

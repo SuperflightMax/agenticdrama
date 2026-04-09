@@ -1,0 +1,45 @@
+{
+  "tick": 0,
+  "phase": "early_evening",
+  "world_flags": {
+    "weather": "cool_clear",
+    "night_coming": true
+  },
+  "objects": [
+    {
+      "id": "lean_to",
+      "zone": "shelter",
+      "state": "usable"
+    },
+    {
+      "id": "berry_bush",
+      "zone": "berries",
+      "state": "sparse"
+    }
+  ],
+  "resources": {
+    "berry_portions": 2,
+    "comfortable_shelter_slots": 1
+  },
+  "players": {
+    "oleg": {
+      "zone": "open"
+    },
+    "mira": {
+      "zone": "open"
+    }
+  },
+  "areas": {
+    "shelter": {
+      "label": "Lean-to shelter"
+    },
+    "berries": {
+      "label": "Berry bush"
+    },
+    "open": {
+      "label": "Open ground"
+    }
+  },
+  "messages": [],
+  "pending_deliveries": []
+}

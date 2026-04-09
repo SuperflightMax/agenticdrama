@@ -1,0 +1,45 @@
+{
+  "campaign_id": "test_minimal",
+  "run_id": "smoke_bootstrap",
+  "status": "ready_not_started",
+  "valid_for_model_testing": "not_run_yet",
+  "active_cast": [
+    "oleg",
+    "mira"
+  ],
+  "source_campaign": "campaigns/test_minimal",
+  "model_layers": {
+    "world_cues": {
+      "used": false,
+      "updated": false
+    },
+    "attention": {
+      "used": false,
+      "updated": false
+    },
+    "appraisal": {
+      "used": false,
+      "updated": false
+    },
+    "state_update": {
+      "used": false,
+      "updated": false
+    },
+    "memory_activation": {
+      "used": false,
+      "updated": false
+    },
+    "relationship_dynamics": {
+      "used": false,
+      "updated": false
+    },
+    "action_pulls": {
+      "used": false,
+      "updated": false
+    }
+  },
+  "notes": [
+    "Minimal smoke test campaign prepared."
+  ],
+  "unresolved_issues": []
+}

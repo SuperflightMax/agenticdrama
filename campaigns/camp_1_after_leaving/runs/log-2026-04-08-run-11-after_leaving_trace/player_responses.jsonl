@@ -1,9 +1,0 @@
-{"tick":1,"player_id":"you_adhd","response":{"tick":1,"player_id":"you_adhd","message":"Ты в порядке?","intent":"text","reasoning_brief":"Не выдерживает пустоты, но пытается начать с короткого и неагрессивного контакта."}}
-{"tick":1,"player_id":"oscillator","response":{"tick":1,"player_id":"oscillator","message":"","intent":"wait","reasoning_brief":"Пока тишина кажется безопаснее любого ответа."}}
-{"tick":1,"player_id":"impostor","response":{"tick":1,"player_id":"impostor","message":"Если хочешь, можно пока не отвечать сразу.","intent":"advise","reasoning_brief":"Хочет снизить напряжение и удержать хрупкое спокойствие."}}
-{"tick":2,"player_id":"you_adhd","response":{"tick":2,"player_id":"you_adhd","message":"","intent":"wait","reasoning_brief":"После отправленного сообщения замирает и ждёт, не решаясь сразу давить ещё сильнее."}}
-{"tick":2,"player_id":"oscillator","response":{"tick":2,"player_id":"oscillator","message":"Не знаю что ответить.","intent":"avoid","reasoning_brief":"Тянется к контакту, но в прямой ответ сейчас войти не может, говорит это только Валере."}}
-{"tick":2,"player_id":"impostor","response":{"tick":2,"player_id":"impostor","message":"Не надо сейчас ничего объяснять, если не можешь.","intent":"advise","reasoning_brief":"Подкладывает мягкое разрешение дальше избегать разговора."}}
-{"tick":3,"player_id":"you_adhd","response":{"tick":3,"player_id":"you_adhd","message":"Ответь хоть что-нибудь.","intent":"text","reasoning_brief":"Ожидание уже стало невыносимым, просит минимум, а не полноценный разговор."}}
-{"tick":3,"player_id":"oscillator","response":{"tick":3,"player_id":"oscillator","message":"","intent":"wait","reasoning_brief":"После второго контакта ещё сильнее закрывается и не отвечает."}}
-{"tick":3,"player_id":"impostor","response":{"tick":3,"player_id":"impostor","message":"Может позже, когда чуть отпустит.","intent":"advise","reasoning_brief":"Снова тянет ситуацию к отсрочке вместо прояснения."}}

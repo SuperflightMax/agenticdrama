@@ -1,0 +1,46 @@
+[
+  {
+    "id": "anya_imprint_001",
+    "cues": [
+      "promise",
+      "late_return",
+      "cold_evening",
+      "no_message"
+    ],
+    "state_signature": [
+      "hope",
+      "tension",
+      "drop_in_trust",
+      "hurt"
+    ],
+    "evaluation": "when someone leaves me waiting without saying anything, I become less important than whatever replaced me",
+    "fragments": [
+      "you said you would be back before dark",
+      "I kept waiting"
+    ],
+    "strength": 74,
+    "valence": "negative",
+    "clarity": "vivid"
+  },
+  {
+    "id": "anya_imprint_002",
+    "cues": [
+      "direct_question",
+      "evasive_tone",
+      "small_smile"
+    ],
+    "state_signature": [
+      "alertness",
+      "irritation",
+      "pressure"
+    ],
+    "evaluation": "evasion often means I am not being told the whole thing",
+    "fragments": [
+      "just trust me",
+      "it is not a big deal"
+    ],
+    "strength": 61,
+    "valence": "negative",
+    "clarity": "clear"
+  }
+]

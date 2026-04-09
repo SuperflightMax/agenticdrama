@@ -1,0 +1,41 @@
+{
+  "source_campaign": "TEMPLATE",
+  "campaign": "TEMPLATE",
+  "run_id": null,
+  "status": "idle",
+  "current_tick": 0,
+  "active_cast": [],
+  "valid_for_model_testing": "partial",
+  "validity_reason": "campaign not configured for launch yet",
+  "model_layers": {
+    "world_cues": {
+      "used": false,
+      "updated": false
+    },
+    "attention": {
+      "used": false,
+      "updated": false
+    },
+    "appraisal": {
+      "used": false,
+      "updated": false
+    },
+    "state_update": {
+      "used": false,
+      "updated": false
+    },
+    "memory_activation": {
+      "used": false,
+      "updated": false
+    },
+    "relationship_dynamics": {
+      "used": false,
+      "updated": false
+    },
+    "action_pulls": {
+      "used": false,
+      "updated": false
+    }
+  },
+  "unresolved_items": []
+}

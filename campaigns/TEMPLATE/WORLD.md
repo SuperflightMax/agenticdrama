@@ -1,21 +1,16 @@
-# WORLD.md — Campaign Environment Template
+# WORLD.md
 
-## Setting
+## Environment overview
+Describe the environment here.
 
-[Describe the environment — post-collapse, urban, rural, etc.]
+## Zones
+List the human-readable zones used by the campaign.
 
-## Location details
-
-[Describe the specific location]
+## Objects
+List important objects and why they matter.
 
 ## Resources
+Describe what exists, how scarce it is, and how it can be reached.
 
-[What resources are available]
-
-## Atmosphere
-
-[What's the mood, tension points]
-
-## Notes
-
-[Any specific dynamics, hidden factors]
+## Pressures
+Describe cold, darkness, crowding, noise, danger, social tension, or other forces that can actually be felt.

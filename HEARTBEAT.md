@@ -1,3 +1,0 @@
-# HEARTBEAT.md → md/HEARTBEAT.md
-
-Read md/HEARTBEAT.md

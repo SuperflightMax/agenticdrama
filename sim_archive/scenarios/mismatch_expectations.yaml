@@ -1,4 +1,0 @@
-scenario:
-  id: mismatch_expectations
-  type: "model_conflict"
-  core: "каждый ожидал разного"

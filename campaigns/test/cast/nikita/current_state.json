@@ -1,0 +1,11 @@
+{
+  "hunger": 28,
+  "fatigue": 38,
+  "stress": 49,
+  "mood": 53,
+  "health": 90,
+  "pain": 6,
+  "clarity": 58,
+  "mobility": 84,
+  "zone": "yard"
+}

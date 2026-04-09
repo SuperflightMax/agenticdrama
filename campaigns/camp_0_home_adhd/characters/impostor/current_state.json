@@ -1,9 +1,0 @@
-{
-  "position": {"zone": "bedroom", "x": 60, "y": 45},
-  "status": "alive",
-  "hunger": 40,
-  "fatigue": 25,
-  "stress": 28,
-  "mood": 68,
-  "health": 100
-}

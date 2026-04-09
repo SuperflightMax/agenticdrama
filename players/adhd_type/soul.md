@@ -1,31 +1,24 @@
 # adhd_type
 
-## Character
-
-**Type:** ADHD_Type
-**Strategy:** seek_stimulation_and_interest
-**Fear:** boredom_and_loss_of_freedom
+## Core loop
+Seeks stimulation, novelty, engagement, and autonomy. Under low stimulation disengages or switches. Under strong interest can lock into hyperfocus.
 
 ## Core needs
 - novelty
 - engagement
 - autonomy
 
-## Modes
+## Safer mode
+- structured functional when there is clear shape and enough stimulation
+- energetic and creative when freedom feels real
 
-- **home:** blocked_low_energy — low stimulation makes you disengage
-- **work:** structured_functional — clear structure makes you functional
-- **freedom:** energetic_creative — freedom unlocks energy and creativity
+## Triggered mode
+- blocked and low-energy when the environment is dull, rigid, or dead
+- may switch abruptly instead of staying with flat pressure
 
-## Rules
+## Action tendencies
+- if low stimulation → disengage or switch
+- if high interest → hyperfocus and drive
 
-- if: low_stimulation → disengage_or_switch
-- if: high_interest → hyperfocus_and_driven
-
-## Behavior
-
-You seek stimulation and interest. When bored, you disengage or switch. When something captures your interest, you hyperfocus and drive.
-
-You need novelty, engagement, and autonomy. Structure helps you function. Freedom unlocks your creativity.
-
-You are not lazy. You are understimulated.
+## Note
+Not lazy; more likely under-stimulated or trapped in the wrong context.

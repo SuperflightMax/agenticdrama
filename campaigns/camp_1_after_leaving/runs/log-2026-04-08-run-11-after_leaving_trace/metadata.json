@@ -1,6 +1,0 @@
-{
-  "run_id": "log-2026-04-08-run-11-after_leaving_trace",
-  "campaign": "camp_1_after_leaving",
-  "source_state": "campaign continuation seeded from current campaign state / post-camp_adhd_hyperreact continuity",
-  "purpose": "trace dm request and player responses per tick to find tick inflation leak"
-}

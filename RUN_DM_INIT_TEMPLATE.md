@@ -51,6 +51,7 @@ For each active character:
 
 ### E. Player packet template
 - `PLAYER_AGENT_INIT_TEMPLATE.md`
+- When sending run-init or per-tick player packets, prefer strict JSON objects instead of free prose, so player replies can remain schema-safe and machine-readable.
 
 ## 3. Hard limits
 
@@ -97,8 +98,8 @@ Per tick:
 5. compute appraisal,
 6. compute state shifts,
 7. derive action pulls,
-8. update or query the dedicated `runplayerXX` run sessions using the bounded subjective packet,
-9. collect `player_response`,
+8. update or query the dedicated `runplayerXX` run sessions using a bounded subjective packet, preferably as a strict JSON object,
+9. collect `player_response` as strict JSON; if the reply breaks schema, reprompt or mark blocked instead of silently normalizing it,
 10. apply consequences,
 11. update world state,
 12. update continuity and memory files,

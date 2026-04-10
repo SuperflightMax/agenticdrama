@@ -53,10 +53,17 @@ You only receive what Run DM has already turned into active subjective effects, 
 - `incoming_messages`
 
 ### Reply schema
-You answer only with `player_response`:
-- `speech[]`
-- `intent{}`
-- `reasoning_brief`
+You answer only with one raw JSON object and nothing else:
+```json
+{
+  "player_response": {
+    "speech": [],
+    "intent": {},
+    "reasoning_brief": ""
+  }
+}
+```
+No markdown, no code fences, no preface, no explanation outside the JSON object.
 
 ## 3. Hard rules
 

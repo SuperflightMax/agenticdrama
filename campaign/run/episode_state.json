@@ -1,11 +1,11 @@
 {
-  "active_episode_id": "ep01_unmet_promise_runtime_safe",
-  "active_episode_index": 0,
-  "status": "in_progress_tick_1_completed",
+  "active_episode_id": null,
+  "active_episode_index": null,
+  "status": "ready_for_first_episode",
   "completed_episode_ids": [],
-  "pending_episode_ids": ["ep01_unmet_promise_runtime_safe","ep02_uneven_burden_stove_and_blankets","ep03_missing_battery_or_painkillers","ep04_outside_emergency_signal","ep05_repair_attempt"],
+  "pending_episode_ids": ["ep01_unmet_promise_water_and_battery","ep02_uneven_burden_stove_and_blankets","ep03_missing_battery_or_painkillers","ep04_outside_emergency_signal","ep05_repair_attempt"],
   "last_injection_notes": [
-    "Fresh run scaffolded. ep01 not yet injected.",
-    "Tick 1: Nikita made explicit promise to bring battery before dark. Promise is pending in world_state."
+    "Fresh run scaffolded by scripts/runtime_ops.sh",
+    "Inject the first enabled episode from episode_plan.json before first serious progression."
   ]
 }

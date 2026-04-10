@@ -111,12 +111,14 @@ This:
 After this, Lab DM may launch Run DM.
 
 Launch rule:
-- launch Run DM as a **fresh isolated subagent/session for this run**
-- launch player agents as **fresh isolated per-character subagents/sessions**, one player per agent context, unless a reviewed alternative runtime design explicitly replaces that architecture
+- Lab DM should use **`dm-orchestrator`** as the launch-only backend for runtime agent creation
+- `dm-orchestrator` launches Run DM as a **fresh isolated subagent/session for this run**
+- `dm-orchestrator` launches player agents as **fresh isolated per-character subagents/sessions**, one player per agent context, unless a reviewed alternative runtime design explicitly replaces that architecture
 - assign and record a unique `run_id` for that run
 - do not reuse Lab DM itself as simulator
 - do not route the run into another persistent DM session such as `agent:dm:main` or `dm:chat`
 - sending instructions into a persistent DM thread does **not** count as spawning Run DM
+- `dm-orchestrator` is not a runtime actor and must not simulate the run itself
 - Run DM must not simulate player decisions internally if player agents were not actually launched
 - one tick must correspond to one real DM↔player exchange cycle
 - Run DM should continue ticks automatically until a real stop condition is hit; it should not require Lab DM approval after every tick by default
@@ -166,7 +168,8 @@ Before launching Run DM, confirm:
 7. Run DM init packet is compiled.
 8. Run DM packet does **not** include `campaign/CAMPAIGN.md`.
 9. Player packets will include **memory effects**, not raw memory storage.
-10. Required player agents are spawned or their launch path is ready before Run DM is expected to query them.
+10. `dm-orchestrator` is available as the launch backend, or another explicitly reviewed launcher is being used.
+11. Required player agents are spawned or their launch path is ready before Run DM is expected to query them.
 
 
 ## Episode workflow

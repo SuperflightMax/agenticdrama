@@ -54,15 +54,23 @@ If the requested work is an actual simulation run, episode injection, baseline p
 Required behavior:
 1. Lab DM reads and verifies the workspace.
 2. Lab DM prepares the distilled run packet.
-3. Lab DM launches a **fresh isolated Run DM subagent/session** for that run.
-4. That fresh Run DM performs the run and writes runtime artifacts.
-5. Results come back to Lab DM for summary/review/commit/reporting.
+3. Lab DM asks **`dm-orchestrator`** to create the fresh runtime agents for this run.
+4. `dm-orchestrator` launches fresh runtime agents, then hands off.
+5. The fresh Run DM performs the run and writes runtime artifacts.
+6. Results come back to Lab DM for summary/review/commit/reporting.
+
+Role split:
+- **Lab DM** = user-facing owner, packet prep, review, final report.
+- **`dm-orchestrator`** = internal launcher only.
+- **Run DM** = runtime lead for one run.
+- **Player agents** = runtime actors only.
 
 A message thread inside another persistent DM session does **not** count as launching Run DM.
 Lab DM must not use another persistent DM session such as `agent:dm:main` or `dm:chat` as a run executor.
 Lab DM must not run the simulation directly "just this time".
+`dm-orchestrator` must not become a second Lab DM or a runtime storyteller. It only launches / hands off.
 Every real run must have its own `run_id`. Runtime artifacts written after kill/reset from an invalidated old run/session must be ignored and must not mutate the active run.
-If a clean Run DM subagent/session cannot be launched, stop and report the block instead of silently collapsing roles.
+If fresh runtime agents cannot be launched, stop and report the block instead of silently collapsing roles.
 
 ## Reload rule
 

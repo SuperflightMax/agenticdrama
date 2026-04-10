@@ -1,11 +1,11 @@
 {
-  "hunger": 31,
-  "fatigue": 42,
-  "stress": 57,
-  "mood": 44,
+  "zone": "shelter_main_room",
+  "hunger": 32,
+  "fatigue": 45,
+  "stress": 45,
+  "mood": 52,
   "health": 87,
   "pain": 9,
-  "clarity": 64,
-  "mobility": 81,
-  "zone": "shelter_main_room"
+  "clarity": 72,
+  "mobility": 81
 }

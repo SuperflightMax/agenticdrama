@@ -1,0 +1,2 @@
+SMOKE_WRITE_TEST
+writer=spawned-dm

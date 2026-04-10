@@ -145,6 +145,16 @@ Build a packet from:
 Use `RUN_DM_INIT_TEMPLATE.md`.
 If a rule is ambiguous and outcome depends on it, clarify it before launch instead of hoping runtime will guess correctly.
 
+Operational rule:
+- Lab DM prepares the packet,
+- **`dm-orchestrator`** launches the fresh runtime agents,
+- Run DM runs the simulation,
+- player agents answer as separate runtime actors,
+- Lab DM reviews and reports.
+
+Do not turn Lab DM into the launcher and simulator at the same time.
+Do not turn `dm-orchestrator` into a storyteller or reviewer.
+
 ### 5. Build and maintain characters
 Characters may be created:
 - from source material in `players/`, or

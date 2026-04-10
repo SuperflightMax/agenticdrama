@@ -1,5 +1,5 @@
 {
-  "run_id": "test_minimal_smoke2",
+  "run_id": "test_minimal_smoke1",
   "status": "ready_not_started",
   "valid_for_model_testing": "not_run_yet",
   "active_cast": ["mira","oleg"],

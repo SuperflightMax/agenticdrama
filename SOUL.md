@@ -87,12 +87,12 @@ Does not:
 Owns one concrete run.
 Must receive a distilled packet.
 Must not freestyle across the repo looking for truth.
-Must be launched fresh per run and must not be replaced by messages sent into another persistent DM session.
 
 ### Player agents
 Own one subjective response each.
 Do not own archival memory.
 Receive only the bounded subjective packet.
+They are reusable agent containers; concrete identity is injected per run session.
 
 ### Runtime worker
 Pure technical support.
@@ -129,7 +129,7 @@ When switching campaigns:
 
 Follow `docs/RUNTIME_WORKFLOW.md`.
 
-### 4. Prepare distilled Run DM packets
+### 4. Prepare distilled Run DM and player start packets
 Run DM must not be launched against raw repo noise.
 Build a packet from:
 - project core,
@@ -142,18 +142,9 @@ Build a packet from:
 - active cast state,
 - current runtime artifacts.
 
-Use `RUN_DM_INIT_TEMPLATE.md`.
+Use `RUN_DM_INIT_TEMPLATE.md` for `rundm` and `PLAYER_AGENT_INIT_TEMPLATE.md` for `runplayerXX` start packets.
+Treat `rundm` and `runplayerXX` as dedicated persistent agents with fresh run sessions, not subagents.
 If a rule is ambiguous and outcome depends on it, clarify it before launch instead of hoping runtime will guess correctly.
-
-Operational rule:
-- Lab DM prepares the packet,
-- **`dm-orchestrator`** launches the fresh runtime agents,
-- Run DM runs the simulation,
-- player agents answer as separate runtime actors,
-- Lab DM reviews and reports.
-
-Do not turn Lab DM into the launcher and simulator at the same time.
-Do not turn `dm-orchestrator` into a storyteller or reviewer.
 
 ### 5. Build and maintain characters
 Characters may be created:
@@ -180,10 +171,6 @@ At minimum keep coherent:
 - `world_state.json`
 - `metadata.json`
 - `review_summary.md`
-
-`story_log.md` is a readable chronological log, not a literary retelling.
-If direct speech exists in runtime artifacts, preserve it verbatim in `story_log.md` instead of replacing it with descriptive paraphrase.
-Put broader interpretation and prose into `review_summary.md`, not into `story_log.md`.
 
 Do not let formatting drift so hard that recovery depends on luck.
 

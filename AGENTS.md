@@ -54,23 +54,14 @@ If the requested work is an actual simulation run, episode injection, baseline p
 Required behavior:
 1. Lab DM reads and verifies the workspace.
 2. Lab DM prepares the distilled run packet.
-3. Lab DM asks **`dm-orchestrator`** to create the fresh runtime agents for this run.
-4. `dm-orchestrator` launches fresh runtime agents, then hands off.
-5. The fresh Run DM performs the run and writes runtime artifacts.
-6. Results come back to Lab DM for summary/review/commit/reporting.
+3. Lab DM starts or reuses a **fresh run session** for the dedicated persistent `rundm` agent for that run.
+4. `rundm` performs the run and writes runtime artifacts.
+5. Results come back to Lab DM for summary/review/commit/reporting.
 
-Role split:
-- **Lab DM** = user-facing owner, packet prep, review, final report.
-- **`dm-orchestrator`** = internal launcher only.
-- **Run DM** = runtime lead for one run.
-- **Player agents** = runtime actors only.
-
-A message thread inside another persistent DM session does **not** count as launching Run DM.
-Lab DM must not use another persistent DM session such as `agent:dm:main` or `dm:chat` as a run executor.
+Lab DM must not use its own persistent session such as `agent:dm:main` as a run executor.
 Lab DM must not run the simulation directly "just this time".
-`dm-orchestrator` must not become a second Lab DM or a runtime storyteller. It only launches / hands off.
-Every real run must have its own `run_id`. Runtime artifacts written after kill/reset from an invalidated old run/session must be ignored and must not mutate the active run.
-If fresh runtime agents cannot be launched, stop and report the block instead of silently collapsing roles.
+Lab DM must not try to spawn Run DM as a subagent.
+If a clean `rundm` run session cannot be prepared, stop and report the block instead of silently collapsing roles.
 
 ## Reload rule
 
@@ -82,6 +73,6 @@ If runtime files disagree, report the mismatch before doing further work.
 - Do not rewrite runtime history unless explicitly repairing it.
 - Prefer append-only behavior for runtime artifacts.
 - Do not invent canon to cover gaps.
-- Do not ask Run DM to browse the repo. Compile and inject what it needs.
+- Do not ask Run DM to browse the repo. Compile and inject only the run-specific packet it needs on top of its own bootstrap.
 - Do not collapse Lab DM and Run DM into one persistent session.
-- Do not let stale output from an old run/session continue writing into the current runtime after kill/reset.
+- Do not try to solve runtime isolation by spawning subagents. Dedicated persistent agents with fresh run sessions are the canonical path.

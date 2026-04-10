@@ -29,6 +29,9 @@ Never collapse these roles.
 ### Episode queue
 `campaign/episode_plan.json`
 
+### Campaign-local episode notes / concretization copies
+`campaign/episode_templates/`
+
 ### Active episode tracker
 `campaign/run/episode_state.json`
 
@@ -36,6 +39,31 @@ Never collapse these roles.
 `campaign/run_archive/`
 and after snapshot they also live in
 `campaigns/<name>/run_archive/`
+
+## Canonical runtime agents
+
+Use these dedicated persistent agents:
+- `dm` = Lab DM
+- `rundm` = Run DM
+- `runplayer01` .. `runplayer06` = reusable player containers
+
+These are persistent OpenClaw agents, but **not** persistent characters.
+Each concrete run must use fresh run sessions and fresh start packets.
+
+### Canonical session naming
+
+For one run id `<run_id>` use:
+- Run DM session key: `run:<run_id>:rundm`
+- Player session keys: `run:<run_id>:player:01` .. `run:<run_id>:player:06`
+
+Do not continue a previous run by accident through `main`.
+Use `main` only for long-lived operator chat, not for simulation runs.
+
+### Player container rule
+
+`runplayerXX` agents are reusable containers.
+Their workspace bootstrap should contain only the role frame and reply discipline.
+Concrete character identity, current state, relation slice, continuity, and active memory effects are injected at run start for the current run session.
 
 ## When to use Runtime Worker / scripts
 
@@ -111,20 +139,13 @@ This:
 After this, Lab DM may launch Run DM.
 
 Launch rule:
-- Lab DM should use **`dm-orchestrator`** as the launch-only backend for runtime agent creation
-- `dm-orchestrator` launches Run DM as a **fresh isolated subagent/session for this run**
-- `dm-orchestrator` launches player agents as **fresh isolated per-character subagents/sessions**, one player per agent context, unless a reviewed alternative runtime design explicitly replaces that architecture
-- assign and record a unique `run_id` for that run
+- use the dedicated persistent agent `rundm`
+- start a **fresh run session** for this run; do not reuse an older unrelated run session
 - do not reuse Lab DM itself as simulator
-- do not route the run into another persistent DM session such as `agent:dm:main` or `dm:chat`
-- sending instructions into a persistent DM thread does **not** count as spawning Run DM
-- `dm-orchestrator` is not a runtime actor and must not simulate the run itself
-- Run DM must not simulate player decisions internally if player agents were not actually launched
-- one tick must correspond to one real DM↔player exchange cycle
-- Run DM should continue ticks automatically until a real stop condition is hit; it should not require Lab DM approval after every tick by default
-- Lab DM observes progress and may intervene or stop the run when needed
-- if fresh isolated Run DM launch is unavailable, stop and report the block instead of collapsing roles
-- if required player agent launch is unavailable, stop and report the block instead of collapsing roles
+- do not route the run into another persistent DM session such as `agent:dm:main`
+- do not try to spawn Run DM as a subagent
+- player actors are the persistent agents `runplayer01` .. `runplayer06`, each with a fresh run session for this run
+- if clean run sessions cannot be prepared, stop and report the block instead of collapsing roles
 
 ### 5. Continue the active run
 Do not create a new run.
@@ -168,8 +189,6 @@ Before launching Run DM, confirm:
 7. Run DM init packet is compiled.
 8. Run DM packet does **not** include `campaign/CAMPAIGN.md`.
 9. Player packets will include **memory effects**, not raw memory storage.
-10. `dm-orchestrator` is available as the launch backend, or another explicitly reviewed launcher is being used.
-11. Required player agents are spawned or their launch path is ready before Run DM is expected to query them.
 
 
 ## Episode workflow
@@ -181,10 +200,11 @@ Lab DM should:
 2. choose from that library when assembling a campaign
 3. concretize selected templates for the current world and cast
 4. write those campaign-specific episode instances into `campaign/episode_plan.json`
-5. inject only the targeted delta for the next episode
-6. preserve current cast state, memory, relations, and world consequences unless the episode explicitly overrides them
-7. update `run/episode_state.json` when advancing
-8. add newly discovered reusable situation shapes back into `episodes/` when they are generic enough to reuse
+5. optionally keep campaign-local concretization notes or copies in `campaign/episode_templates/`
+6. inject only the targeted delta for the next episode
+7. preserve current cast state, memory, relations, and world consequences unless the episode explicitly overrides them
+8. update `run/episode_state.json` when advancing
+9. add newly discovered reusable situation shapes back into `episodes/` when they are generic enough to reuse
 
 Run DM does not own campaign planning.
 Run DM may receive only the current episode packet and does not need awareness of future queued episodes unless Lab DM explicitly includes that context.
@@ -200,7 +220,6 @@ When one episode finishes and the next begins:
 When an episode injection happens:
 - the actual causal patch must be visible in runtime world state / snapshots
 - `story_log.md` should contain one short human-readable note that an episode injection occurred and what pressure was introduced
-- if characters already speak in that tick, preserve direct speech verbatim instead of paraphrasing it away in the log
 - do not write the outcome in that note
 
 See `docs/EPISODE_SYSTEM.md` for the canonical rules.
@@ -227,12 +246,38 @@ If reviewing an archived run, use the corresponding folder in `campaign/run_arch
 - Player agents must not receive raw memory storage.
 - Runtime logs are append-only, except explicit repair.
 
-## Run reset / kill rule
+## Start-packet discipline for dedicated agents
 
-If a run is killed, reset, or replaced:
-- invalidate the old `run_id`,
-- do not accept further writes from the old Run DM session,
-- do not let stale output mutate current runtime artifacts.
+### Run DM start packet
+`rundm` already loads its own bootstrap from its own workspace.
+Lab DM should therefore send only the **run-specific start packet**, not the whole project doc bundle again.
 
-Only the currently active Run DM may write active runtime artifacts for its run.
-Lab DM may prepare, snapshot, archive, or review, but must not continue the run inside a persistent DM session.
+Send to `rundm` at run start:
+- run id and session intent
+- compiled run rules / deltas needed for this concrete run
+- active runtime world packet
+- active cast packet from `campaign/cast/*`
+- current runtime artifact status from `campaign/run/*`
+- player roster mapping to `runplayerXX` sessions
+- the player packet template / response contract
+
+Do **not** resend the full lab bootstrap unless `rundm` workspace is known to be missing it.
+Do **not** include `campaign/CAMPAIGN.md`.
+
+### Player start packet
+Each `runplayerXX` agent already loads its own minimal role bootstrap.
+At run start Lab DM or Run DM should send only:
+- assigned character id / name
+- short soul / personality profile for this run
+- current state snapshot
+- relations slice
+- continuity summary
+- active memory effects and active subjective biases
+- reply schema reminder if needed
+
+Do not inject raw repo docs into players.
+Do not inject raw `memory_imprints.json` storage into players.
+
+### Tick updates
+After run start, Run DM should send only per-tick subjective packets to the player sessions.
+Do not recreate or replace the entire player identity every tick unless the run is being repaired from files.

@@ -137,7 +137,71 @@ These are default tendencies, not hard equations.
 - `60..79`: stable / generally workable
 - `80..100`: strongly resourced / high-function band
 
-## 5. Cross-effects
+## 5. Character-local modifiers and baseline profiles
+
+The generic state model is not enough by itself.
+Different characters must not only have different current values, but also different **response curves**.
+Otherwise two people with different personalities but the same numbers will still be simulated too similarly.
+
+For each active character, Run DM should distinguish between:
+- current state values,
+- character-local baseline tendencies,
+- character-local sensitivities / resistances,
+- character-local recovery style.
+
+### 5.1 Current state values
+These are the live numbers in the current run, for example:
+- hunger 32
+- stress 45
+- clarity 72
+
+They answer: **where is the character right now?**
+
+### 5.2 Baseline tendencies
+These are trait-like default tendencies for this character.
+They answer: **what does this character tend to be like before the current moment adds pressure?**
+
+Examples:
+- naturally high vigilance around reliability cues
+- low baseline tolerance for bodily discomfort
+- naturally good practical stamina
+- usually decent clarity under neutral conditions
+- quick-to-soften after visible repair
+
+### 5.3 Sensitivities and resistances
+These are local modifiers on top of the generic state model.
+They answer: **what hits this character harder or weaker than average?**
+
+Examples:
+- delay / vagueness may raise stress faster for one character
+- bodily pain may cut clarity harder for one character than another
+- hunger may produce unfairness-reading quickly in one character, but mostly withdrawal in another
+- one character may resist panic but collapse into fatigue faster
+
+### 5.4 Recovery style
+These are character-specific rules for what actually repairs state.
+They answer: **what reduces pressure for this character, and what fails to help?**
+
+Examples:
+- one character calms through explicit explanation
+- one calms only through visible follow-through
+- one recovers mood from warmth and soft social contact
+- one needs solitude or task completion rather than talk
+
+### 5.5 Required modeling rule
+Run DM must not treat all characters as identical processors with different current numbers only.
+Current values are the live state.
+Character-local modifiers determine how strongly cues translate into appraisal, state change, and action pulls for that specific person.
+
+### 5.6 Where these live
+Character-local modifiers should come from:
+1. the character soul / continuity / reviewed spec,
+2. campaign-specific cast materials,
+3. explicit run packet instructions.
+
+If a character-local modifier matters for an outcome and is not defined anywhere reliable, Lab DM should add it to the character materials instead of leaving Run DM to freestyle it indefinitely.
+
+## 6. Cross-effects
 
 These are default cross-field tendencies Run DM should apply unless a campaign overrides them.
 
@@ -166,7 +230,7 @@ These are default cross-field tendencies Run DM should apply unless a campaign o
 - high stress makes low-trust or high-resentment reads sharpen faster
 - under lower stress, the same relation state may remain latent instead of dominant
 
-## 6. Perception effects
+## 7. Perception effects
 
 Run DM should not treat state as a decorative afterthought.
 State changes:
@@ -184,7 +248,7 @@ Default tendencies:
 - high pain -> bodily and effort-related cues gain weight
 - low clarity -> worse distinction between cue and interpretation
 
-## 7. Decision effects
+## 8. Decision effects
 
 State should not directly choose action.
 Instead it shapes:
@@ -200,7 +264,7 @@ Examples:
 - high pain + low mobility -> avoidance, staying put, asking others, conserving effort
 - high clarity + moderate stress -> checking / verifying instead of instantly reacting
 
-## 8. How state updates happen
+## 9. How state updates happen
 
 ### 8.1 Update trigger
 A state update should happen only if something was:
@@ -237,7 +301,7 @@ Existing state has inertia.
 
 Positive signals do not automatically erase negative build-up in one step.
 
-## 9. When a state shift is significant enough to matter in logs
+## 10. When a state shift is significant enough to matter in logs
 
 A shift matters enough for runtime reasoning when at least one is true:
 - it changes the band of a parameter
@@ -246,7 +310,7 @@ A shift matters enough for runtime reasoning when at least one is true:
 - it creates or resolves a meaningful social interpretation
 - it contributes to memory formation
 
-## 10. Memory formation rule
+## 11. Memory formation rule
 
 Memory does not form from every event.
 A new imprint becomes likely when there is meaningful accumulated state change, especially if the moment includes:
@@ -263,7 +327,7 @@ Imprints should encode:
 - fragments if relevant
 - strength / valence / clarity
 
-## 11. Relation interaction rule
+## 12. Relation interaction rule
 
 State and relations should be computed together, not separately.
 For example:
@@ -273,7 +337,7 @@ For example:
 Relation values do not directly cause action.
 They bias appraisal and repair thresholds.
 
-## 12. What Run DM must not do
+## 13. What Run DM must not do
 
 Run DM must not:
 - use state numbers as decorative color only
@@ -282,7 +346,7 @@ Run DM must not:
 - silently turn prose intuition into fake formal state mechanics
 - claim a model layer was used when it was skipped
 
-## 13. Current limitation
+## 14. Current limitation
 
 This document defines default semantics and bands, but still leaves room for campaign-specific overrides.
 If a campaign needs harder equations or custom thresholds, place them in that campaign's `SIMULATION_RULES.md` and treat that file as a local override.

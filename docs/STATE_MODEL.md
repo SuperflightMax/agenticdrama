@@ -114,13 +114,20 @@ Typical effects:
 
 ### 3.4 mood (higher = better)
 Meaning:
-- baseline positive/negative world coloring
-- not a single emotion, but the current background tilt of interpretation
+- current positive/negative background coloring of the lived world
+- not a single emotion, and usually not a deep root variable by itself
+- often a fast-moving aggregate or semi-derived field reflecting how other pressures are currently landing
+
+Modeling rule:
+- default assumption is that `mood` is more labile than `stress`, `fatigue`, `health`, or `hunger`
+- many events should change mood first, before they significantly change slower state fields
+- mood may also function as a visible readout of how other pressures currently combine, rather than as the sole cause of later behavior
 
 Typical effects:
 - low mood biases appraisal negative
 - high mood makes repair, benefit-of-doubt, and tolerance easier
 - mood influences which memory traces activate more easily
+- mood may buffer or amplify the felt impact of the same objective cue without fully replacing slower pressures underneath
 
 ### 3.5 health (higher = better)
 Meaning:
@@ -293,6 +300,7 @@ These are default cross-field tendencies Run DM should apply unless a campaign o
 ### 5.5 mood x memory activation
 - lower mood makes negative imprints easier to activate
 - higher mood makes positive / safe / smoothing imprints easier to activate
+- mood often works as a fast amplifier or dampener of already-existing pressure rather than a full independent cause
 
 ### 5.6 stress x relations
 - high stress makes low-trust or high-resentment reads sharpen faster
@@ -353,6 +361,12 @@ State shifts may come from:
 - accumulated strain over several ticks
 - sharp spikes or shocks
 
+Default temporal rule:
+- some fields are slower and more accumulative (`stress`, `fatigue`, `hunger`, often `health`)
+- some fields are faster and more immediately reactive (`mood`, some safety/hope-like buffers, engagement)
+- therefore one event may sharply move `mood` while only slightly moving `stress` or `fatigue`
+- the same event may later influence slower fields indirectly by changing recovery rate, interpretation bias, or follow-up behavior
+
 ### 8.3 Update size
 Use three default magnitudes unless campaign rules require more detail:
 - slight shift: 1..5
@@ -369,6 +383,13 @@ Default non-linear rule:
 - repeated same-pattern hits in a short window increase later deltas
 - cues that cross a band boundary often produce larger downstream effect than equal-sized cues inside a stable band
 - multiple aligned pressures (for example high stress + low clarity + low trust) produce stronger appraisal distortion than simple sum-of-parts reasoning
+- fast-reactive fields may take a larger immediate hit from one event than slower fields do
+- slower fields may change less immediately, but can accumulate through repetition or through worsened recovery conditions
+
+Example pattern:
+- one upsetting social event may sharply drop `mood`
+- that same event may only slightly raise `stress`
+- but if the bad pattern repeats, `stress` can keep climbing while `mood` becomes more unstable and harder to restore
 
 ### 8.4 Inertia
 Existing state has inertia.
@@ -377,6 +398,11 @@ Existing state has inertia.
 - already-high fatigue keeps reducing recovery bandwidth
 
 Positive signals do not automatically erase negative build-up in one step.
+
+Important distinction:
+- low mood may improve relatively quickly after relief, warmth, repair, or hope
+- high stress and high fatigue usually decay more slowly unless the actual pressure pattern changes
+- therefore a character can look better in mood while still carrying heavy stress load underneath
 
 ## 10. When a state shift is significant enough to matter in logs
 

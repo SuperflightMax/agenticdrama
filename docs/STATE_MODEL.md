@@ -453,6 +453,16 @@ Default temporal rule:
 - therefore one event may sharply move `mood` while only slightly moving `stress` or `fatigue`
 - the same event may later influence slower fields indirectly by changing recovery rate, interpretation bias, or follow-up behavior
 
+Important distinction:
+- **rate of change** and **behavioral importance** are not the same thing
+- a field may change slowly across real time, yet still strongly shape appraisal right now if its current value is already high or low
+- therefore a short scene does not make slow fields irrelevant
+
+Example:
+- `hunger` may barely move during 15 minutes of simulated time
+- but high hunger can already bias attention, tolerance, fairness-reading, willingness to spend effort, and willingness to delay gratification throughout the whole scene
+- so a field should not be dropped merely because it is unlikely to change much inside the current window
+
 ### 8.3 Update size
 Use three default magnitudes unless campaign rules require more detail:
 - slight shift: 1..5

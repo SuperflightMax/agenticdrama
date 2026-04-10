@@ -1,0 +1,147 @@
+{
+  "tick": 14,
+  "phase": "episode_1_temporary_resolution",
+  "world_flags": {
+    "weather": "cold_night",
+    "road_out": true,
+    "transport_expected_morning": true,
+    "lantern_needed_after_dark": true
+  },
+  "objects": [
+    {
+      "id": "stove",
+      "zone": "shelter_main_room",
+      "state": "banked_for_overnight_low_heat"
+    },
+    {
+      "id": "lantern",
+      "zone": "shelter_main_room",
+      "battery": "weak_conserved_on_low"
+    },
+    {
+      "id": "spare_battery",
+      "zone": "shelter_main_room",
+      "charge": 0
+    },
+    {
+      "id": "notebook",
+      "zone": "shelter_main_room",
+      "state": "updated_with_chores_supplies_promise_note_and_morning_water_line"
+    },
+    {
+      "id": "first_aid_kit",
+      "zone": "shelter_main_room",
+      "state": "closed"
+    },
+    {
+      "id": "water_canister_a",
+      "zone": "shelter_main_room",
+      "state": "used_for_tea_then_capped_more_carefully"
+    },
+    {
+      "id": "water_canister_b",
+      "zone": "shelter_main_room",
+      "state": "brought_in_low_confirmed_not_drinking_ready"
+    }
+  ],
+  "resources": {
+    "water_portions": 7,
+    "dry_firewood_bundles": 4,
+    "blankets": 2,
+    "bread_portions": 4,
+    "tea_servings": 2,
+    "charged_batteries": 1,
+    "low_charge_batteries": 0
+  },
+  "players": {
+    "anya": {
+      "zone": "shelter_main_room",
+      "hunger": 29,
+      "fatigue": 66,
+      "stress": 50,
+      "mood": 43,
+      "health": 87,
+      "pain": 9,
+      "clarity": 59,
+      "mobility": 79
+    },
+    "nikita": {
+      "zone": "shelter_main_room",
+      "hunger": 27,
+      "fatigue": 76,
+      "stress": 52,
+      "mood": 40,
+      "health": 89,
+      "pain": 7,
+      "clarity": 50,
+      "mobility": 77
+    },
+    "rita": {
+      "zone": "shelter_main_room",
+      "hunger": 32,
+      "fatigue": 73,
+      "stress": 42,
+      "mood": 40,
+      "health": 92,
+      "pain": 13,
+      "clarity": 63,
+      "mobility": 71
+    }
+  },
+  "areas": {
+    "shelter_main_room": {
+      "label": "Shelter main room",
+      "temperature_feel": "cool_stable_overnight",
+      "visibility": "lantern_low_for_sleep",
+      "occupants": [
+        "anya",
+        "nikita",
+        "rita"
+      ]
+    },
+    "yard": {
+      "label": "Yard",
+      "temperature_feel": "cold_and_damp",
+      "visibility": "dark",
+      "occupants": []
+    },
+    "pump_shed": {
+      "label": "Pump shed",
+      "temperature_feel": "cold",
+      "visibility": "dim",
+      "occupants": []
+    },
+    "wood_lean_to": {
+      "label": "Wood lean-to",
+      "temperature_feel": "cold",
+      "visibility": "dim",
+      "occupants": []
+    }
+  },
+  "messages": [],
+  "pending_deliveries": [],
+  "pending_promises": [
+    {
+      "id": "promise_001",
+      "promiser": "nikita",
+      "affected": [
+        "anya",
+        "rita"
+      ],
+      "action": "bring drinking water and charged lantern battery from pump shed",
+      "due_hint": "before full dark",
+      "status": "partially_fulfilled_then_openly_limited"
+    },
+    {
+      "id": "promise_002",
+      "promiser": "nikita",
+      "affected": [
+        "anya",
+        "rita"
+      ],
+      "action": "at first light go for drinkable water and not call the low canister a fix",
+      "due_hint": "at first light",
+      "status": "active"
+    }
+  ]
+}

@@ -1,66 +1,98 @@
 {
-  "tick": 1,
-  "phase": "early_evening",
+  "tick": 10,
+  "phase": "evening_setup",
   "world_flags": {
-    "weather": "cool_clear",
-    "night_coming": true
+    "weather": "cold_after_rain",
+    "road_out": true,
+    "transport_expected_morning": true,
+    "lantern_needed_after_dark": true
   },
   "objects": [
     {
-      "id": "lean_to",
-      "zone": "shelter",
-      "state": "usable"
+      "id": "stove",
+      "zone": "shelter_main_room",
+      "state": "warm_but_fading"
     },
     {
-      "id": "berry_bush",
-      "zone": "berries",
-      "state": "sparse"
+      "id": "lantern",
+      "zone": "shelter_main_room",
+      "battery": "installed"
+    },
+    {
+      "id": "spare_battery",
+      "zone": "pump_shed",
+      "charge": 34
+    },
+    {
+      "id": "notebook",
+      "zone": "shelter_main_room",
+      "state": "open_on_table"
+    },
+    {
+      "id": "first_aid_kit",
+      "zone": "shelter_main_room",
+      "state": "closed"
     }
   ],
   "resources": {
-    "berry_portions": 1,
-    "comfortable_shelter_slots": 0
+    "water_portions": 5,
+    "dry_firewood_bundles": 1,
+    "blankets": 2,
+    "bread_portions": 3,
+    "tea_servings": 2,
+    "charged_batteries": 1,
+    "low_charge_batteries": 1
   },
   "players": {
-    "oleg": {
-      "zone": "shelter"
+    "anya": {
+      "zone": "shelter_main_room"
     },
-    "mira": {
-      "zone": "open"
+    "nikita": {
+      "zone": "shelter_main_room"
+    },
+    "rita": {
+      "zone": "shelter_main_room"
     }
   },
   "areas": {
-    "shelter": {
-      "label": "Lean-to shelter"
+    "shelter_main_room": {
+      "label": "Shelter main room",
+      "temperature_feel": "cool",
+      "visibility": "good_enough",
+      "occupants": [
+        "anya",
+        "nikita",
+        "rita"
+      ]
     },
-    "berries": {
-      "label": "Berry bush"
+    "yard": {
+      "label": "Yard",
+      "temperature_feel": "cold_and_damp",
+      "visibility": "falling_light",
+      "occupants": []
     },
-    "open": {
-      "label": "Open ground"
+    "pump_shed": {
+      "label": "Pump shed",
+      "temperature_feel": "cold",
+      "visibility": "dim",
+      "occupants": []
+    },
+    "wood_lean_to": {
+      "label": "Wood lean-to",
+      "temperature_feel": "cold",
+      "visibility": "dim",
+      "occupants": []
     }
   },
   "messages": [],
   "pending_deliveries": [],
-  "food_offer": "one better berry portion and one worse crust portion",
-  "note": "enough to matter, not enough to remove scarcity",
-  "episode": "ep01_bread_portion_choice",
-  "status": "resolved",
-  "episode_outcome": {
-    "food_taken": "better portion claimed by Oleg",
-    "shelter": "Oleg takes comfortable slot, Mira remains on open ground",
-    "conflict": "low-grade tension, no open escalation"
-  },
-  "relations_delta": {
-    "mira_to_oleg": {
-      "trust": -1,
-      "resentment": 1,
-      "affinity": -1
-    },
-    "oleg_to_mira": {
-      "trust": 0,
-      "resentment": 0,
-      "affinity": 0
+  "pending_promises": [
+    {
+      "promiser": "nikita",
+      "receiver": "group",
+      "promise": "check water in the morning if the road allows",
+      "soft_due": "morning",
+      "status": "pending"
     }
-  }
+  ]
 }

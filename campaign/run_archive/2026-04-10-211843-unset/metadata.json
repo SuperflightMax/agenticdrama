@@ -1,0 +1,10 @@
+{
+  "run_id": "unset",
+  "status": "ready_not_started",
+  "valid_for_model_testing": "not_run_yet",
+  "active_cast": [],
+  "source_campaign": null,
+  "model_layers": {},
+  "notes": [],
+  "unresolved_issues": []
+}

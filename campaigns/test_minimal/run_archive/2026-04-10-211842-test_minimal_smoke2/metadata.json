@@ -1,0 +1,20 @@
+{
+  "run_id": "test_minimal_smoke2",
+  "status": "ready_not_started",
+  "valid_for_model_testing": "not_run_yet",
+  "active_cast": ["mira","oleg"],
+  "source_campaign": "test_minimal",
+  "episode_queue_file": "episode_plan.json",
+  "episode_state_file": "run/episode_state.json",
+  "model_layers": {
+    "world_cues": {"used": false, "updated": false},
+    "attention": {"used": false, "updated": false},
+    "appraisal": {"used": false, "updated": false},
+    "state_update": {"used": false, "updated": false},
+    "memory_activation": {"used": false, "updated": false},
+    "relationship_dynamics": {"used": false, "updated": false},
+    "action_pulls": {"used": false, "updated": false}
+  },
+  "notes": ["Fresh run scaffolded by scripts/runtime_ops.sh"],
+  "unresolved_issues": []
+}

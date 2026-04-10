@@ -1,0 +1,8 @@
+{
+  "active_episode_id": null,
+  "active_episode_index": null,
+  "status": "no_episode_selected",
+  "completed_episode_ids": [],
+  "pending_episode_ids": [],
+  "last_injection_notes": []
+}

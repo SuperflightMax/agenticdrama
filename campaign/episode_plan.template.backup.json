@@ -1,0 +1,8 @@
+{
+  "campaign_id": "template",
+  "episode_queue": [],
+  "notes": [
+    "Fill this with ordered episode instances.",
+    "Each episode should inject only a targeted delta into the current campaign state."
+  ]
+}

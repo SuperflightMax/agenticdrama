@@ -1,0 +1,11 @@
+{
+  "zone": "shelter_main_room",
+  "hunger": 32,
+  "fatigue": 45,
+  "stress": 45,
+  "mood": 52,
+  "health": 87,
+  "pain": 9,
+  "clarity": 72,
+  "mobility": 81
+}

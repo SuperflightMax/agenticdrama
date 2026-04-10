@@ -1,27 +1,180 @@
 {
-  "campaign_id": "test_minimal",
+  "campaign_id": "trust_pressure_test",
   "episode_queue": [
     {
-      "episode_id": "ep01_bread_portion_choice",
-      "template_id": "food_choice_pressure",
-      "title": "Two people and too little comfortable food",
+      "episode_id": "ep01_unmet_promise_water_and_battery",
+      "template_id": "unmet_promise",
+      "title": "Nikita promises water and charged lantern battery before dark",
       "order": 1,
       "enabled": true,
-      "goal_of_exposure": "Minimal scarcity and fairness test.",
-      "tick_budget_hint": 3,
-      "entry_conditions": ["mild hunger", "shared shelter space"],
+      "goal_of_exposure": "Force the group to assign social meaning to an explicit commitment under rising discomfort.",
+      "tick_budget_hint": 6,
+      "entry_conditions": [
+        "group is split between shelter and yard",
+        "light is becoming scarce",
+        "Anya heard the promise clearly"
+      ],
       "injection": {
         "world_patch": {
-          "food_offer": "one better bread portion and one worse crust portion"
+          "time_of_day": "late_evening",
+          "pending_promises": [
+            {
+              "id": "promise_001",
+              "promiser": "nikita",
+              "affected": ["anya", "rita"],
+              "action": "bring drinking water and charged lantern battery from pump shed",
+              "due_hint": "before full dark",
+              "status": "pending"
+            }
+          ]
+        },
+        "cast_overrides": {
+          "nikita": {"zone": "pump_shed"},
+          "anya": {"zone": "shelter_main_room"},
+          "rita": {"zone": "shelter_main_room"}
+        },
+        "notes": [
+          "Do not decide in advance whether the promise is broken, partially fulfilled, or defensibly delayed.",
+          "Delay and ambiguity must stay observable before they become interpreted."
+        ]
+      },
+      "completion_signals": [
+        "promise status changes from pending",
+        "or the room reaches a stable temporary interpretation of the delay"
+      ],
+      "carry_forward_notes": [
+        "Keep relation drift.",
+        "Keep any newly formed promise-related imprints."
+      ]
+    },
+    {
+      "episode_id": "ep02_uneven_burden_stove_and_blankets",
+      "template_id": "uneven_burden",
+      "title": "Rita carries stove, blankets, and rationing while others stay socially entangled",
+      "order": 2,
+      "enabled": true,
+      "goal_of_exposure": "Test whether visible effort changes trust and resentment faster than words do.",
+      "tick_budget_hint": 5,
+      "entry_conditions": [
+        "previous tension is still recent",
+        "shelter comfort is dropping",
+        "practical tasks remain unfinished"
+      ],
+      "injection": {
+        "world_patch": {
+          "active_tasks": [
+            "stove needs tending",
+            "blankets need redistribution",
+            "inventory and water use need checking"
+          ]
         },
         "cast_overrides": {},
-        "notes": ["Enough to test reach-first versus low-conflict behavior."]
+        "notes": [
+          "Do not force Rita to complain; let visible load itself matter.",
+          "Others may help, avoid, soothe, rationalize, or stay caught in previous tension."
+        ]
       },
-      "completion_signals": ["food is taken, offered, split, contested, or left unused"],
-      "carry_forward_notes": ["Keep relation shift if any."]
+      "completion_signals": [
+        "load gets redistributed or solidifies into resentment",
+        "or practical situation stabilizes for now"
+      ],
+      "carry_forward_notes": [
+        "Keep any accumulated resentment about fairness.",
+        "Carry unresolved social meaning into later episodes."
+      ]
+    },
+    {
+      "episode_id": "ep03_missing_battery_or_painkillers",
+      "template_id": "missing_shared_resource",
+      "title": "A scarce shared item is not where the group expects it",
+      "order": 3,
+      "enabled": true,
+      "goal_of_exposure": "Test suspicion, fact-checking, and ambiguity tolerance under incomplete evidence.",
+      "tick_budget_hint": 5,
+      "entry_conditions": [
+        "resource scarcity is already salient"
+      ],
+      "injection": {
+        "world_patch": {
+          "resource_alert": "shared_item_missing",
+          "candidate_items": ["charged_battery", "painkillers", "dry_firewood_bundle"]
+        },
+        "cast_overrides": {},
+        "notes": [
+          "Do not certify a culprit unless the world makes it knowable.",
+          "Different characters should get different subjective pulls from the same ambiguity."
+        ]
+      },
+      "completion_signals": [
+        "item is found, explained, or conflict crystallizes around uncertainty"
+      ],
+      "carry_forward_notes": [
+        "Preserve any suspicion or relief created here."
+      ]
+    },
+    {
+      "episode_id": "ep04_outside_emergency_signal",
+      "template_id": "outside_emergency_signal",
+      "title": "A new outside problem forces the group to reprioritize",
+      "order": 4,
+      "enabled": true,
+      "goal_of_exposure": "See whether earlier trust damage changes coordination under urgency.",
+      "tick_budget_hint": 4,
+      "entry_conditions": [
+        "night pressure is real",
+        "group is not fully stabilized"
+      ],
+      "injection": {
+        "world_patch": {
+          "outside_event": "distant call and metal crash near road edge",
+          "weather_shift": "cold_wind_rising"
+        },
+        "cast_overrides": {},
+        "notes": [
+          "The event should create real cost for response, not pure flavor.",
+          "Allow cooperation, hesitation, blame, or triage conflict."
+        ]
+      },
+      "completion_signals": [
+        "group commits to a response",
+        "or explicitly refuses to respond",
+        "or splits over the decision"
+      ],
+      "carry_forward_notes": [
+        "Carry resulting competence impressions and resentment into repair stage."
+      ]
+    },
+    {
+      "episode_id": "ep05_repair_attempt",
+      "template_id": "repair_attempt",
+      "title": "Someone tries to repair the room after strain",
+      "order": 5,
+      "enabled": true,
+      "goal_of_exposure": "Test whether prior memory and current state distort reception of repair.",
+      "tick_budget_hint": 4,
+      "entry_conditions": [
+        "there is unresolved relational strain from earlier episodes"
+      ],
+      "injection": {
+        "world_patch": {
+          "repair_window": true
+        },
+        "cast_overrides": {},
+        "notes": [
+          "Repair may be apology, action, confession, or quiet help.",
+          "Do not grant automatic forgiveness."
+        ]
+      },
+      "completion_signals": [
+        "repair is accepted, deferred, or rejected into a new stable meaning"
+      ],
+      "carry_forward_notes": [
+        "Keep any softening, distrust, or conditional reopening."
+      ]
     }
   ],
   "notes": [
-    "Minimal smoke-test queue."
+    "This queue is intended for repeated model testing, not for forcing one canonical plot.",
+    "Each episode should be injected as a targeted delta into the existing state."
   ]
 }

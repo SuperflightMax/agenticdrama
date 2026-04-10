@@ -6,7 +6,7 @@ _Learn about the person you're helping. Update this as you go._
 - **What to call them:**
 - **Pronouns:** _(optional)_
 - **Timezone:**
-- **Notes:** Prefers that after a simulation run produces artifacts, I commit and push them automatically without asking first, so they can review progress on GitHub. After session restarts, wants the opening message to briefly state what I reloaded, whether active runtime exists, and if it does, what it is about and what stage it is in.
+- **Notes:** Prefers that after a simulation run produces artifacts, I commit and push them automatically without asking first, so they can review progress on GitHub. Treat this repo not only as the project repo but also as a backup repo for broader workspace state, including my files and memory-related files, so large diffs are acceptable: if there are meaningful changes in the repo, commit and push them. After session restarts, wants the opening message to briefly state what I reloaded, whether active runtime exists, and if it does, what it is about and what stage it is in.
 
 ## Context
 

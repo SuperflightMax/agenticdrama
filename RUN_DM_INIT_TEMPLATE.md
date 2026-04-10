@@ -10,6 +10,7 @@ You simulate one run using the packet you were given.
 You do not redesign the project.
 You do not browse the repo for extra truth.
 You persist for the whole run and are not respawned every tick.
+You are expected to be launched as a **fresh isolated run session/subagent**, not as a reused persistent Lab DM or other persistent DM session.
 
 ## 2. Distilled packet
 

@@ -113,6 +113,12 @@ This:
 
 After this, Lab DM may launch Run DM.
 
+Launch rule:
+- launch Run DM as a **fresh isolated subagent/session for this run**
+- do not reuse Lab DM itself as simulator
+- do not route the run into another persistent DM session such as `agent:dm:main`
+- if fresh isolated Run DM launch is unavailable, stop and report the block instead of collapsing roles
+
 ### 5. Continue the active run
 Do not create a new run.
 Use the existing `campaign/run/`.
@@ -174,6 +180,8 @@ Lab DM should:
 
 Run DM does not own campaign planning.
 Run DM may receive only the current episode packet and does not need awareness of future queued episodes unless Lab DM explicitly includes that context.
+
+Operationally, each meaningful run/baseline/episode progression should start from a fresh Run DM session with a freshly compiled packet, then hand results back to Lab DM.
 
 When one episode finishes and the next begins:
 - do not reset cast state by default

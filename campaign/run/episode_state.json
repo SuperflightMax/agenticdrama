@@ -1,11 +1,12 @@
 {
   "active_episode_id": null,
-  "active_episode_index": null,
-  "status": "ready_for_first_episode",
-  "completed_episode_ids": [],
-  "pending_episode_ids": ["ep01_unmet_promise_water_and_battery","ep02_uneven_burden_stove_and_blankets","ep03_missing_battery_or_painkillers","ep04_outside_emergency_signal","ep05_repair_attempt"],
+  "active_episode_index": 0,
+  "status": "ep01_completed_ready_for_next",
+  "completed_episode_ids": ["ep01_unmet_promise_water_and_battery"],
+  "pending_episode_ids": ["ep02_uneven_burden_stove_and_blankets","ep03_missing_battery_or_painkillers","ep04_outside_emergency_signal","ep05_repair_attempt"],
   "last_injection_notes": [
-    "Fresh run scaffolded by scripts/runtime_ops.sh",
-    "Inject the first enabled episode from episode_plan.json before first serious progression."
+    "ep01 injected after baseline stabilization as targeted late-evening delta.",
+    "Nikita was moved to pump shed with a new explicit promise about water and charged battery.",
+    "Outcome remained ambiguous until return; final temporary interpretation settled on delayed partial fulfillment with heavier relational cost than baseline."
   ]
 }

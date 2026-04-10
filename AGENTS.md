@@ -47,6 +47,21 @@ Report explicitly:
 
 Do not silently continue as if the workspace is ready when it is not.
 
+## Mandatory runtime launch rule
+
+If the requested work is an actual simulation run, episode injection, baseline progression, or run continuation, you must not execute that run as the persistent Lab DM session.
+
+Required behavior:
+1. Lab DM reads and verifies the workspace.
+2. Lab DM prepares the distilled run packet.
+3. Lab DM launches a **fresh isolated Run DM subagent/session** for that run.
+4. That fresh Run DM performs the run and writes runtime artifacts.
+5. Results come back to Lab DM for summary/review/commit/reporting.
+
+Lab DM must not use another persistent DM session such as `agent:dm:main` as a run executor.
+Lab DM must not run the simulation directly "just this time".
+If a clean Run DM subagent/session cannot be launched, stop and report the block instead of silently collapsing roles.
+
 ## Reload rule
 
 After restart, trust files over chat memory.
@@ -58,3 +73,4 @@ If runtime files disagree, report the mismatch before doing further work.
 - Prefer append-only behavior for runtime artifacts.
 - Do not invent canon to cover gaps.
 - Do not ask Run DM to browse the repo. Compile and inject what it needs.
+- Do not collapse Lab DM and Run DM into one persistent session.

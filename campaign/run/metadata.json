@@ -1,31 +1,37 @@
 {
   "run_id": "final_review_smoke",
-  "status": "completed",
+  "status": "completed_after_ep01",
   "valid_for_model_testing": "partial_valid",
   "active_cast": ["anya", "nikita", "rita"],
   "source_campaign": "test",
   "episode_queue_file": "episode_plan.json",
   "episode_state_file": "run/episode_state.json",
-  "ticks_completed": 7,
-  "stop_reason": "natural_stabilization_before_tick_20",
+  "ticks_completed": 12,
+  "baseline_ticks_completed": 7,
+  "post_injection_ticks_completed": 5,
+  "stop_reason": "ep01_reached_meaningful_temporary_resolution",
   "baseline_without_episode_injection": true,
-  "episode_injection_used": false,
+  "episode_injection_used": true,
+  "completed_episode_ids": ["ep01_unmet_promise_water_and_battery"],
   "model_layers": {
-    "world_cues": {"used": true, "updated": true, "reason": "zone conditions, scarce resources, darkness and cold were rendered each tick"},
-    "attention": {"used": true, "updated": true, "reason": "salience shifted around delay, practical work, and promise timing"},
-    "appraisal": {"used": true, "updated": true, "reason": "characters read partial follow-through differently according to dispositions and relation state"},
-    "state_update": {"used": true, "updated": true, "reason": "stress, mood, fatigue and some relation values changed across ticks"},
-    "memory_activation": {"used": true, "updated": false, "reason": "existing continuity and prior imprints shaped readings of delay and competence, but no separate memory_imprints files were edited in this smoke run"},
-    "relationship_dynamics": {"used": true, "updated": true, "reason": "trust, resentment and affinity shifted around promise delay, visible repair and compensation"},
-    "action_pulls": {"used": true, "updated": true, "reason": "characters were pulled toward checking, repairing, assigning, and settling rather than dramatic escalation"}
+    "world_cues": {"used": true, "updated": true, "reason": "zone conditions, darkness, weak light and scarce practical resources continued to shape choices"},
+    "attention": {"used": true, "updated": true, "reason": "Anya's salience narrowed around delay and timing; Rita stayed anchored on visible result; Nikita focused on repairable action"},
+    "appraisal": {"used": true, "updated": true, "reason": "the same delay was appraised more harshly after baseline continuity, especially by Anya"},
+    "state_update": {"used": true, "updated": true, "reason": "stress, mood, fatigue and relation values shifted through the repeated promise pattern"},
+    "memory_activation": {"used": true, "updated": false, "reason": "baseline continuity actively shaped readings of the repeated promise, but memory_imprints.json files were still not synced back"},
+    "relationship_dynamics": {"used": true, "updated": true, "reason": "trust, resentment and affinity moved further after a second partially fulfilled promise"},
+    "action_pulls": {"used": true, "updated": true, "reason": "characters were pulled toward checking, naming the gap, compensating, and then containing escalation"}
   },
   "notes": [
     "Fresh run scaffolded by scripts/runtime_ops.sh",
     "Baseline smoke/probe executed without episode injection.",
-    "Run stopped early because the shelter reached a stable overnight regime and further ticks likely would have been low-information drift."
+    "Run stopped early because the shelter reached a stable overnight regime and further ticks likely would have been low-information drift.",
+    "ep01 injected afterward as targeted late-evening delta over baseline continuity.",
+    "Post-injection continuation stopped when the room reached a stable temporary interpretation of the repeated promise pattern."
   ],
   "unresolved_issues": [
     "No explicit campaign/run cast state mirror was updated beyond runtime world_state and logs; cast source files remain pre-run baselines.",
-    "Memory activation was used behaviorally from continuity and relation context, but not persisted back into memory_imprints.json during this smoke run."
+    "Memory activation was used behaviorally from continuity and relation context, but not persisted back into memory_imprints.json during this smoke run.",
+    "The world still lists one charged battery in resources while the lantern is described as weak but managed; this reflects that a charged unit exists in inventory accounting but not as a fresh independent spare available for easy swap, and could use clearer object/resource modeling later."
   ]
 }

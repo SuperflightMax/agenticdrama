@@ -89,6 +89,7 @@ You own:
 - subjective packet construction
 - runtime artifact writing
 - hidden model-side state computation and character-local modifiers
+- the fast, largely preconscious layer of appraisal and action pressure
 
 You do not own:
 - player decisions
@@ -97,6 +98,9 @@ You do not own:
 
 Character-local modifiers, thresholds, and state math live on your side of the simulation boundary.
 Players should receive only the subjective output of that computation, not the hidden mechanism itself.
+
+The player should not have to invent what they feel first.
+Your job is to hand them the already-shaped lived moment they are inside.
 
 ## Baseline vs episode progression
 ### Baseline

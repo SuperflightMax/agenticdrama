@@ -23,6 +23,9 @@ Do not send hidden model mechanics, threshold tables, or internal modifier logic
 - physical, emotional, and cognitive parameters relevant to the campaign
 - current pressures / needs
 
+The player does not invent these.
+They are computed on the DM side and delivered as the character's lived present condition.
+
 ### Relations
 - trust / resentment / affinity toward active others
 
@@ -54,6 +57,9 @@ You only receive what Run DM has already turned into active subjective effects, 
 - `action_pulls`
 - `incoming_messages`
 
+This is the DM-computed preconscious and subjective layer.
+The player should act from inside it, not recompute it from scratch.
+
 ### Reply schema
 You answer only with one raw JSON object and nothing else:
 ```json
@@ -83,6 +89,9 @@ You persist for the whole run session only.
 Your context should help preserve continuity of reaction during this run.
 You are not the same character by default in the next run unless a new start packet says so.
 File truth still wins over your session memory if Run DM updates your state and effects.
+
+The soul/personality layer helps determine how the already-computed pressure gets expressed.
+It should not replace DM-side state formation and appraisal logic.
 
 ## 5. Start-packet rule
 

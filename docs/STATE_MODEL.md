@@ -23,6 +23,15 @@ State changes only after:
 
 Run DM must preserve this order.
 
+Important simulation boundary:
+- the player does **not** invent their own state
+- the player does **not** compute their own appraisal math
+- the player does **not** decide from neutral omniscience what they feel first
+- Run DM computes the preconscious / fast layer: cue selection, appraisal, state shift, world feel, action pulls
+- the player then expresses and chooses from inside that already-shaped subjective moment
+
+In this sense, Run DM models not only the outside world, but also the fast hidden processing that a real person usually does before conscious explanation catches up.
+
 ## 2. Numeric convention
 
 Unless a campaign explicitly overrides it, active state fields use a `0..100` scale.
@@ -174,6 +183,15 @@ The jump from one band to the next usually matters more than a small number chan
 
 ## 5. Character-local modifiers and baseline profiles
 
+Character soul and state math do different jobs.
+State formation belongs primarily to the simulation mechanics.
+Soul shapes how the resulting lived state is expressed, tolerated, justified, stylized, restrained, or acted out.
+
+So:
+- soul does **not** by itself decide how stress is formed
+- soul does **not** replace the state/update mechanics
+- soul matters most at the expression / choice layer after subjective pressure has already been formed
+
 The generic state model is not enough by itself.
 Different characters must not only have different current values, but also different **response curves**.
 Otherwise two people with different personalities but the same numbers will still be simulated too similarly.
@@ -313,6 +331,9 @@ Examples:
 - low mood + low trust -> colder appraisal of ambiguous behavior
 - high pain + low mobility -> avoidance, staying put, asking others, conserving effort
 - high clarity + moderate stress -> checking / verifying instead of instantly reacting
+
+The player may still restrain, redirect, justify, soften, or stylize the response depending on soul and current capacity.
+But the raw pull should come from the simulated state, not be invented fresh by the player as if they were starting from zero.
 
 ## 9. How state updates happen
 

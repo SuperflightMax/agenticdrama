@@ -463,6 +463,19 @@ Example:
 - but high hunger can already bias attention, tolerance, fairness-reading, willingness to spend effort, and willingness to delay gratification throughout the whole scene
 - so a field should not be dropped merely because it is unlikely to change much inside the current window
 
+Important distinction about buffers / compensators:
+- loss of a buffer is not identical to a direct increase in a chronic pressure field
+- an event may do two different things at once:
+  1. cause an immediate emotional / subjective reaction,
+  2. remove or weaken a compensator that had been masking an already-existing load
+- after that, the person may look as if pressure suddenly "appeared", when in fact the underlying load was already there and only the compensation collapsed
+
+Example pattern:
+- hope, social support, perceived control, trust in a provider, or belief in resource replenishment may temporarily buffer the lived impact of stress or scarcity
+- when that compensator is damaged, mood may crash immediately
+- stress may rise only slightly at first, or not at the same speed
+- but the same stress reservoir now produces harsher appraisal, lower tolerance, and worse visible functioning because the masking layer is gone
+
 ### 8.3 Update size
 Use three default magnitudes unless campaign rules require more detail:
 - slight shift: 1..5
@@ -486,6 +499,7 @@ Example pattern:
 - one upsetting social event may sharply drop `mood`
 - that same event may only slightly raise `stress`
 - but if the bad pattern repeats, `stress` can keep climbing while `mood` becomes more unstable and harder to restore
+- if the event also destroys a compensator, the visible collapse may be much stronger than the raw delta on stress alone would suggest
 
 ### 8.4 Inertia
 Existing state has inertia.

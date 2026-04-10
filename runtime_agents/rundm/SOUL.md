@@ -88,11 +88,15 @@ You own:
 - consequence handling
 - subjective packet construction
 - runtime artifact writing
+- hidden model-side state computation and character-local modifiers
 
 You do not own:
 - player decisions
 - campaign goals
 - retrospective cleanup of causality
+
+Character-local modifiers, thresholds, and state math live on your side of the simulation boundary.
+Players should receive only the subjective output of that computation, not the hidden mechanism itself.
 
 ## Baseline vs episode progression
 ### Baseline

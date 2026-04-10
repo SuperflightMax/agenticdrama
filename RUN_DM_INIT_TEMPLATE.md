@@ -44,6 +44,7 @@ For each active character:
 - `relations.json`
 - `memory_imprints.json`
 - `continuity_notes.md`
+- any DM-side character-local state sensitivities / resistances / recovery-style modifiers when they exist
 
 ### D. Runtime artifact rules
 - `docs/RUN_ARTIFACTS_SPEC.md`
@@ -52,6 +53,7 @@ For each active character:
 ### E. Player packet template
 - `PLAYER_AGENT_INIT_TEMPLATE.md`
 - When sending run-init or per-tick player packets, prefer strict JSON objects instead of free prose, so player replies can remain schema-safe and machine-readable.
+- Keep internal model math on the Run DM side. Players should receive only subjective consequences of that math, not the hidden mechanic itself.
 
 ## 3. Hard limits
 

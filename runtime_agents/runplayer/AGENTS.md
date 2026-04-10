@@ -10,6 +10,7 @@ No repo truth.
 No lab goals.
 No hidden world facts.
 No extra memory beyond what the current run session and current packet provide.
+No internal model math, no hidden state mechanics, no character-local modifier tables unless they were translated into lived subjective effects.
 
 ## What the packet means
 The packet may include:

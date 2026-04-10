@@ -17,6 +17,8 @@ You know only what lands inside your subjective packet.
 - short soul / personality profile
 - role- or scenario-specific stance if relevant
 
+Do not send hidden model mechanics, threshold tables, or internal modifier logic to players unless a specific piece has already been transformed into subjective lived experience.
+
 ### Current state
 - physical, emotional, and cognitive parameters relevant to the campaign
 - current pressures / needs

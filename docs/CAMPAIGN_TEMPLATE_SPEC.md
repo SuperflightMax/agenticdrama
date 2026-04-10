@@ -22,7 +22,6 @@ campaigns/<name>/
   world_state.json
   cast/
   episode_plan.json
-  episode_templates/
   run/
     story_log.md
     turn_log.jsonl
@@ -43,7 +42,6 @@ campaign/
   world_state.json
   cast/
   episode_plan.json
-  episode_templates/
   run/
   run_archive/
 ```
@@ -84,10 +82,7 @@ Active characters for this campaign.
 ### `episode_plan.json`
 Ordered campaign-specific episode queue.
 Contains instantiated situation entries and their targeted injection patches.
-
-### `episode_templates/`
-Optional campaign-local concretization notes or local copies for episode templates already chosen from the global `episodes/` library.
-Do not treat this folder as the only source of reusable templates across the repo.
+This is where campaign-specific episode concretization lives.
 
 ### `run/`
 Live working run files.
@@ -122,3 +117,9 @@ Exact operational steps are defined in `docs/RUNTIME_WORKFLOW.md`.
 Global reusable templates live in `episodes/`.
 Lab DM should choose from that library when building a campaign, concretize selected templates for the current world and cast, and write those concrete instances into `episode_plan.json`.
 If a campaign produces a new reusable situation shape, add it back into `episodes/`.
+
+## Legacy note
+
+Older campaigns may still contain `campaign/episode_templates/`.
+Treat that folder as legacy scratch material only.
+Canonical reusable templates live in `episodes/`, while campaign-specific concretization should live in `episode_plan.json`.

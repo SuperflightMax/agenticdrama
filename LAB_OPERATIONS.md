@@ -29,9 +29,6 @@ Never collapse these roles.
 ### Episode queue
 `campaign/episode_plan.json`
 
-### Campaign-local episode notes / concretization copies
-`campaign/episode_templates/`
-
 ### Active episode tracker
 `campaign/run/episode_state.json`
 
@@ -115,8 +112,10 @@ After this, Lab DM may launch Run DM.
 
 Launch rule:
 - launch Run DM as a **fresh isolated subagent/session for this run**
+- assign and record a unique `run_id` for that run
 - do not reuse Lab DM itself as simulator
-- do not route the run into another persistent DM session such as `agent:dm:main`
+- do not route the run into another persistent DM session such as `agent:dm:main` or `dm:chat`
+- sending instructions into a persistent DM thread does **not** count as spawning Run DM
 - if fresh isolated Run DM launch is unavailable, stop and report the block instead of collapsing roles
 
 ### 5. Continue the active run
@@ -172,11 +171,10 @@ Lab DM should:
 2. choose from that library when assembling a campaign
 3. concretize selected templates for the current world and cast
 4. write those campaign-specific episode instances into `campaign/episode_plan.json`
-5. optionally keep campaign-local concretization notes or copies in `campaign/episode_templates/`
-6. inject only the targeted delta for the next episode
-7. preserve current cast state, memory, relations, and world consequences unless the episode explicitly overrides them
-8. update `run/episode_state.json` when advancing
-9. add newly discovered reusable situation shapes back into `episodes/` when they are generic enough to reuse
+5. inject only the targeted delta for the next episode
+6. preserve current cast state, memory, relations, and world consequences unless the episode explicitly overrides them
+7. update `run/episode_state.json` when advancing
+8. add newly discovered reusable situation shapes back into `episodes/` when they are generic enough to reuse
 
 Run DM does not own campaign planning.
 Run DM may receive only the current episode packet and does not need awareness of future queued episodes unless Lab DM explicitly includes that context.
@@ -192,6 +190,7 @@ When one episode finishes and the next begins:
 When an episode injection happens:
 - the actual causal patch must be visible in runtime world state / snapshots
 - `story_log.md` should contain one short human-readable note that an episode injection occurred and what pressure was introduced
+- if characters already speak in that tick, preserve direct speech verbatim instead of paraphrasing it away in the log
 - do not write the outcome in that note
 
 See `docs/EPISODE_SYSTEM.md` for the canonical rules.
@@ -217,3 +216,13 @@ If reviewing an archived run, use the corresponding folder in `campaign/run_arch
 - Runtime Worker must not make model decisions.
 - Player agents must not receive raw memory storage.
 - Runtime logs are append-only, except explicit repair.
+
+## Run reset / kill rule
+
+If a run is killed, reset, or replaced:
+- invalidate the old `run_id`,
+- do not accept further writes from the old Run DM session,
+- do not let stale output mutate current runtime artifacts.
+
+Only the currently active Run DM may write active runtime artifacts for its run.
+Lab DM may prepare, snapshot, archive, or review, but must not continue the run inside a persistent DM session.

@@ -41,6 +41,7 @@ Owns:
 - review.
 
 Does not directly simulate the run.
+Must not substitute a persistent DM chat/thread for a fresh Run DM spawn.
 
 ### Run DM
 Per-run simulation operator.
@@ -52,6 +53,7 @@ Owns:
 - runtime logging.
 
 Does not own future campaign episode planning unless Lab DM explicitly hands that scope into the current packet.
+Must be fresh per run and must stop writing if its `run_id` is invalidated by kill/reset.
 
 ### Player agents
 Per-character runtime actors.
@@ -113,7 +115,6 @@ Campaign management truth:
 - `world_state.json`
 - `cast/`
 - `episode_plan.json`
-- `episode_templates/`
 - `run/`
 - `run_archive/`
 
@@ -140,6 +141,7 @@ and after snapshot in
 
 Runtime logs are append-only unless explicitly repairing a broken log.
 `story_log.md` should visibly mark episode injections in human-readable form when they happen during a run.
+If direct speech exists in runtime artifacts, `story_log.md` should preserve that speech verbatim instead of paraphrasing it away.
 
 ## 6. Memory
 

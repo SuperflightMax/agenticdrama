@@ -29,6 +29,10 @@ Purpose:
 - not literary prose,
 - not raw machine data.
 
+`story_log.md` is a chronological readable log, not a retold scene.
+If direct speech exists in runtime artifacts, preserve it verbatim instead of replacing it with descriptive paraphrase.
+Broader interpretation belongs in `review_summary.md`, not in `story_log.md`.
+
 Structure:
 1. short title / run id / tick span,
 2. short cast block (one line per character),
@@ -36,7 +40,7 @@ Structure:
 4. tick-by-tick sections.
 
 Each tick should clearly show:
-- what was said (in plain readable form),
+- what was said (prefer direct quotes when they exist),
 - what was done,
 - what changed.
 
@@ -47,6 +51,7 @@ The actual causal patch must still be visible in world state / snapshots.
 Keep it short.
 Keep it Russian.
 Do not include raw ids or JSON fragments.
+Do not replace a known quote with summary phrasing such as "Никита ругал печку" when the actual quote is available.
 
 ## 4. `turn_log.jsonl`
 

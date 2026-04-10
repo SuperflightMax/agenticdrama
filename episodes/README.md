@@ -16,8 +16,10 @@ Lab DM should:
 - choose templates from this library when creating a campaign,
 - concretize selected templates for the current world and cast,
 - write campaign-specific instances into `campaign/episode_plan.json`,
-- optionally keep campaign-local concretization notes in `campaign/episode_templates/`,
 - add newly discovered reusable templates back into this library.
+
+Campaigns should store concrete episode instances in the plan, not duplicate the template library inside the campaign.
+If an older campaign still has `campaign/episode_templates/`, treat it as legacy scratch material rather than canonical truth.
 
 Do not treat templates here as scripted outcomes.
 They are pressure shapes, not mandatory arcs.

@@ -87,6 +87,7 @@ Does not:
 Owns one concrete run.
 Must receive a distilled packet.
 Must not freestyle across the repo looking for truth.
+Must be launched fresh per run and must not be replaced by messages sent into another persistent DM session.
 
 ### Player agents
 Own one subjective response each.
@@ -169,6 +170,10 @@ At minimum keep coherent:
 - `world_state.json`
 - `metadata.json`
 - `review_summary.md`
+
+`story_log.md` is a readable chronological log, not a literary retelling.
+If direct speech exists in runtime artifacts, preserve it verbatim in `story_log.md` instead of replacing it with descriptive paraphrase.
+Put broader interpretation and prose into `review_summary.md`, not into `story_log.md`.
 
 Do not let formatting drift so hard that recovery depends on luck.
 

@@ -39,13 +39,11 @@ episodes/
   README.md
 ```
 
-Each campaign may contain:
+Each campaign should contain:
 
 ```text
 campaigns/<name>/
   episode_plan.json
-  episode_templates/
-    <template_id>.md
   run/
     episode_state.json
 ```
@@ -55,13 +53,10 @@ Global reusable situation template.
 Lab DM chooses from this library when assembling a campaign.
 New reusable templates discovered during review should be added back here.
 
-### `campaign/episode_templates/<template_id>.md`
-Optional campaign-local concretization notes or local copies.
-Use this only when a campaign needs local wording, extra notes, or a concretized version that should not replace the global reusable template.
-
 ### `episode_plan.json`
 Ordered list of selected episode instances for this campaign.
 Each entry points to a template and adds campaign-specific concretization for the current world and cast.
+Campaign-specific concretization belongs here, not in a duplicated template library under the campaign.
 
 ### `run/episode_state.json`
 Working runtime tracker for the current run.
@@ -76,6 +71,8 @@ Lab DM should:
 - write the resulting queue into `campaign/episode_plan.json`,
 - preserve continuity between episodes unless an override is explicit,
 - add good newly discovered reusable templates back into `episodes/`.
+
+If an older campaign still contains `campaign/episode_templates/`, treat it as legacy scratch material rather than canonical truth.
 
 ## 5. Run DM responsibility
 
@@ -135,6 +132,7 @@ If the episode file does not declare a state field override, keep the current va
 When an episode is injected:
 - the causal patch itself must be visible in runtime world state / snapshots,
 - `story_log.md` should contain one short human-readable note that an injection happened and what pressure was introduced,
+- if speech happens in that tick, preserve direct speech verbatim in the log instead of replacing it with descriptive prose,
 - that note must not state guilt, motive, or outcome as fact.
 
 Example acceptable note:

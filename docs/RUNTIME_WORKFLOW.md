@@ -23,14 +23,16 @@ Every campaign folder and active runtime use:
 2. Reset `run/story_log.md`, `run/turn_log.jsonl`, `run/tick_snapshots.jsonl`, `run/review_summary.md` if you are intentionally starting a new clean run.
 3. Copy campaign root `world_state.json` into `run/world_state.json`.
 4. Update `run/metadata.json` with new `run_id`, status, active cast, and validity baseline.
-5. Only then launch Run DM.
+5. Only then launch Run DM as a fresh isolated per-run session/subagent.
+6. Do not substitute messages sent into another persistent DM thread for a real Run DM spawn.
 
 ## 4. Finishing a run
 
 1. Stop the run.
-2. Make sure `run/metadata.json` is up to date.
-3. Copy the full contents of `run/` into `run_archive/log-YYYY-MM-DD-run-N-name/`.
-4. If this run becomes the new canonical continuation, copy `run/world_state.json` back to campaign root `world_state.json` and sync changed cast files.
+2. Invalidate its `run_id` so stale output from that old run/session will be ignored.
+3. Make sure `run/metadata.json` is up to date.
+4. Copy the full contents of `run/` into `run_archive/log-YYYY-MM-DD-run-N-name/`.
+5. If this run becomes the new canonical continuation, copy `run/world_state.json` back to campaign root `world_state.json` and sync changed cast files.
 
 ## 5. Switching active campaign
 
@@ -73,7 +75,8 @@ Advancing to the next episode means:
 2. apply only the new episode injection delta
 3. update `episode_state.json`
 4. append a short human-readable injection note to `story_log.md`
-5. continue the same causal continuity unless Lab DM explicitly starts a separate branch
+5. if speech exists in that tick, preserve direct speech verbatim in `story_log.md` rather than paraphrasing it
+6. continue the same causal continuity unless Lab DM explicitly starts a separate branch
 
 Do not treat episode progression as a full campaign reset.
 

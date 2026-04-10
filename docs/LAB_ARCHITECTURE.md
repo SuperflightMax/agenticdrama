@@ -26,6 +26,7 @@ Responsibilities:
 - runtime logging.
 
 Run DM is bounded by a distilled packet and normally does not need the future episode queue beyond the current active episode context.
+Run DM must be launched fresh per run and must never be faked by sending instructions into another persistent DM session.
 
 ### 3. Player agents
 Per-character runtime actors.
@@ -74,3 +75,9 @@ For campaign creation, activation, run switching, and restore, Lab DM should use
 ## Important packet rule
 
 `campaign/CAMPAIGN.md` is a Lab DM file. It should not be injected into Run DM runtime packet because it contains experiment purpose.
+
+## Runtime isolation rule
+
+Every real run must have its own `run_id`.
+Only the current Run DM for that `run_id` may write active runtime artifacts.
+If a run is killed, reset, or replaced, any later output from the invalidated old run/session must be ignored.

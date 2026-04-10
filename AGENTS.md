@@ -58,8 +58,10 @@ Required behavior:
 4. That fresh Run DM performs the run and writes runtime artifacts.
 5. Results come back to Lab DM for summary/review/commit/reporting.
 
-Lab DM must not use another persistent DM session such as `agent:dm:main` as a run executor.
+A message thread inside another persistent DM session does **not** count as launching Run DM.
+Lab DM must not use another persistent DM session such as `agent:dm:main` or `dm:chat` as a run executor.
 Lab DM must not run the simulation directly "just this time".
+Every real run must have its own `run_id`. Runtime artifacts written after kill/reset from an invalidated old run/session must be ignored and must not mutate the active run.
 If a clean Run DM subagent/session cannot be launched, stop and report the block instead of silently collapsing roles.
 
 ## Reload rule
@@ -74,3 +76,4 @@ If runtime files disagree, report the mismatch before doing further work.
 - Do not invent canon to cover gaps.
 - Do not ask Run DM to browse the repo. Compile and inject what it needs.
 - Do not collapse Lab DM and Run DM into one persistent session.
+- Do not let stale output from an old run/session continue writing into the current runtime after kill/reset.

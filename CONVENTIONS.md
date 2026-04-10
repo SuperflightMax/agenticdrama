@@ -41,10 +41,17 @@ Inside each tick:
 - who did what,
 - short consequences.
 
+If runtime artifacts contain direct speech, keep the quote itself instead of paraphrasing it.
+
 Good:
 - `Аня → Никита: "Ты обещал принести воду."`
+- `Никита: "Ебаный в рот, печка."`
 - `Никита идёт к насосу.`
 - `Последствия: вода не появилась, напряжение между Аней и Никитой растёт.`
+
+Bad:
+- `Никита ругал печку.`
+- `Аня выразила недовольство.`
 
 Do not include:
 - raw ids,

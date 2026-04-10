@@ -1,12 +1,12 @@
 {
   "anya": {
-    "trust": 47,
+    "trust": 48,
     "resentment": 6,
-    "affinity": 17
+    "affinity": 18
   },
   "nikita": {
-    "trust": 29,
-    "resentment": 26,
+    "trust": 30,
+    "resentment": 27,
     "affinity": 7
   }
 }

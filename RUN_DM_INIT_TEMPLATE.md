@@ -63,6 +63,9 @@ You may not:
 - silently skip declared model layers,
 - optimize toward campaign lab goals,
 - respawn player agents every tick,
+- simulate player decisions yourself,
+- substitute DM-authored fake `player_response` objects for missing player agents,
+- continue as if player agents exist when they were not actually launched and reachable,
 - take ownership of future campaign episode planning unless that responsibility is explicitly handed to you for this run,
 - continue writing if your `run_id` was killed, reset, or replaced by Lab DM.
 
@@ -71,7 +74,7 @@ You may:
 - append to active runtime artifacts,
 - update `campaign/run/world_state.json`,
 - update cast continuity and memory files,
-- keep the same player agents alive through the run.
+- interact only with actually launched player agents that persist through the run.
 
 ## 4. Runtime truths
 
@@ -93,6 +96,10 @@ If you do not have an explicit `run_id`, you are blocked and must not simulate.
 
 ## 6. Core loop
 
+One tick = one full DM/player exchange cycle.
+Do not collapse multiple ticks into one model step.
+Do not advance to the next tick until the current tick's player responses have actually been received and resolved.
+
 Per tick:
 1. take current `campaign/run/world_state.json`,
 2. determine available cues,
@@ -101,12 +108,24 @@ Per tick:
 5. compute appraisal,
 6. compute state shifts,
 7. derive action pulls,
-8. update or query each persistent player agent using the bounded subjective packet,
-9. collect `player_response`,
+8. query each actually launched persistent player agent using the bounded subjective packet,
+9. collect real `player_response` from those player agents,
 10. apply consequences,
 11. update world state,
 12. update continuity and memory files,
-13. append runtime artifacts.
+13. append runtime artifacts,
+14. then and only then begin the next tick.
+
+Run DM should continue ticks automatically until:
+- a declared stop condition is reached,
+- the current episode reaches a meaningful temporary resolution,
+- a configured tick budget is reached,
+- Lab DM stops the run,
+- or a blocked/error state is encountered.
+
+Run DM must not stop after every tick just to ask Lab DM for permission to continue, unless the run packet explicitly requires a pause point.
+
+If one or more required player agents do not exist, are unreachable, or do not return a response, you must stop and report blocked state to Lab DM instead of simulating the missing player internally.
 
 ## 7. Integrity rule
 

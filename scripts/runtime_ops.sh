@@ -224,9 +224,32 @@ save_active_runtime_back_to_storage() {
   local dst="$CAMPAIGNS/$current_source"
   [ -d "$dst" ] || return 0
 
-  sync_run_back_to_campaign_root "$ACTIVE"
-  copytree_replace "$ACTIVE" "$dst"
+  local tmp_copy archived_runtime
+  tmp_copy="$(mktemp -d)"
+  copytree_replace "$dst" "$tmp_copy/storage_base"
+
+  if [ -d "$ACTIVE/run" ] && has_meaningful_run_content "$ACTIVE/run"; then
+    ensure_dir "$tmp_copy/storage_base/run_archive"
+    archived_runtime="$(archive_active_run "$ACTIVE" || true)"
+    if [ -n "$archived_runtime" ]; then
+      local archive_name
+      archive_name="$(basename "$archived_runtime")"
+      copytree_replace "$ACTIVE/run" "$tmp_copy/storage_base/run_archive/$archive_name"
+    fi
+  fi
+
+  if [ -d "$ACTIVE/cast" ]; then
+    copytree_replace "$ACTIVE/cast" "$tmp_copy/storage_base/cast"
+  fi
+  if [ -f "$ACTIVE/CAMPAIGN.md" ]; then cp -f "$ACTIVE/CAMPAIGN.md" "$tmp_copy/storage_base/CAMPAIGN.md"; fi
+  if [ -f "$ACTIVE/WORLD.md" ]; then cp -f "$ACTIVE/WORLD.md" "$tmp_copy/storage_base/WORLD.md"; fi
+  if [ -f "$ACTIVE/SIMULATION_RULES.md" ]; then cp -f "$ACTIVE/SIMULATION_RULES.md" "$tmp_copy/storage_base/SIMULATION_RULES.md"; fi
+  if [ -f "$ACTIVE/episode_plan.json" ]; then cp -f "$ACTIVE/episode_plan.json" "$tmp_copy/storage_base/episode_plan.json"; fi
+  if [ -f "$ACTIVE/$RUNTIME_SOURCE_FILE" ]; then cp -f "$ACTIVE/$RUNTIME_SOURCE_FILE" "$tmp_copy/storage_base/$RUNTIME_SOURCE_FILE"; fi
+
+  copytree_replace "$tmp_copy/storage_base" "$dst"
   write_runtime_source_marker "$dst" "$current_source"
+  rm -rf "$tmp_copy"
   echo "Saved active runtime back to storage: $dst"
 }
 
@@ -239,7 +262,6 @@ cmd_activate() {
   if [ -d "$ACTIVE" ]; then
     local archived=""
     archived="$(archive_active_run "$ACTIVE" || true)"
-    sync_run_back_to_campaign_root "$ACTIVE"
     save_active_runtime_back_to_storage
     if [ -n "$archived" ]; then
       echo "Archived previous active run to: $archived"
@@ -257,7 +279,6 @@ cmd_snapshot() {
   [ -n "$name" ] || { usage; exit 1; }
   [ -d "$ACTIVE" ] || { echo "Active campaign/ does not exist" >&2; exit 1; }
   local dst="$CAMPAIGNS/$name"
-  sync_run_back_to_campaign_root "$ACTIVE"
   copytree_replace "$ACTIVE" "$dst"
   rm -rf "$dst/runs"
   write_runtime_source_marker "$dst" "$name"

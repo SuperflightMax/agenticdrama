@@ -27,6 +27,7 @@ Responsibilities:
 
 Run DM is bounded by a distilled packet and normally does not need the future episode queue beyond the current active episode context.
 Run DM must be launched fresh per run and must never be faked by sending instructions into another persistent DM session.
+Run DM must not simulate player decisions itself. It must query actual player agents and use their returned `player_response` values, or stop blocked if those player agents were not launched or are unreachable.
 
 ### 3. Player agents
 Per-character runtime actors.
@@ -34,6 +35,8 @@ Responsibilities:
 - live inside their subjective packet,
 - return `player_response`,
 - preserve continuity of reaction during the run.
+
+For clean experimental separation, player agents should be launched as fresh isolated per-character subagents/sessions, one player per agent context.
 
 ### 4. Runtime worker
 Technical support role.

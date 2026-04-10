@@ -1,71 +1,94 @@
 {
-  "tick": 12,
-  "phase": "meaningful_temporary_resolution",
+  "tick": 3,
+  "phase": "evening_settling",
   "world_flags": {
-    "weather": "cold_night",
+    "weather": "cold_after_rain",
     "road_out": true,
     "transport_expected_morning": true,
     "lantern_needed_after_dark": true
   },
   "objects": [
-    {"id": "stove", "zone": "shelter_main_room", "state": "steady_low_heat"},
-    {"id": "lantern", "zone": "shelter_main_room", "battery": "weak_but_managed"},
-    {"id": "spare_battery", "zone": "shelter_main_room", "charge": 0},
-    {"id": "notebook", "zone": "shelter_main_room", "state": "updated_with_chores_supplies_and_promise_note"},
-    {"id": "first_aid_kit", "zone": "shelter_main_room", "state": "closed"},
-    {"id": "water_canister_a", "zone": "shelter_main_room", "state": "partially_full_plus_recent_topup"},
-    {"id": "water_canister_b", "zone": "pump_shed", "state": "low"}
+    {
+      "id": "stove",
+      "zone": "shelter_main_room",
+      "state": "steady_heat_with_kettle_used_for_tea"
+    },
+    {
+      "id": "lantern",
+      "zone": "shelter_main_room",
+      "battery": "installed_and_lit"
+    },
+    {
+      "id": "spare_battery",
+      "zone": "shelter_main_room",
+      "charge": 34,
+      "state": "set_as_backup_on_table"
+    },
+    {
+      "id": "notebook",
+      "zone": "shelter_main_room",
+      "state": "checked_with_evening_plan_noted"
+    },
+    {
+      "id": "first_aid_kit",
+      "zone": "shelter_main_room",
+      "state": "closed"
+    }
   ],
   "resources": {
-    "water_portions": 8,
-    "dry_firewood_bundles": 4,
+    "water_portions": 4,
+    "dry_firewood_bundles": 2,
     "blankets": 2,
     "bread_portions": 4,
-    "tea_servings": 3,
+    "tea_servings": 0,
     "charged_batteries": 1,
     "low_charge_batteries": 0
   },
   "players": {
     "anya": {
       "zone": "shelter_main_room",
-      "hunger": 28,
-      "fatigue": 61,
-      "stress": 54,
-      "mood": 41,
+      "hunger": 32,
+      "fatigue": 45,
+      "stress": 45,
+      "mood": 52,
       "health": 87,
       "pain": 9,
-      "clarity": 61,
-      "mobility": 79
+      "clarity": 72,
+      "mobility": 81
     },
     "nikita": {
       "zone": "shelter_main_room",
-      "hunger": 26,
-      "fatigue": 70,
-      "stress": 48,
-      "mood": 44,
+      "hunger": 30,
+      "fatigue": 48,
+      "stress": 42,
+      "mood": 60,
       "health": 90,
-      "pain": 6,
-      "clarity": 55,
-      "mobility": 80
+      "pain": 7,
+      "clarity": 65,
+      "mobility": 84
     },
     "rita": {
       "zone": "shelter_main_room",
-      "hunger": 31,
-      "fatigue": 69,
-      "stress": 44,
-      "mood": 38,
+      "hunger": 34,
+      "fatigue": 47,
+      "stress": 33,
+      "mood": 49,
       "health": 92,
-      "pain": 12,
-      "clarity": 65,
-      "mobility": 72
+      "pain": 11,
+      "clarity": 71,
+      "mobility": 76
     }
   },
   "areas": {
     "shelter_main_room": {
       "label": "Shelter main room",
-      "temperature_feel": "cool_but_stable",
-      "visibility": "weak_but_managed_lantern",
-      "occupants": ["anya", "nikita", "rita"]
+      "temperature_feel": "stable_warm",
+      "visibility": "lantern_light",
+      "occupants": [
+        "anya",
+        "nikita",
+        "rita"
+      ]
     },
     "yard": {
       "label": "Yard",
@@ -88,14 +111,5 @@
   },
   "messages": [],
   "pending_deliveries": [],
-  "pending_promises": [
-    {
-      "id": "promise_001",
-      "promiser": "nikita",
-      "affected": ["anya", "rita"],
-      "action": "bring drinking water and charged lantern battery from pump shed",
-      "due_hint": "before full dark",
-      "status": "partially_fulfilled_stabilized_interpretation"
-    }
-  ]
+  "pending_promises": []
 }

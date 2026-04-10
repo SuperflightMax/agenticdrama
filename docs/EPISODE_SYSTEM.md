@@ -111,14 +111,22 @@ Each entry in `episode_plan.json` should declare:
 - `completion_signals`
 - `carry_forward_notes`
 
+Recommended injection shape for active-runtime use:
+- `pressure_intent` — what new causal pressure must appear
+- `compatibility_checks` — what must already be true, and what must **not** be overwritten
+- `realization_hints` — allowed ways Run DM may concretize the pressure from the current runtime world
+- `world_patch` — only minimal safe deltas that can be applied directly without breaking continuity
+- `notes` — ambiguity, safety, and non-forcing reminders
+
 ## 8. Injection rule
 
 An episode injection is a **targeted patch**, not a total reset.
 
+It must be applied against the **current active runtime state** in `campaign/run/world_state.json`, not against the baseline campaign root state in `campaign/world_state.json`.
+
 It may change only what the episode explicitly touches, for example:
 - time of day,
 - weather,
-- location occupancy,
 - a pending promise,
 - a missing object,
 - a new external event,
@@ -126,6 +134,17 @@ It may change only what the episode explicitly touches, for example:
 - a temporary survival pressure.
 
 If the episode file does not declare a state field override, keep the current value from the end of the previous episode or previous tick.
+
+Forbidden for mid-run episode injection unless explicitly justified and repair-safe:
+- teleporting characters to new zones by fiat,
+- declaring that a character already said or did something that has not yet happened in runtime,
+- restoring earlier baseline positions or resources just because the template assumed them,
+- replacing a live unresolved situation with a cleaner template start state.
+
+If the current runtime state is incompatible with a template's preferred starting picture, do not force the picture onto the world. Instead:
+- adapt the episode to the live state,
+- choose another concrete realization of the same pressure,
+- or delay / skip the episode and record why.
 
 ## 9. Visibility of injection
 
@@ -145,13 +164,27 @@ Run DM must treat the episode as:
 - new available cues,
 - maybe new uncertainty,
 - maybe new pending commitments,
-- maybe new resource changes.
+- maybe new resource changes,
+- a need to concretize the pressure from the current runtime state rather than from the template's imagined opening.
+
+Before applying an episode mid-run, Run DM should perform a compatibility check:
+1. read the current `campaign/run/world_state.json`
+2. verify current zones, scarce resources, unresolved promises, and active pressures
+3. reject any direct patch that would overwrite live continuity without explicit authorization
+4. realize the episode through the lightest valid delta that still exposes the intended pressure
+
+Run DM may concretize an episode at the next meaningful tick, for example by:
+- choosing which scarce resource becomes socially salient now,
+- choosing which character is in position to make or receive a commitment,
+- surfacing a newly noticed shortage, discrepancy, message, or outside event,
+- converting a template pressure into a live offer, request, discovery, or coordination need.
 
 Run DM must **not** treat the episode as:
 - a required dramatic arc,
 - a forced conflict,
 - proof that someone is guilty,
-- a permission slip to skip appraisal.
+- a permission slip to skip appraisal,
+- permission to rewrite positions, commitments, or actions retroactively so the template can start cleanly.
 
 ## 11. Completion rule
 

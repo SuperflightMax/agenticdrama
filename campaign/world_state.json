@@ -1,5 +1,5 @@
 {
-  "tick": 0,
+  "tick": 2,
   "phase": "evening_setup",
   "world_flags": {
     "weather": "cold_after_rain",
@@ -11,17 +11,19 @@
     {
       "id": "stove",
       "zone": "shelter_main_room",
-      "state": "warm_but_fading"
+      "state": "checked_and_coaxed_warmer"
     },
     {
       "id": "lantern",
       "zone": "shelter_main_room",
-      "battery": "installed"
+      "battery": "installed",
+      "state": "lit_and_ready"
     },
     {
       "id": "spare_battery",
-      "zone": "pump_shed",
-      "charge": 34
+      "zone": "shelter_main_room",
+      "charge": 34,
+      "state": "retrieved_and_verified"
     },
     {
       "id": "notebook",
@@ -48,7 +50,7 @@
       "zone": "shelter_main_room"
     },
     "nikita": {
-      "zone": "yard"
+      "zone": "shelter_main_room"
     },
     "rita": {
       "zone": "shelter_main_room"
@@ -57,20 +59,19 @@
   "areas": {
     "shelter_main_room": {
       "label": "Shelter main room",
-      "temperature_feel": "cool",
-      "visibility": "good_enough",
+      "temperature_feel": "cool_but_steadier",
+      "visibility": "lantern_light",
       "occupants": [
         "anya",
-        "rita"
+        "rita",
+        "nikita"
       ]
     },
     "yard": {
       "label": "Yard",
       "temperature_feel": "cold_and_damp",
-      "visibility": "falling_light",
-      "occupants": [
-        "nikita"
-      ]
+      "visibility": "near_dark",
+      "occupants": []
     },
     "pump_shed": {
       "label": "Pump shed",
@@ -87,5 +88,13 @@
   },
   "messages": [],
   "pending_deliveries": [],
-  "pending_promises": []
+  "pending_promises": [
+    {
+      "id": "promise_001",
+      "promiser": "nikita",
+      "action": "bring spare battery",
+      "due_hint": "before full dark",
+      "status": "fulfilled"
+    }
+  ]
 }

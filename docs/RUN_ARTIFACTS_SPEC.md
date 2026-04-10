@@ -40,9 +40,17 @@ Structure:
 4. tick-by-tick sections.
 
 Each tick should clearly show:
-- what was said (prefer direct quotes when they exist),
-- what was done,
+- who said what (prefer direct quotes when they exist),
+- who did what,
 - what changed.
+
+Prefer an explicit plain sequence over descriptive summary. Good runtime logging looks like:
+- `Аня → Никита: "Ты обещал воду до темноты."`
+- `Никита возвращается из насосной с канистрой, но без батареи.`
+- `Рита кладёт дрова у печи.`
+- `Последствия: обещание остаётся частично выполненным, у Ани растёт настороженность.`
+
+Avoid explanatory paraphrase when concrete speech or action is available.
 
 When a new episode is injected during a run, add one short human-readable note to `story_log.md` that the injection happened and what pressure was introduced.
 Do not present guilt, motive, or outcome as fact in that note.

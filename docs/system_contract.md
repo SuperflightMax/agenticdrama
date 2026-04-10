@@ -54,12 +54,14 @@ Owns:
 
 Does not own future campaign episode planning unless Lab DM explicitly hands that scope into the current packet.
 Must be fresh per run and must stop writing if its `run_id` is invalidated by kill/reset.
+Must not simulate player decisions itself. It must query actual player agents and use their returned responses, or stop blocked.
 
 ### Player agents
 Per-character runtime actors.
 Own:
 - bounded subjective response.
 Do not own archival memory storage.
+For clean runtime separation, they should be launched as one fresh isolated agent/session per active character.
 
 ### Runtime worker
 Technical helper.
@@ -163,4 +165,5 @@ Forbidden:
 - giving Run DM experiment goals as runtime steering,
 - player omniscience,
 - skipping active model layers silently,
-- using agent chat memory as stronger truth than files.
+- using agent chat memory as stronger truth than files,
+- Run DM fabricating missing player responses instead of querying real player agents.

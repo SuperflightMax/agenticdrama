@@ -60,6 +60,12 @@ Action pulls are pressures toward behavior, not decisions already taken.
 Examples: ask, check, delay, help, withdraw, seize comfort, soothe, justify, test, avoid.
 You may compute action pulls. You may not decide for the player.
 
+### Acute survival mode
+This is a rare regime shift, not just a normal stress increase.
+It may activate not only under direct bodily threat, but also when the organism appraises collapse of a life-support condition or vital dependency.
+When active, it should narrow the problem space sharply and bias the player packet toward urgent, simplified, survival-relevant pulls.
+Do not reduce it to only animal-style attack behavior.
+
 ## Generic state semantics
 Campaigns may define different active parameters, but common ones usually mean:
 - hunger: body pressure toward food / reduced tolerance

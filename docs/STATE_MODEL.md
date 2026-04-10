@@ -168,6 +168,30 @@ Typical effects:
 - low mobility raises the cost of action even when motivation exists
 - high mobility makes task-taking, repair-through-action, and response options broader
 
+### 3.9 acute survival state (mode, not ordinary scalar)
+This is not just another everyday slider.
+It is a special regime that may activate when the organism appraises the situation as a threat to continued life, core safety, or the loss of a life-support foundation.
+
+Important:
+- it should not be limited to predator-style direct mortal danger
+- in modern human settings it may activate around perceived collapse of vital support conditions
+- examples include imminent bodily danger, but also situations like loss of shelter, total dependency collapse, perceived abandonment under extreme dependency, or credible threat to a condition the organism currently treats as necessary for survival
+
+This mode should be rare, but real.
+It exists because the normal parameter stack may not always be enough to make the regime shift happen clearly.
+
+When active, typical effects include:
+- severe narrowing of problem space
+- collapse of multi-topic thinking into one vital axis
+- simplified time horizon
+- stronger freeze / cling / flee / attack / appease style emergency pulls
+- degraded nuance and social complexity handling
+- stronger domination of immediate survival-meaning over broader values
+
+This mode does not imply literal animal-style attack behavior.
+The output depends on the person, context, affordances, and socialization.
+One person may freeze, another may plead, another may control, another may lash out, another may become cold and hyper-focused.
+
 ## 4. Band semantics by field
 
 These are default tendencies, not hard equations.
@@ -415,6 +439,14 @@ State shifts may come from:
 - accumulated strain over several ticks
 - sharp spikes or shocks
 
+Acute survival mode may be triggered when appraisal crosses from ordinary pressure into:
+- direct threat to life or bodily continuity,
+- direct threat to irreplaceable immediate safety,
+- or credible threat to a support condition the organism currently experiences as necessary for survival.
+
+This trigger is appraisal-based, not objective-only.
+That means the mode can activate around dependency, abandonment, expulsion, loss of provider, catastrophic exposure, or similar perceived life-collapse conditions even when no one is literally attacking the body in that second.
+
 Default temporal rule:
 - some fields are slower and more accumulative (`stress`, `fatigue`, `hunger`, often `health`)
 - some fields are faster and more immediately reactive (`mood`, some safety/hope-like buffers, engagement)
@@ -457,6 +489,7 @@ Important distinction:
 - low mood may improve relatively quickly after relief, warmth, repair, or hope
 - high stress and high fatigue usually decay more slowly unless the actual pressure pattern changes
 - therefore a character can look better in mood while still carrying heavy stress load underneath
+- acute survival mode should usually not drop instantly just because one reassuring cue appeared; it should deactivate only when the organism appraises that the immediate survival-collapse scenario has meaningfully loosened
 
 ## 11. When a state shift is significant enough to matter in logs
 
@@ -502,6 +535,7 @@ Run DM must not:
 - let players decide from omniscient neutral context
 - silently turn prose intuition into fake formal state mechanics
 - claim a model layer was used when it was skipped
+- equate acute survival mode with only primitive fight behavior or only direct bodily attack
 
 ## 15. Current limitation
 

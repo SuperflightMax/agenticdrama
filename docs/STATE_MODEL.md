@@ -27,6 +27,23 @@ Run DM must preserve this order.
 
 Unless a campaign explicitly overrides it, active state fields use a `0..100` scale.
 
+## 2.1 Normalization principle
+The purpose of state math is not only to track local change, but to create a comparable reference frame.
+If two characters both have `stress = 70`, that should mean the same **generic severity band** before character-local modifiers are applied.
+Otherwise the numbers stop being comparable and become decorative.
+
+So the model should split into two layers:
+- **normalized generic state meaning**: what `stress 70`, `clarity 30`, `pain 60` mean in the shared model
+- **character-local response profile**: how this character converts that state into appraisal, tolerance, recovery, and action pulls
+
+Important rule:
+- character-local modifiers may change sensitivity, recovery, interpretation bias, and downstream behavior
+- character-local modifiers should **not** silently redefine the generic meaning of the number itself
+
+In other words:
+- Petya stress 70 and Masha stress 70 should both count as the same generic stress band
+- but Petya and Masha may differ in what kinds of cues push them to 70, how fast they recover from 70, and what 70 does to their appraisal or behavior
+
 But the scale is not interpreted identically for all fields.
 There are two default families:
 - **one-sided pressure scales**: more of the value means more pressure or impairment
@@ -173,7 +190,8 @@ These are the live numbers in the current run, for example:
 - stress 45
 - clarity 72
 
-They answer: **where is the character right now?**
+They answer: **where is the character right now in the shared normalized model?**
+These numbers should remain comparable across characters at the generic level.
 
 ### 5.2 Baseline tendencies
 These are trait-like default tendencies for this character.
@@ -189,6 +207,13 @@ Examples:
 ### 5.3 Sensitivities and resistances
 These are local modifiers on top of the generic state model.
 They answer: **what hits this character harder or weaker than average?**
+
+They must not turn the shared scale into a different hidden scale per character.
+Their job is to affect:
+- how quickly the character moves between bands
+- what cues create larger or smaller deltas
+- what downstream appraisal / action consequences follow from a given band
+not to redefine what the band itself means.
 
 Examples:
 - delay / vagueness may raise stress faster for one character

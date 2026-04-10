@@ -4,6 +4,10 @@ This document turns the project's qualitative state logic into an explicit simul
 It is intentionally not a game-y stat block for optimizing scenes.
 Its job is to make Run DM compute state consistently enough that behavior emerges from internal causality rather than prompt improvisation.
 
+This file is the source of truth for generic state mechanics.
+Bootstraps, prompts, packet compilers, and runtime procedures should be derived from it, not invented separately.
+If a bootstrap or prompt disagrees with this document, this document wins and the bootstrap should be updated.
+
 Use this together with:
 - `docs/simulation_agents_life_core.md`
 - `docs/MEMORY_MODEL.md`
@@ -23,17 +27,29 @@ Run DM must preserve this order.
 
 Unless a campaign explicitly overrides it, active state fields use a `0..100` scale.
 
-Interpretation:
-- `0..19` = extreme / critical band
-- `20..39` = strong negative band
-- `40..59` = moderate / mixed band
-- `60..79` = stable / good band
-- `80..100` = strong / high-function band
+But the scale is not interpreted identically for all fields.
+There are two default families:
+- **one-sided pressure scales**: more of the value means more pressure or impairment
+- **capacity / resource scales**: more of the value means more usable capacity
+
+Some campaigns may also define **bipolar state axes** where the midpoint is neutral and both directions matter differently. If that is needed, the campaign must declare it explicitly instead of hoping Run DM will infer it.
+
+Default band interpretation:
+- `0..19`
+- `20..39`
+- `40..59`
+- `60..79`
+- `80..100`
+
+These bands are not linear in lived effect.
+Crossing a band boundary matters more than drifting inside a band.
+Some combinations create stronger-than-additive effects.
 
 Important:
 - not every parameter uses the same polarity
 - some are **higher is worse** (`hunger`, `fatigue`, `stress`, `pain`)
 - some are **higher is better** (`mood`, `health`, `clarity`, `mobility`)
+- campaigns may later define explicit bipolar fields if needed, but they must be named as such in campaign rules
 
 ## 3. State field meanings
 
@@ -122,6 +138,8 @@ Typical effects:
 ## 4. Band semantics by field
 
 These are default tendencies, not hard equations.
+Effects should be treated as non-linear by default.
+The jump from one band to the next usually matters more than a small number change inside the same band.
 
 ### For higher-is-worse fields: hunger, fatigue, stress, pain
 - `0..19`: minimal pressure, usually background only
@@ -178,6 +196,8 @@ Examples:
 - hunger may produce unfairness-reading quickly in one character, but mostly withdrawal in another
 - one character may resist panic but collapse into fatigue faster
 
+These modifiers should eventually be representable in explicit cast-side profile fields, not only as prose intuition.
+
 ### 5.4 Recovery style
 These are character-specific rules for what actually repairs state.
 They answer: **what reduces pressure for this character, and what fails to help?**
@@ -200,6 +220,11 @@ Character-local modifiers should come from:
 3. explicit run packet instructions.
 
 If a character-local modifier matters for an outcome and is not defined anywhere reliable, Lab DM should add it to the character materials instead of leaving Run DM to freestyle it indefinitely.
+
+Target direction:
+- generic mechanics live in this document,
+- campaign overrides live in `SIMULATION_RULES.md`,
+- character-local response profiles live in explicit cast-side data rather than only free prose.
 
 ## 6. Cross-effects
 
@@ -293,6 +318,12 @@ Heuristics:
 - clear meaningful cue hitting a live sensitivity -> moderate
 - shock, repeated accumulated pressure, or heavily memory-loaded cue -> major
 
+Update size should not be treated as purely additive arithmetic.
+Default non-linear rule:
+- repeated same-pattern hits in a short window increase later deltas
+- cues that cross a band boundary often produce larger downstream effect than equal-sized cues inside a stable band
+- multiple aligned pressures (for example high stress + low clarity + low trust) produce stronger appraisal distortion than simple sum-of-parts reasoning
+
 ### 8.4 Inertia
 Existing state has inertia.
 - already-high stress rises more easily from threat cues and falls more slowly
@@ -350,3 +381,9 @@ Run DM must not:
 
 This document defines default semantics and bands, but still leaves room for campaign-specific overrides.
 If a campaign needs harder equations or custom thresholds, place them in that campaign's `SIMULATION_RULES.md` and treat that file as a local override.
+
+Still missing and desirable next steps:
+- explicit cast-side profile schema for sensitivities / resistances / recovery style
+- more formal relation math
+- more formal update transfer rules from cue classes to deltas
+- packet compiler rules that force Run DM to show which state mechanics were actually applied

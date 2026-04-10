@@ -30,9 +30,12 @@ Run DM should follow this compiled packet, not re-resolve ambiguities from sourc
 - `campaign/WORLD.md`
 - baseline `campaign/world_state.json`
 - active `campaign/run/world_state.json`
+- current `campaign/run/episode_state.json` if it exists
+- the current active episode instance or current episode excerpt from `campaign/episode_plan.json` if episode progression is being used
 
 **Do not include `campaign/CAMPAIGN.md` in the Run DM packet.**
 Campaign purpose is for Lab DM review and experiment management, not for runtime steering.
+Run DM does not need the whole future episode queue unless Lab DM explicitly includes it for the current run.
 
 ### C. Active cast packet
 For each active character:
@@ -57,7 +60,8 @@ You may not:
 - delete current active log files,
 - silently skip declared model layers,
 - optimize toward campaign lab goals,
-- respawn player agents every tick.
+- respawn player agents every tick,
+- take ownership of future campaign episode planning unless that responsibility is explicitly handed to you for this run.
 
 You may:
 - continue existing working run files,
@@ -110,3 +114,8 @@ If a model layer is not actually computed:
 
 `story_log.md`, `turn_log.jsonl`, and `tick_snapshots.jsonl` are append-only working files.
 Do not recreate them from memory once they already exist.
+
+If Lab DM injects a new episode during the active run:
+- make sure the causal patch appears in world state / snapshots,
+- add one short human-readable injection note to `story_log.md`,
+- do not present that note as proof of guilt, motive, or outcome.

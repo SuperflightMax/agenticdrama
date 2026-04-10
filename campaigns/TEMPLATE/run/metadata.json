@@ -37,5 +37,7 @@
       "updated": false
     }
   },
-  "unresolved_items": []
+  "unresolved_items": [],
+  "episode_queue_file": "episode_plan.json",
+  "episode_state_file": "run/episode_state.json"
 }

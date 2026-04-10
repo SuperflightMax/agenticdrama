@@ -12,6 +12,7 @@ Responsibilities:
 - project continuity,
 - docs,
 - campaign assembly,
+- episode template selection and campaign-specific concretization,
 - runtime activation / switching,
 - run review.
 
@@ -24,7 +25,7 @@ Responsibilities:
 - memory / continuity updates,
 - runtime logging.
 
-Run DM is bounded by a distilled packet.
+Run DM is bounded by a distilled packet and normally does not need the future episode queue beyond the current active episode context.
 
 ### 3. Player agents
 Per-character runtime actors.
@@ -68,7 +69,7 @@ Responsibilities:
 
 ## Operational note
 
-For campaign creation, activation, run switching, and restore, Lab DM should use `LAB_OPERATIONS.md` and `scripts/runtime_ops.py` instead of inventing ad-hoc file workflows.
+For campaign creation, activation, run switching, and restore, Lab DM should use `LAB_OPERATIONS.md` and `scripts/runtime_ops.sh` instead of inventing ad-hoc file workflows.
 
 ## Important packet rule
 

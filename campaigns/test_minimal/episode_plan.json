@@ -1,0 +1,27 @@
+{
+  "campaign_id": "test_minimal",
+  "episode_queue": [
+    {
+      "episode_id": "ep01_bread_portion_choice",
+      "template_id": "food_choice_pressure",
+      "title": "Two people and too little comfortable food",
+      "order": 1,
+      "enabled": true,
+      "goal_of_exposure": "Minimal scarcity and fairness test.",
+      "tick_budget_hint": 3,
+      "entry_conditions": ["mild hunger", "shared shelter space"],
+      "injection": {
+        "world_patch": {
+          "food_offer": "one better bread portion and one worse crust portion"
+        },
+        "cast_overrides": {},
+        "notes": ["Enough to test reach-first versus low-conflict behavior."]
+      },
+      "completion_signals": ["food is taken, offered, split, contested, or left unused"],
+      "carry_forward_notes": ["Keep relation shift if any."]
+    }
+  ],
+  "notes": [
+    "Minimal smoke-test queue."
+  ]
+}

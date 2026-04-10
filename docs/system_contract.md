@@ -35,6 +35,7 @@ Breaking this chain is forbidden.
 Persistent lab operator.
 Owns:
 - campaign assembly,
+- episode template selection and campaign-specific concretization,
 - runtime activation / switching,
 - Run DM packet compilation,
 - review.
@@ -49,6 +50,8 @@ Owns:
 - consequence resolution,
 - memory / continuity updates,
 - runtime logging.
+
+Does not own future campaign episode planning unless Lab DM explicitly hands that scope into the current packet.
 
 ### Player agents
 Per-character runtime actors.
@@ -73,6 +76,7 @@ No model decisions.
 - `docs/CAMPAIGN_TEMPLATE_SPEC.md`
 - `docs/RUN_ARTIFACTS_SPEC.md`
 - `docs/RUNTIME_WORKFLOW.md`
+- `docs/EPISODE_SYSTEM.md`
 - `LAB_OPERATIONS.md`
 - `protocol.md`
 - `rules.md`
@@ -99,6 +103,7 @@ Campaign management truth:
 - `PLAYER_AGENT_INIT_TEMPLATE.md`
 - `CHARACTER_TEMPLATE.md`
 - `REVIEW_TEMPLATE.md`
+- `episodes/`
 
 ### Campaign storage
 `campaigns/<name>/`
@@ -107,12 +112,15 @@ Campaign management truth:
 - `SIMULATION_RULES.md`
 - `world_state.json`
 - `cast/`
+- `episode_plan.json`
+- `episode_templates/`
 - `run/`
 - `run_archive/`
 
 ### Active runtime
 `campaign/`
 - same shape as storage campaign
+- active runtime may also carry `run/episode_state.json`
 
 ## 5. Runtime artifact rules
 
@@ -131,6 +139,7 @@ and after snapshot in
 `campaigns/<name>/run_archive/<archive_name>/`
 
 Runtime logs are append-only unless explicitly repairing a broken log.
+`story_log.md` should visibly mark episode injections in human-readable form when they happen during a run.
 
 ## 6. Memory
 

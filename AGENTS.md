@@ -14,22 +14,26 @@ Read in this order:
 5. `docs/CAMPAIGN_TEMPLATE_SPEC.md`
 6. `docs/RUN_ARTIFACTS_SPEC.md`
 7. `docs/RUNTIME_WORKFLOW.md`
-8. `docs/MEMORY_MODEL.md`
-9. `docs/system_contract.md`
-10. `CONVENTIONS.md`
-11. `protocol.md`
-12. `rules.md`
+8. `docs/EPISODE_SYSTEM.md`
+9. `docs/MEMORY_MODEL.md`
+10. `docs/system_contract.md`
+11. `CONVENTIONS.md`
+12. `protocol.md`
+13. `rules.md`
+14. `episodes/README.md` if it exists
 
 Then inspect active runtime:
-13. `campaign/CAMPAIGN.md` if it exists
-14. `campaign/WORLD.md` if it exists
-15. `campaign/SIMULATION_RULES.md` if it exists
-16. `campaign/world_state.json` if it exists
-17. `campaign/cast/` if it exists
-18. `campaign/run/metadata.json` if it exists
-19. tail of `campaign/run/story_log.md` if it exists
-20. tail of `campaign/run/turn_log.jsonl` if it exists
-21. tail of `campaign/run/tick_snapshots.jsonl` if it exists
+15. `campaign/CAMPAIGN.md` if it exists
+16. `campaign/WORLD.md` if it exists
+17. `campaign/SIMULATION_RULES.md` if it exists
+18. `campaign/world_state.json` if it exists
+19. `campaign/cast/` if it exists
+20. `campaign/run/metadata.json` if it exists
+21. `campaign/episode_plan.json` if it exists
+22. `campaign/run/episode_state.json` if it exists
+23. tail of `campaign/run/story_log.md` if it exists
+24. tail of `campaign/run/turn_log.jsonl` if it exists
+25. tail of `campaign/run/tick_snapshots.jsonl` if it exists
 
 ## After reading
 

@@ -100,6 +100,7 @@ docs/RUNTIME_WORKFLOW.md
 docs/RUN_ARTIFACTS_SPEC.md
 docs/simulation_agents_life_core.md
 docs/system_contract.md
+episodes/README.md
 players/adhd_type/continuity_notes.md
 players/adhd_type/current_state.json
 players/adhd_type/memory_imprints.json
@@ -127,4 +128,5 @@ players/swing_type/relations.json
 players/swing_type/soul.md
 protocol.md
 rules.md
-scripts/runtime_ops.py
+scripts/runtime_ops.sh
+docs/REPO_REVIEW_AND_READINESS_2026-04-10.md

@@ -40,6 +40,10 @@ Each tick should clearly show:
 - what was done,
 - what changed.
 
+When a new episode is injected during a run, add one short human-readable note to `story_log.md` that the injection happened and what pressure was introduced.
+Do not present guilt, motive, or outcome as fact in that note.
+The actual causal patch must still be visible in world state / snapshots.
+
 Keep it short.
 Keep it Russian.
 Do not include raw ids or JSON fragments.

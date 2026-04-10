@@ -23,6 +23,18 @@ Never collapse these roles.
 ### Current working run
 `campaign/run/`
 
+### Global episode library
+`episodes/`
+
+### Episode queue
+`campaign/episode_plan.json`
+
+### Campaign-local episode notes / concretization copies
+`campaign/episode_templates/`
+
+### Active episode tracker
+`campaign/run/episode_state.json`
+
 ### Archived runs
 `campaign/run_archive/`
 and after snapshot they also live in
@@ -39,12 +51,13 @@ Use scripts for:
 - restoring a run from archive.
 
 Do not make up manual copy workflows if the script already covers the operation.
+Operational entrypoint is Bash-first because target environment is Linux VPS.
 
 ## Standard operations
 
 ### 1. Create a new campaign from template
 Use:
-`python3 scripts/runtime_ops.py create-campaign <new_name>`
+`bash scripts/runtime_ops.sh create-campaign <new_name>`
 
 This copies:
 - `campaigns/TEMPLATE/` -> `campaigns/<new_name>/`
@@ -58,7 +71,7 @@ Then Lab DM edits:
 
 ### 2. Create a new campaign from an existing one
 Use:
-`python3 scripts/runtime_ops.py create-campaign <new_name> --from <source_name>`
+`bash scripts/runtime_ops.sh create-campaign <new_name> --from <source_name>`
 
 Then Lab DM edits whatever must differ.
 If the new campaign is supposed to have clean memory, Lab DM must clean:
@@ -69,9 +82,16 @@ If the new campaign is supposed to have clean memory, Lab DM must clean:
 
 ### 3. Activate a campaign
 Use:
-`python3 scripts/runtime_ops.py activate <campaign_name>`
+`bash scripts/runtime_ops.sh activate <campaign_name>`
 
 This makes `campaign/` a working copy of `campaigns/<campaign_name>/`.
+
+This preserves the previous active campaign before replacement:
+- archives `campaign/run/` if it contains meaningful work,
+- syncs `campaign/run/world_state.json` back to campaign root by default,
+- snapshots current `campaign/` back into its source storage campaign when source is known,
+- only then replaces runtime with the selected campaign.
+
 
 After activation, verify:
 - `campaign/CAMPAIGN.md`
@@ -83,7 +103,7 @@ After activation, verify:
 
 ### 4. Start a fresh run in the active campaign
 Use:
-`python3 scripts/runtime_ops.py new-run --run-id <run_id>`
+`bash scripts/runtime_ops.sh new-run --run-id <run_id>`
 
 This:
 - archives the current contents of `campaign/run/` into `campaign/run_archive/<timestamp>-<old_run_id>/` if the current run is non-empty,
@@ -104,7 +124,7 @@ Run DM continues:
 
 ### 6. Snapshot active runtime back to storage
 Use:
-`python3 scripts/runtime_ops.py snapshot <campaign_name>`
+`bash scripts/runtime_ops.sh snapshot <campaign_name>`
 
 This copies current `campaign/` back into `campaigns/<campaign_name>/`.
 
@@ -115,7 +135,7 @@ Use it:
 
 ### 7. Restore an archived run into current working run
 Use:
-`python3 scripts/runtime_ops.py restore-run <archive_name>`
+`bash scripts/runtime_ops.sh restore-run <archive_name>`
 
 This copies:
 - `campaign/run_archive/<archive_name>/` -> `campaign/run/`
@@ -135,6 +155,38 @@ Before launching Run DM, confirm:
 7. Run DM init packet is compiled.
 8. Run DM packet does **not** include `campaign/CAMPAIGN.md`.
 9. Player packets will include **memory effects**, not raw memory storage.
+
+
+## Episode workflow
+
+Episodes are ordered situation injections, not scripted outcomes.
+
+Lab DM should:
+1. keep reusable situation shapes in the global `episodes/` library
+2. choose from that library when assembling a campaign
+3. concretize selected templates for the current world and cast
+4. write those campaign-specific episode instances into `campaign/episode_plan.json`
+5. optionally keep campaign-local concretization notes or copies in `campaign/episode_templates/`
+6. inject only the targeted delta for the next episode
+7. preserve current cast state, memory, relations, and world consequences unless the episode explicitly overrides them
+8. update `run/episode_state.json` when advancing
+9. add newly discovered reusable situation shapes back into `episodes/` when they are generic enough to reuse
+
+Run DM does not own campaign planning.
+Run DM may receive only the current episode packet and does not need awareness of future queued episodes unless Lab DM explicitly includes that context.
+
+When one episode finishes and the next begins:
+- do not reset cast state by default
+- do not clear memory or relations
+- do not replace the whole world state if only one pressure changed
+- do carry forward unresolved meaning into the next episode
+
+When an episode injection happens:
+- the actual causal patch must be visible in runtime world state / snapshots
+- `story_log.md` should contain one short human-readable note that an episode injection occurred and what pressure was introduced
+- do not write the outcome in that note
+
+See `docs/EPISODE_SYSTEM.md` for the canonical rules.
 
 ## Review workflow
 

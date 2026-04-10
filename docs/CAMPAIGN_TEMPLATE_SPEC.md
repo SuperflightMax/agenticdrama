@@ -4,6 +4,14 @@ Read this before creating, repairing, copying, or switching campaigns.
 
 ## 1. Canonical campaign structure
 
+Global reusable episode library at repo root:
+
+```text
+episodes/
+  <template_id>.md
+  README.md
+```
+
 Every campaign folder should use the same structure:
 
 ```text
@@ -13,6 +21,8 @@ campaigns/<name>/
   SIMULATION_RULES.md
   world_state.json
   cast/
+  episode_plan.json
+  episode_templates/
   run/
     story_log.md
     turn_log.jsonl
@@ -32,6 +42,8 @@ campaign/
   SIMULATION_RULES.md
   world_state.json
   cast/
+  episode_plan.json
+  episode_templates/
   run/
   run_archive/
 ```
@@ -68,6 +80,15 @@ Baseline world state for this campaign outside the live run.
 ### `cast/`
 Active characters for this campaign.
 
+
+### `episode_plan.json`
+Ordered campaign-specific episode queue.
+Contains instantiated situation entries and their targeted injection patches.
+
+### `episode_templates/`
+Optional campaign-local concretization notes or local copies for episode templates already chosen from the global `episodes/` library.
+Do not treat this folder as the only source of reusable templates across the repo.
+
 ### `run/`
 Live working run files.
 Run DM writes here.
@@ -95,3 +116,9 @@ Exact operational steps are defined in `docs/RUNTIME_WORKFLOW.md`.
 ## Packet safety
 
 `CAMPAIGN.md` is for Lab DM and review context. It should not be injected into the runtime packet for Run DM.
+
+## 5. Episode source rule
+
+Global reusable templates live in `episodes/`.
+Lab DM should choose from that library when building a campaign, concretize selected templates for the current world and cast, and write those concrete instances into `episode_plan.json`.
+If a campaign produces a new reusable situation shape, add it back into `episodes/`.

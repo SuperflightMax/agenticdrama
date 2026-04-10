@@ -1,52 +1,20 @@
 {
-  "campaign_id": "trust_pressure_test",
-  "run_id": "test_bootstrap",
+  "run_id": "final_review_smoke",
   "status": "ready_not_started",
   "valid_for_model_testing": "not_run_yet",
-  "active_cast": [
-    "anya",
-    "nikita",
-    "rita"
-  ],
-  "source_campaign": "campaigns/test",
+  "active_cast": ["anya","nikita","rita"],
+  "source_campaign": "test",
+  "episode_queue_file": "episode_plan.json",
+  "episode_state_file": "run/episode_state.json",
   "model_layers": {
-    "world_cues": {
-      "used": false,
-      "updated": false
-    },
-    "attention": {
-      "used": false,
-      "updated": false
-    },
-    "appraisal": {
-      "used": false,
-      "updated": false
-    },
-    "state_update": {
-      "used": false,
-      "updated": false
-    },
-    "memory_activation": {
-      "used": false,
-      "updated": false
-    },
-    "relationship_dynamics": {
-      "used": false,
-      "updated": false
-    },
-    "action_pulls": {
-      "used": false,
-      "updated": false
-    }
+    "world_cues": {"used": false, "updated": false},
+    "attention": {"used": false, "updated": false},
+    "appraisal": {"used": false, "updated": false},
+    "state_update": {"used": false, "updated": false},
+    "memory_activation": {"used": false, "updated": false},
+    "relationship_dynamics": {"used": false, "updated": false},
+    "action_pulls": {"used": false, "updated": false}
   },
-  "suggested_scenarios": [
-    "unmet_promise",
-    "uneven_burden",
-    "moved_shared_resource"
-  ],
-  "notes": [
-    "Campaign prepared for first run.",
-    "No runtime ticks have been executed yet."
-  ],
+  "notes": ["Fresh run scaffolded by scripts/runtime_ops.sh"],
   "unresolved_issues": []
 }

@@ -38,10 +38,11 @@ Before replacing `campaign/`:
 1. Detect whether current `campaign/run/` contains meaningful work.
 2. If yes, archive it into that campaign's `run_archive/`.
 3. If current runtime should remain the latest continuation, sync `run/world_state.json` back into campaign root `world_state.json` and sync changed cast files.
-4. Save the current `campaign/` back into its source folder under `campaigns/<name>/`.
-5. Only then replace `campaign/` with a copy of the next selected campaign folder.
+4. By default, sync `campaign/run/world_state.json` back into campaign root `world_state.json` before saving, unless it is intentionally known to be a broken or discarded branch.
+5. Save the current `campaign/` back into its source folder under `campaigns/<name>/`.
+6. Only then replace `campaign/` with a copy of the next selected campaign folder.
 
-Never discard `campaign/run/` silently during a switch.
+Never discard `campaign/run/` silently during a switch. Activation must preserve the outgoing active campaign before replacement.
 
 ## 6. Restoring a past run
 
@@ -60,7 +61,24 @@ If `run/` files contradict each other:
 - archive the repaired state separately if needed.
 
 
-## 8. Standard script
 
-The canonical helper for these operations is `scripts/runtime_ops.py`.
+## 8. Episode progression inside one campaign
+
+Ordered episode queues live in `campaign/episode_plan.json`.
+Global reusable episode templates live in `episodes/`.
+Runtime progression state lives in `campaign/run/episode_state.json`.
+
+Advancing to the next episode means:
+1. keep the current cast files and current `run/world_state.json`
+2. apply only the new episode injection delta
+3. update `episode_state.json`
+4. append a short human-readable injection note to `story_log.md`
+5. continue the same causal continuity unless Lab DM explicitly starts a separate branch
+
+Do not treat episode progression as a full campaign reset.
+
+## 9. Standard script
+
+The canonical helper for copy / archive / activate / restore operations is `scripts/runtime_ops.sh`.
 Lab DM should prefer using it over inventing a fresh copy/archive procedure.
+This helper is Bash-first because deployment target is Linux VPS.

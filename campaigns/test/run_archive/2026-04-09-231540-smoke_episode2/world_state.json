@@ -1,0 +1,91 @@
+{
+  "tick": 0,
+  "phase": "evening_setup",
+  "world_flags": {
+    "weather": "cold_after_rain",
+    "road_out": true,
+    "transport_expected_morning": true,
+    "lantern_needed_after_dark": true
+  },
+  "objects": [
+    {
+      "id": "stove",
+      "zone": "shelter_main_room",
+      "state": "warm_but_fading"
+    },
+    {
+      "id": "lantern",
+      "zone": "shelter_main_room",
+      "battery": "installed"
+    },
+    {
+      "id": "spare_battery",
+      "zone": "pump_shed",
+      "charge": 34
+    },
+    {
+      "id": "notebook",
+      "zone": "shelter_main_room",
+      "state": "open_on_table"
+    },
+    {
+      "id": "first_aid_kit",
+      "zone": "shelter_main_room",
+      "state": "closed"
+    }
+  ],
+  "resources": {
+    "water_portions": 5,
+    "dry_firewood_bundles": 2,
+    "blankets": 2,
+    "bread_portions": 4,
+    "tea_servings": 3,
+    "charged_batteries": 1,
+    "low_charge_batteries": 1
+  },
+  "players": {
+    "anya": {
+      "zone": "shelter_main_room"
+    },
+    "nikita": {
+      "zone": "yard"
+    },
+    "rita": {
+      "zone": "shelter_main_room"
+    }
+  },
+  "areas": {
+    "shelter_main_room": {
+      "label": "Shelter main room",
+      "temperature_feel": "cool",
+      "visibility": "good_enough",
+      "occupants": [
+        "anya",
+        "rita"
+      ]
+    },
+    "yard": {
+      "label": "Yard",
+      "temperature_feel": "cold_and_damp",
+      "visibility": "falling_light",
+      "occupants": [
+        "nikita"
+      ]
+    },
+    "pump_shed": {
+      "label": "Pump shed",
+      "temperature_feel": "cold",
+      "visibility": "dim",
+      "occupants": []
+    },
+    "wood_lean_to": {
+      "label": "Wood lean-to",
+      "temperature_feel": "cold",
+      "visibility": "dim",
+      "occupants": []
+    }
+  },
+  "messages": [],
+  "pending_deliveries": [],
+  "pending_promises": []
+}

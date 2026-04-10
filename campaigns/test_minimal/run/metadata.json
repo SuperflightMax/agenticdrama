@@ -41,5 +41,10 @@
   "notes": [
     "Minimal smoke test campaign prepared."
   ],
-  "unresolved_issues": []
+  "unresolved_issues": [],
+  "episode_queue_file": "episode_plan.json",
+  "episode_state_file": "run/episode_state.json",
+  "suggested_scenarios": [
+    "ep01_bread_portion_choice"
+  ]
 }

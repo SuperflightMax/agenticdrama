@@ -244,5 +244,5 @@ If you cannot say that yet, keep inspecting files instead of pretending readines
 
 ## Central operational rule
 
-For campaign creation, activation, run switching, snapshotting, and restore, use `LAB_OPERATIONS.md` and `scripts/runtime_ops.py`.
+For campaign creation, activation, run switching, snapshotting, and restore, use `LAB_OPERATIONS.md` and `scripts/runtime_ops.sh`.
 Do not improvise a fresh file workflow every time.

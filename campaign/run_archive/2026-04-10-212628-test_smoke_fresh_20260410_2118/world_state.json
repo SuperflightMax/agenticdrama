@@ -1,5 +1,5 @@
 {
-  "tick": 0,
+  "tick": 10,
   "phase": "evening_setup",
   "world_flags": {
     "weather": "cold_after_rain",
@@ -36,10 +36,10 @@
   ],
   "resources": {
     "water_portions": 5,
-    "dry_firewood_bundles": 2,
+    "dry_firewood_bundles": 1,
     "blankets": 2,
-    "bread_portions": 4,
-    "tea_servings": 3,
+    "bread_portions": 3,
+    "tea_servings": 2,
     "charged_batteries": 1,
     "low_charge_batteries": 1
   },
@@ -48,7 +48,7 @@
       "zone": "shelter_main_room"
     },
     "nikita": {
-      "zone": "yard"
+      "zone": "shelter_main_room"
     },
     "rita": {
       "zone": "shelter_main_room"
@@ -61,6 +61,7 @@
       "visibility": "good_enough",
       "occupants": [
         "anya",
+        "nikita",
         "rita"
       ]
     },
@@ -68,9 +69,7 @@
       "label": "Yard",
       "temperature_feel": "cold_and_damp",
       "visibility": "falling_light",
-      "occupants": [
-        "nikita"
-      ]
+      "occupants": []
     },
     "pump_shed": {
       "label": "Pump shed",
@@ -87,5 +86,13 @@
   },
   "messages": [],
   "pending_deliveries": [],
-  "pending_promises": []
+  "pending_promises": [
+    {
+      "promiser": "nikita",
+      "receiver": "group",
+      "promise": "check water in the morning if the road allows",
+      "soft_due": "morning",
+      "status": "pending"
+    }
+  ]
 }

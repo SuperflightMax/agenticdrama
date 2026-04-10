@@ -1,23 +1,20 @@
 {
-  "run_id": "test_smoke_fresh_20260410_2118",
-  "status": "baseline_completed",
-  "valid_for_model_testing": "yes",
-  "active_cast": ["anya", "nikita", "rita"],
+  "run_id": "test_smoke_reset_20260410_2125",
+  "status": "ready_not_started",
+  "valid_for_model_testing": "not_run_yet",
+  "active_cast": ["anya","nikita","rita"],
   "source_campaign": "test",
   "episode_queue_file": "episode_plan.json",
   "episode_state_file": "run/episode_state.json",
   "model_layers": {
-    "world_cues": {"used": true, "updated": true},
-    "attention": {"used": true, "updated": true},
-    "appraisal": {"used": true, "updated": true},
-    "state_update": {"used": true, "updated": true},
-    "memory_activation": {"used": true, "updated": true},
-    "relationship_dynamics": {"used": true, "updated": true},
-    "action_pulls": {"used": true, "updated": true}
+    "world_cues": {"used": false, "updated": false},
+    "attention": {"used": false, "updated": false},
+    "appraisal": {"used": false, "updated": false},
+    "state_update": {"used": false, "updated": false},
+    "memory_activation": {"used": false, "updated": false},
+    "relationship_dynamics": {"used": false, "updated": false},
+    "action_pulls": {"used": false, "updated": false}
   },
-  "notes": [
-    "Fresh run scaffolded by scripts/runtime_ops.sh",
-    "Baseline completed without episode injection"
-  ],
+  "notes": ["Fresh run scaffolded by scripts/runtime_ops.sh"],
   "unresolved_issues": []
 }

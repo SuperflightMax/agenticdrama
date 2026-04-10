@@ -276,7 +276,61 @@ Target direction:
 - campaign overrides live in `SIMULATION_RULES.md`,
 - character-local response profiles live in explicit cast-side data rather than only free prose.
 
-## 6. Cross-effects
+## 6. Universal field pool and dynamic salience
+
+The model should not split into totally different isolated state systems for each environment.
+A character remains one organism with one psyche whether the current pressure is social, practical, dangerous, intimate, or physical.
+
+So the default direction is:
+- keep one shared state field pool,
+- keep one shared relation / memory model,
+- vary which fields are most behaviorally influential right now.
+
+This means:
+- different scenarios do **not** require entirely separate humans with unrelated mechanics
+- but different scenarios do change which pressures dominate attention, appraisal, and action pulls
+
+### 6.1 Always-on vs foregrounded fields
+Some fields may remain present but not foregrounded on every tick.
+
+Example:
+- during acute danger, mobility, pain, stress, and clarity may dominate
+- trust, resentment, and attachment still exist, but may shape behavior less strongly in that moment
+- after immediate danger drops, those social fields may surge back into relevance
+
+### 6.2 Campaign activation sets
+Campaigns may declare which fields are actively tracked or emphasized.
+That should mean:
+- which fields Run DM must compute explicitly,
+- which fields are expected to matter often,
+- which fields are likely to appear in subjective packets,
+not that all non-listed human mechanisms cease to exist conceptually.
+
+### 6.3 Tick-level salience
+Even inside one campaign, the same active fields should not all matter equally every tick.
+Run DM should decide which fields are currently foregrounded by:
+- current environment,
+- current cues,
+- current task demands,
+- current social meaning,
+- current memory activation,
+- current state bands.
+
+### 6.4 No "all parameters all the time" requirement
+The goal is not to force every tick to mention or visibly use every state field.
+The goal is to preserve one coherent underlying organism where:
+- any field can matter if conditions make it matter,
+- not every field must dominate at once,
+- dormant fields may still constrain behavior even when not foregrounded.
+
+### 6.5 Design implication
+When expanding the model, prefer:
+- one general state architecture,
+- campaign-specific emphasis,
+- character-specific modifiers,
+over completely separate environment-specific state systems unless there is a truly different ontology.
+
+## 7. Cross-effects
 
 These are default cross-field tendencies Run DM should apply unless a campaign overrides them.
 
@@ -306,7 +360,7 @@ These are default cross-field tendencies Run DM should apply unless a campaign o
 - high stress makes low-trust or high-resentment reads sharpen faster
 - under lower stress, the same relation state may remain latent instead of dominant
 
-## 7. Perception effects
+## 8. Perception effects
 
 Run DM should not treat state as a decorative afterthought.
 State changes:
@@ -324,7 +378,7 @@ Default tendencies:
 - high pain -> bodily and effort-related cues gain weight
 - low clarity -> worse distinction between cue and interpretation
 
-## 8. Decision effects
+## 9. Decision effects
 
 State should not directly choose action.
 Instead it shapes:
@@ -343,7 +397,7 @@ Examples:
 The player may still restrain, redirect, justify, soften, or stylize the response depending on soul and current capacity.
 But the raw pull should come from the simulated state, not be invented fresh by the player as if they were starting from zero.
 
-## 9. How state updates happen
+## 10. How state updates happen
 
 ### 8.1 Update trigger
 A state update should happen only if something was:
@@ -404,7 +458,7 @@ Important distinction:
 - high stress and high fatigue usually decay more slowly unless the actual pressure pattern changes
 - therefore a character can look better in mood while still carrying heavy stress load underneath
 
-## 10. When a state shift is significant enough to matter in logs
+## 11. When a state shift is significant enough to matter in logs
 
 A shift matters enough for runtime reasoning when at least one is true:
 - it changes the band of a parameter
@@ -413,7 +467,7 @@ A shift matters enough for runtime reasoning when at least one is true:
 - it creates or resolves a meaningful social interpretation
 - it contributes to memory formation
 
-## 11. Memory formation rule
+## 12. Memory formation rule
 
 Memory does not form from every event.
 A new imprint becomes likely when there is meaningful accumulated state change, especially if the moment includes:
@@ -430,7 +484,7 @@ Imprints should encode:
 - fragments if relevant
 - strength / valence / clarity
 
-## 12. Relation interaction rule
+## 13. Relation interaction rule
 
 State and relations should be computed together, not separately.
 For example:
@@ -440,7 +494,7 @@ For example:
 Relation values do not directly cause action.
 They bias appraisal and repair thresholds.
 
-## 13. What Run DM must not do
+## 14. What Run DM must not do
 
 Run DM must not:
 - use state numbers as decorative color only
@@ -449,7 +503,7 @@ Run DM must not:
 - silently turn prose intuition into fake formal state mechanics
 - claim a model layer was used when it was skipped
 
-## 14. Current limitation
+## 15. Current limitation
 
 This document defines default semantics and bands, but still leaves room for campaign-specific overrides.
 If a campaign needs harder equations or custom thresholds, place them in that campaign's `SIMULATION_RULES.md` and treat that file as a local override.

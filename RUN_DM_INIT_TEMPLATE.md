@@ -66,9 +66,10 @@ Append to append-only logs each tick:
 ```
 `campaign/run/turn_log.jsonl`      — one JSON object per turn, full proof chain
 `campaign/run/tick_snapshots.jsonl` — one JSON line per tick, world state
-`campaign/run/story_log.md`         — human-readable narrative, append only
+`campaign/run/story_log.md`         — human-readable narrative in Russian, append only
 ```
-Update each tick:
+
+**Language rule:** `story_log.md` must be written in Russian. All user-facing artifacts must be Russian.Update each tick:
 ```
 `campaign/run/world_state.json`
 ```
@@ -121,6 +122,10 @@ Every `turn_log.jsonl` entry must contain this proof chain:
 
 If a step was not computed: `"<step>": "skipped", "reason": "<why>"`
 Do not omit fields — omitting implies computation when none occurred.
+
+**Dialogue requirement:** The `subjective_render` field must contain the actual rendered text that was sent to the player — including what the character said (speech), what they perceived (world feel), and their state/body feel. This is what goes into `story_log.md`. Without it, the narrative has no dialogue.
+
+**Gap flagged:** Previous ticks 2-13 are missing subjective_render / speech from artifacts. Future runs must include this.
 
 ### F. Turn log vs tick artifact distinction
 

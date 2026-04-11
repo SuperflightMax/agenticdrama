@@ -1,0 +1,8 @@
+{
+  "run_id": "test_smoke_reset_20260410_2125",
+  "tick": 4,
+  "episode": "ep01_unmet_promise_water_and_battery",
+  "summary": "Nikita is in motion toward completion. Anya keeps the pressure on through Rita. Rita starts organizing fallback roles if the return stalls.",
+  "world_state": {"phase":"late_evening","pressure":"execution_window"},
+  "status": "advanced"
+}

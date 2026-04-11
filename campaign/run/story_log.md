@@ -103,3 +103,75 @@ Nikita agreed to future practical support. Rita completed the battery run. The e
 - turn_log.jsonl and tick_snapshots.jsonl: rebuilt post-run from available data
 
 **Issue to fix:** Run DM must write complete proof chain artifacts to `campaign/run/artifacts/tick_<N>.json` AND append to `turn_log.jsonl` and `tick_snapshots.jsonl` every tick. Do not simplify later ticks.
+
+## Episode: ep02_uneven_burden_stove_and_blankets (ticks 9-13)
+
+### Tick 9
+Episode: ep02_uneven_burden_stove_and_blankets
+Available cues: ['stove warmth fading', 'blankets count low', 'night cooling', 'who gets warmth first']
+Noticed cues: ['stove warmth fading', 'blankets count low', 'night cooling', 'who gets warmth first']
+  anya state: stress=60, mood=44, clarity=69
+  nikita state: stress=57, mood=47, clarity=63
+  rita state: stress=42, mood=45, clarity=71
+  anya relations: nikita={'trust': 42, 'resentment': 21}, rita={'trust': 47, 'affinity': 25}
+  nikita relations: rita={'trust': 44, 'resentment': 11}
+  rita relations: anya={'affinity': 26}, nikita={'trust': 43, 'resentment': 12}
+  anya: The room feels colder and more expensive to stay inside.
+  nikita: Warmth is now something you have to earn with action.
+  rita: The house is asking for a decision, not a mood.
+
+### Tick 10
+Episode: ep02_uneven_burden_stove_and_blankets
+Available cues: ['single active blanket', 'stove output weak but present', 'Anya monitoring fairness', 'Rita counting bodies vs covers']
+Noticed cues: ['single active blanket', 'stove output weak but present', 'Anya monitoring fairness', 'Rita counting bodies vs covers']
+  anya state: stress=61, mood=43
+  nikita state: stress=58, mood=46
+  rita state: stress=43, mood=45
+  anya relations: nikita={'resentment': 23}
+  nikita relations: anya={'affinity': 34}
+  rita relations: anya={'trust': 48}, nikita={'trust': 44}
+  anya: The warmth is small enough that fairness matters more than softness.
+  nikita: The best repair is a visible one.
+  rita: If it is worth doing, it is worth assigning.
+
+### Tick 11
+Episode: ep02_uneven_burden_stove_and_blankets
+Available cues: ['temperature dropping', 'blanket redistribution visible', 'stove tending ongoing', 'Nikita trying to be useful']
+Noticed cues: ['temperature dropping', 'blanket redistribution visible', 'stove tending ongoing', 'Nikita trying to be useful']
+  anya state: stress=60, mood=44
+  nikita state: stress=56, mood=47
+  rita state: stress=42, mood=46
+  anya relations: nikita={'trust': 43, 'resentment': 22}
+  nikita relations: rita={'trust': 45}
+  rita relations: nikita={'affinity': 11}
+  anya: Work helps, but it does not erase memory.
+  nikita: Action is finally louder than apology.
+  rita: The room is easier when everyone can see the load.
+
+### Tick 12
+Episode: ep02_uneven_burden_stove_and_blankets
+Available cues: ['night settled', 'warmth temporarily stabilized', 'one blanket still disputed by implication', 'everyone tired']
+Noticed cues: ['night settled', 'warmth temporarily stabilized', 'one blanket still disputed by implication', 'everyone tired']
+  anya state: stress=59, mood=44
+  nikita state: stress=55, mood=47
+  rita state: stress=41, mood=46
+  anya relations: nikita={'trust': 44}
+  rita relations: nikita={'trust': 45, 'resentment': 12}
+  nikita relations: anya={'affinity': 35}
+  anya: Calmer, not cleared.
+  nikita: Enough progress to keep moving, not enough to relax.
+  rita: Night wants a clean arrangement.
+
+### Tick 13
+Episode: ep02_uneven_burden_stove_and_blankets
+Available cues: ['settled night', 'stove mostly stable', 'blanket count resolved by assignment', 'shared fatigue']
+Noticed cues: ['settled night', 'stove mostly stable', 'blanket count resolved by assignment', 'shared fatigue']
+  anya state: stress=58, mood=45
+  nikita state: stress=54, mood=48
+  rita state: stress=40, mood=46
+  anya relations: nikita={'trust': 45, 'resentment': 22}, rita={'trust': 48}
+  nikita relations: rita={'trust': 46}, anya={'affinity': 36}
+  rita relations: anya={'affinity': 27}
+  anya: The night is workable, but not innocent.
+  nikita: He got the room through the evening without further collapse.
+  rita: The practical burden is finally named and bounded.

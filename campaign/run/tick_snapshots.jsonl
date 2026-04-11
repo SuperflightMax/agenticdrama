@@ -6,3 +6,8 @@
 {"run_id": "test_smoke_reset_20260410_2125", "tick": 6, "world_state": {"phase": "late_evening", "pressure": "return_or_fallthrough"}}
 {"run_id": "test_smoke_reset_20260410_2125", "tick": 7, "world_state": {"phase": "late_evening", "pressure": "outcome_lock"}}
 {"run_id": "test_smoke_reset_20260410_2125", "tick": 8, "world_state": {"phase": "late_evening", "pressure": "resolved_or_broken"}}
+{"run_id":"test_smoke_reset_20260410_2125","tick":9,"phase":"late_evening","episode":"ep02_uneven_burden_stove_and_blankets","characters":{"anya":{"stress":60,"mood":44,"clarity":69},"nikita":{"stress":57,"mood":47,"clarity":63},"rita":{"stress":42,"mood":45,"clarity":71}}}
+{"run_id":"test_smoke_reset_20260410_2125","tick":10,"phase":"late_evening","episode":"ep02_uneven_burden_stove_and_blankets","characters":{"anya":{"stress":61,"mood":43},"nikita":{"stress":58,"mood":46},"rita":{"stress":43,"mood":45}}}
+{"run_id":"test_smoke_reset_20260410_2125","tick":11,"phase":"late_evening","episode":"ep02_uneven_burden_stove_and_blankets","characters":{"anya":{"stress":60,"mood":44},"nikita":{"stress":56,"mood":47},"rita":{"stress":42,"mood":46}}}
+{"run_id":"test_smoke_reset_20260410_2125","tick":12,"phase":"late_evening","episode":"ep02_uneven_burden_stove_and_blankets","characters":{"anya":{"stress":59,"mood":44},"nikita":{"stress":55,"mood":47},"rita":{"stress":41,"mood":46}}}
+{"run_id":"test_smoke_reset_20260410_2125","tick":13,"phase":"late_evening","episode":"ep02_uneven_burden_stove_and_blankets","characters":{"anya":{"stress":58,"mood":45},"nikita":{"stress":54,"mood":48},"rita":{"stress":40,"mood":46}}}

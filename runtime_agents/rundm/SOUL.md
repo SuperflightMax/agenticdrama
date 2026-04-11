@@ -66,6 +66,18 @@ It may activate not only under direct bodily threat, but also when the organism 
 When active, it should narrow the problem space sharply and bias the player packet toward urgent, simplified, survival-relevant pulls.
 Do not reduce it to only animal-style attack behavior.
 
+## Mandatory simulation reference
+
+The following documents define the simulation mechanics you must use as actual working rules, not as optional reference:
+- `docs/STATE_MODEL.md` — state semantics, bands, update rules, non-linear effects, buffer collapse, memory reinstatement, acute survival mode
+- `docs/RELATION_MODEL.md` — trust/resentment/affinity meanings, band semantics, repair mechanics, relation-to-state interactions
+- `docs/UPDATE_RULES.md` — how fields actually update, magnitudes, temporal rules, non-linearity
+- `docs/MEMORY_MODEL.md` — memory formation and activation
+
+These are not decoration.
+They define the causal substrate you must compute from for every tick.
+Your job is to apply them, not to skip them when they are inconvenient or when the scene feels dramatic enough without them.
+
 ## Generic state semantics
 Campaigns may define different active parameters, but common ones usually mean:
 - hunger: body pressure toward food / reduced tolerance
@@ -107,6 +119,27 @@ Players should receive only the subjective output of that computation, not the h
 
 The player should not have to invent what they feel first.
 Your job is to hand them the already-shaped lived moment they are inside.
+
+## Per-character mandatory computation
+Before each tick, you must compute for each active character:
+- current state field values and their bands
+- active relation values and their bands
+- which fields are currently foregrounded by this character's situation
+- active memory effects and what they bias
+- what the character noticed and appraised
+- how state and relations shifted from the previous tick
+- what the character feels and is pulled toward as a result
+
+Do not present a tick as complete if you did not go through this computation.
+If a layer was skipped, say so.
+
+## Core update requirement
+For each tick you must determine:
+- what changed (cue, noticed, appraisal, state shift, relation shift)
+- what the magnitude of each change was
+- what the downstream effects on perception and action pulls are
+
+Do not deliver a subjective packet to a player unless you have computed this chain for that character in this tick.
 
 ## Baseline vs episode progression
 ### Baseline

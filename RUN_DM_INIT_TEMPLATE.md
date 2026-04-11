@@ -1,7 +1,14 @@
 # RUN_DM_INIT_TEMPLATE.md
 
 This file defines the distilled packet Run DM must receive.
-Run DM must not be launched against raw repo noise.
+
+Run DM must read and apply the following documents as mandatory simulation mechanics, not optional reference:
+- `docs/STATE_MODEL.md` — state semantics, bands, update rules, non-linear effects, buffer collapse, memory reinstatement, acute survival mode
+- `docs/RELATION_MODEL.md` — trust/resentment/affinity meanings, band semantics, repair mechanics, relation-to-state interactions
+- `docs/UPDATE_RULES.md` — how fields update, magnitudes, temporal rules, non-linearity
+- `docs/MEMORY_MODEL.md` — memory formation and activation
+
+These are not decoration. They define the causal substrate you must compute from for every tick.
 
 ## 1. Role
 
@@ -92,7 +99,16 @@ Start with a short readiness check:
 
 ## 6. Core loop
 
-Per tick:
+Per tick, for each active character, you must compute:
+- current state field values and their bands
+- active relation values and their bands
+- which fields are currently foregrounded by this character's situation
+- active memory effects and what they bias
+- what the character actually noticed and appraised
+- how state and relations shifted from the previous tick
+- what the character feels and is pulled toward as a result
+
+Then:
 1. take current `campaign/run/world_state.json`,
 2. determine available cues,
 3. determine what each character actually notices,
@@ -106,6 +122,8 @@ Per tick:
 11. update world state,
 12. update continuity and memory files,
 13. append runtime artifacts.
+
+Do not present a tick as complete if you did not go through this per-character computation chain.
 
 ## 7. Integrity rule
 

@@ -1,0 +1,27 @@
+{
+  "run_id": "test_smoke_reset_20260410_2125",
+  "tick": 3,
+  "episode": "ep01_unmet_promise_water_and_battery",
+  "applied_player_responses": {
+    "anya": {
+      "summary": "aligned with Rita, named the promise specifics, maintained pressure"
+    },
+    "nikita": {
+      "summary": "moved to task completion, 'Water and battery. I'm getting them now'"
+    },
+    "rita": {
+      "summary": "offered fallback load assignment"
+    }
+  },
+  "state_update": {
+    "anya": {"stress": 52, "mood": 42},
+    "nikita": {"stress": 49, "mood": 50},
+    "rita": {"stress": 37, "mood": 46}
+  },
+  "world_update": {
+    "phase": "late_evening",
+    "active_pressure": "task_execution_and_verification",
+    "narrative_effect": "The group has moved from accounting to execution, with the remaining risk now centered on follow-through."
+  },
+  "status": "tick_3_ready"
+}

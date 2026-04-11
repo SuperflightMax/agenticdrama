@@ -1,0 +1,102 @@
+{
+  "run_id": "test_smoke_reset_20260410_2125",
+  "tick": 1,
+  "episode": "ep01_unmet_promise_water_and_battery",
+  "episode_details": {
+    "title": "Nikita promises water and charged lantern battery before dark",
+    "goal": "Force group to assign social meaning to an explicit commitment under rising discomfort",
+    "tick_budget": 6,
+    "entry_conditions": ["group split between shelter and yard", "light becoming scarce", "Anya heard the promise clearly"],
+    "injection": {"time_of_day": "late_evening", "pending_promise": "nikita will bring drinking water and charged lantern battery from pump shed before full dark"},
+    "cast_positions": {"nikita": "pump_shed", "anya": "shelter_main_room", "rita": "shelter_main_room"}
+  },
+  "world_state_delta": {
+    "resources_unchanged": true,
+    "players_zones_unchanged": true,
+    "world_flags_unchanged": true,
+    "note": "No physical world change, only the social/expectation pressure of the unmet promise"
+  },
+  "character_computations": {
+    "anya": {
+      "zone": "shelter_main_room",
+      "previous_state": {"hunger":32,"fatigue":45,"stress":45,"mood":52,"health":87,"pain":9,"clarity":72,"mobility":81},
+      "current_state": {"hunger":32,"fatigue":45,"stress":50,"mood":44,"health":87,"pain":9,"clarity":70,"mobility":81},
+      "state_shifts": [
+        {"field":"stress","delta":5,"magnitude":"moderate","band_crossing":"none","trigger":"explicit_promise_incomplete_as_dark_falls"},
+        {"field":"mood","delta":-8,"magnitude":"moderate","band_crossing":"none","trigger":"reliability_concern"},
+        {"field":"clarity","delta":-2,"magnitude":"slight","band_crossing":"none","trigger":"stress_clarity_drag"}
+      ],
+      "relations_previous": {"nikita":{"trust":50,"resentment":12,"affinity":37},"rita":{"trust":45,"resentment":7,"affinity":23}},
+      "relations_current": {"nikita":{"trust":44,"resentment":19,"affinity":36},"rita":{"trust":45,"resentment":7,"affinity":23}},
+      "relation_shifts": [
+        {"field":"trust->nikita","delta":-6,"magnitude":"moderate","trigger":"promise_given_then_not_resolved_before_dark"},
+        {"field":"resentment->nikita","delta":7,"magnitude":"moderate","trigger":"timing_failure_without_confirmation"},
+        {"field":"affinity->nikita","delta":-1,"magnitude":"slight","trigger":"frustration_overrides_warmth"}
+      ],
+      "cues_noticed": ["darkening evening", "Rita present", "Nikita absent from shelter", "promise remembered clearly", "water and lantern battery are still needed"],
+      "appraisal": "Nikita’s promise was explicit and time-bound. With evening closing in, the absence of confirmation reads as a real reliability issue, not just delay. Anya feels the mismatch early because timing matters to her.",
+      "action_pulls": ["press for clarity now", "ask Rita whether Nikita said anything else", "wait a short beat for confirmation", "speak directly if the delay continues"],
+      "memory_form": {
+        "id": "ep01_anya_001",
+        "cues": ["water", "charged battery", "promise", "before dark", "Nikita absent"],
+        "state_signature": ["stress_rise", "mood_drop", "trust_erode"],
+        "evaluation": "he said he would bring the water and battery before dark, and the dark is closing in with no confirmation",
+        "fragments": ["before dark", "he said he would", "still not here"],
+        "strength": 71,
+        "valence": "negative",
+        "clarity": "vivid"
+      }
+    },
+    "nikita": {
+      "zone": "pump_shed",
+      "previous_state": {"hunger":30,"fatigue":48,"stress":42,"mood":60,"health":90,"pain":7,"clarity":65,"mobility":84},
+      "current_state": {"hunger":30,"fatigue":48,"stress":47,"mood":51,"health":90,"pain":7,"clarity":64,"mobility":84},
+      "state_shifts": [
+        {"field":"stress","delta":5,"magnitude":"moderate","band_crossing":"none","trigger":"promise_pressure_and_task_friction"},
+        {"field":"mood","delta":-9,"magnitude":"moderate","band_crossing":"none","trigger":"shame_adjacent_unfinished_task"},
+        {"field":"clarity","delta":-1,"magnitude":"slight","band_crossing":"none","trigger":"pressure_narrows_focus"}
+      ],
+      "relations_previous": {"anya":{"trust":53,"resentment":6,"affinity":35},"rita":{"trust":45,"resentment":10,"affinity":15}},
+      "relations_current": {"anya":{"trust":50,"resentment":6,"affinity":35},"rita":{"trust":45,"resentment":10,"affinity":15}},
+      "relation_shifts": [
+        {"field":"trust->anya","delta":-3,"magnitude":"slight","trigger":"overcommitment_risk_seen_in_himself"}
+      ],
+      "cues_noticed": ["pump_shed task", "cold damp air", "time slipping", "promise hanging over him"],
+      "appraisal": "He promised before fully checking cost and friction. The task is still open and the social pressure is rising. His shame risk pushes him toward charm, partial repair, or delay rather than clean admission.",
+      "action_pulls": ["bring the water and battery now", "re-enter with a partial solution", "avoid the hardest admission", "say something soothing before the full confession"],
+      "memory_form": {
+        "id": "ep01_nikita_001",
+        "cues": ["promise", "water", "battery", "before dark", "task friction"],
+        "state_signature": ["stress_rise", "mood_drop", "shame_adjacent"],
+        "evaluation": "I promised before checking the cost, and now the timing is catching up",
+        "fragments": ["I said I would", "I should have checked first"],
+        "strength": 68,
+        "valence": "negative",
+        "clarity": "vivid"
+      }
+    },
+    "rita": {
+      "zone": "shelter_main_room",
+      "previous_state": {"hunger":34,"fatigue":47,"stress":33,"mood":49,"health":92,"pain":11,"clarity":71,"mobility":76},
+      "current_state": {"hunger":34,"fatigue":47,"stress":36,"mood":47,"health":92,"pain":11,"clarity":71,"mobility":76},
+      "state_shifts": [
+        {"field":"stress","delta":3,"magnitude":"slight","band_crossing":"none","trigger":"ambient_load_and_resource_watch"},
+        {"field":"mood","delta":-2,"magnitude":"slight","band_crossing":"none","trigger":"evening_tension"}
+      ],
+      "relations_previous": {"anya":{"trust":52,"resentment":4,"affinity":20},"nikita":{"trust":37,"resentment":23,"affinity":10}},
+      "relations_current": {"anya":{"trust":52,"resentment":4,"affinity":20},"nikita":{"trust":37,"resentment":23,"affinity":10}},
+      "relation_shifts": [],
+      "cues_noticed": ["Anya watching the door", "resources matter now", "Nikita not yet back", "evening tightening"],
+      "appraisal": "Rita reads the practical load first. She can tell something is not settled, and she will want specifics if the delay continues. She does not yet have the full promise context, so the relational read stays light.",
+      "action_pulls": ["ask Anya what Nikita promised", "check supplies and timing", "wait for Nikita to return", "prepare for a practical fallback"],
+      "memory_form": null
+    }
+  },
+  "packet_delivery": {
+    "anya": {"session":"agent:runplayer01:run:test_smoke_reset_20260410_2125:player:01","status":"unavailable_or_timeout"},
+    "nikita": {"session":"agent:runplayer02:run:test_smoke_reset_20260410_2125:player:02","status":"unavailable_or_timeout"},
+    "rita": {"session":"agent:runplayer03:run:test_smoke_reset_20260410_2125:player:03","status":"unavailable_or_timeout"}
+  },
+  "status": "blocked_awaiting_player_sessions",
+  "block_reason": "Player sessions for this run are still not reachable, so tick 1 subjective packets cannot be delivered and tick 2 cannot begin."
+}

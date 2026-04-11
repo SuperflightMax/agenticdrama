@@ -452,6 +452,7 @@ Default temporal rule:
 - some fields are faster and more immediately reactive (`mood`, some safety/hope-like buffers, engagement)
 - therefore one event may sharply move `mood` while only slightly moving `stress` or `fatigue`
 - the same event may later influence slower fields indirectly by changing recovery rate, interpretation bias, or follow-up behavior
+- fast state shifts may come from at least three different sources: immediate bodily/environmental signal, memory-triggered state reinstatement, or acute regime switch
 
 Important distinction:
 - **rate of change** and **behavioral importance** are not the same thing

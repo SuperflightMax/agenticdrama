@@ -86,6 +86,11 @@ Instead, the imprint may act as:
 
 This does not have to come with an explanation.
 
+Important simulation rule:
+memory activation can itself produce a fast state shift or partial state reinstatement.
+That means the present state may change not only because of the objective event weight,
+but because the current cues woke up an older lived state-pattern.
+
 Examples:
 - “I don’t know why, but I don’t like this”
 - “I feel calmer with him”

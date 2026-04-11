@@ -1,0 +1,8 @@
+{"run_id": "test_smoke_reset_20260410_2125", "tick": 1, "phase": "late_evening", "episode": "ep01_unmet_promise_water_and_battery", "characters": {"anya": {"hunger": 32, "fatigue": 45, "stress": 50, "mood": 44, "health": 87, "pain": 9, "clarity": 70, "mobility": 81}, "nikita": {"hunger": 30, "fatigue": 48, "stress": 47, "mood": 51, "health": 90, "pain": 7, "clarity": 64, "mobility": 84}, "rita": {"hunger": 34, "fatigue": 47, "stress": 36, "mood": 47, "health": 92, "pain": 11, "clarity": 71, "mobility": 76}}}
+{"run_id": "test_smoke_reset_20260410_2125", "tick": 2, "world_state": {"phase": "late_evening", "active_pressure": "shared_clarity_needed", "narrative_effect": "The room has moved from vague tension into explicit accountability."}}
+{"run_id": "test_smoke_reset_20260410_2125", "tick": 3, "world_state": {"phase": "late_evening", "active_pressure": "task_execution_and_verification", "narrative_effect": "The group has moved from accounting to execution, with the remaining risk now centered on follow-through."}}
+{"run_id": "test_smoke_reset_20260410_2125", "tick": 4, "world_state": {"phase": "late_evening", "pressure": "execution_window"}}
+{"run_id": "test_smoke_reset_20260410_2125", "tick": 5, "world_state": {"phase": "late_evening", "pressure": "verification"}}
+{"run_id": "test_smoke_reset_20260410_2125", "tick": 6, "world_state": {"phase": "late_evening", "pressure": "return_or_fallthrough"}}
+{"run_id": "test_smoke_reset_20260410_2125", "tick": 7, "world_state": {"phase": "late_evening", "pressure": "outcome_lock"}}
+{"run_id": "test_smoke_reset_20260410_2125", "tick": 8, "world_state": {"phase": "late_evening", "pressure": "resolved_or_broken"}}

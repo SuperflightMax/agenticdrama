@@ -71,13 +71,20 @@ Rules:
 - append-only,
 - enough detail to reconstruct what was rendered and what was returned.
 
-For significant ticks, include at least:
-- a proof chain compatible with `docs/PACKET_CONTRACT.md` (noticed cues, activated imprints if any, appraisal summary, state / relation shifts, action pulls),
-- perceived-state render or equivalent,
-- `player_response`,
-- consequence / update events,
-- `tick_completed`.
+For every tick, include a **proof chain** per `docs/PACKET_CONTRACT.md`:
+- `available_cues` — list of cues available to this character this tick
+- `noticed_cues` — which of the available cues entered attention
+- `appraisal` — vector or summary of the appraisal for this character this tick
+- `activated_imprints` — which imprints activated and the activation math (similarity / strength / state_congruence / relation_match / recency)
+- `state_shifts` — each field that changed, with the delta and the appraisal justification
+- `relation_shifts` — each relation field that changed, with delta and justification
+- `action_pulls` — what the character is pulled toward
+- `subjective_render` — the rendered subjective packet sent to the player
+- `player_response` — the player's JSON response
+- `tick_completed` — true / false
 
+If a step was skipped, mark it explicitly: `"appraisal": "skipped", "reason": "..."`
+Do not omit the field — that implies it was computed when it wasn't.
 ## 5. `tick_snapshots.jsonl`
 
 Purpose:

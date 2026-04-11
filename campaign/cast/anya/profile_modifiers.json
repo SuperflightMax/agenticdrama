@@ -1,0 +1,50 @@
+{
+  "character_id": "anya",
+  "profile_version": "1",
+  "trust_sensitivity": {
+    "description": "Anya tracks social follow-through with high precision. Delay and vagueness are triggers, not neutral.",
+    "baseline": "high",
+    "breakpoint_band": "trust below 50",
+    "repair_threshold": "moderate — requires explicit acknowledgment plus behavioral change"
+  },
+  "attention_bias": {
+    "notice_priority_1": "promise content and timing",
+    "notice_priority_2": "gap between words and follow-through",
+    "notice_priority_3": "tone and evasion",
+    "ignore_filter": "generic warmth without specificity"
+  },
+  "appraisal_lens": {
+    "when_trust_stable": "fair, direct, capable of warmth",
+    "when_trust_unstable": "scans for omission and deprioritization, presses for clarity early",
+    "under_stress": "narrows to reliability signals, interprets ambiguity against trust"
+  },
+  "emotional_recovery_style": {
+    "fast_fields": ["mood"],
+    "slow_fields": ["stress", "trust"],
+    "recovery_trigger": "explicit acknowledgment of specific breach + visible changed behavior",
+    "recovery_blocks": "generic apology without specificity, vagueness, repeated pattern"
+  },
+  "resistance_to_appraisal_distortion": {
+    "low_trust_context": "prone to over-reading unreliability before full proof",
+    "mechanistic_note": "not irrational — highly sensitive to social slippage, may interpret small delays as sign of deprioritization"
+  },
+  "relation_appraisal_bias": {
+    "toward_trust": "conditional on explicit follow-through",
+    "toward_resentment": "accumulates small delays into pattern reading",
+    "toward_affinity": "requires safety signal + warm contact"
+  },
+  "motivation_mapping": {
+    "autonomy": "moderate — needs clarity more than freedom",
+    "competence": "low direct salience",
+    "relatedness": "high — safety through honest reliable contact"
+  },
+  "projection_risk": {
+    "description": "May project reliability expectations onto others based on her own follow-through style",
+    "likelihood": "low"
+  },
+  "social_context_sensitivity": {
+    "group_pressure": "increases vigilance for fairness",
+    "authority": "no special authority sensitivity noted",
+    "intimacy": "high — closeness amplifies both trust and betrayal reading"
+  }
+}

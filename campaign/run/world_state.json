@@ -1,39 +1,14 @@
 {
-  "tick": 0,
-  "phase": "evening_setup",
+  "tick": 8,
+  "phase": "late_evening",
+  "episode": "ep01_unmet_promise_water_and_battery",
+  "episode_status": "closed",
   "world_flags": {
     "weather": "cold_after_rain",
     "road_out": true,
     "transport_expected_morning": true,
     "lantern_needed_after_dark": true
   },
-  "objects": [
-    {
-      "id": "stove",
-      "zone": "shelter_main_room",
-      "state": "warm_but_fading"
-    },
-    {
-      "id": "lantern",
-      "zone": "shelter_main_room",
-      "battery": "installed"
-    },
-    {
-      "id": "spare_battery",
-      "zone": "pump_shed",
-      "charge": 34
-    },
-    {
-      "id": "notebook",
-      "zone": "shelter_main_room",
-      "state": "open_on_table"
-    },
-    {
-      "id": "first_aid_kit",
-      "zone": "shelter_main_room",
-      "state": "closed"
-    }
-  ],
   "resources": {
     "water_portions": 5,
     "dry_firewood_bundles": 2,
@@ -43,49 +18,39 @@
     "charged_batteries": 1,
     "low_charge_batteries": 1
   },
-  "players": {
+  "characters": {
     "anya": {
-      "zone": "shelter_main_room"
+      "zone": "shelter_main_room",
+      "stress": 52,
+      "mood": 42,
+      "hunger": 32,
+      "fatigue": 45,
+      "health": 87,
+      "pain": 9,
+      "clarity": 70,
+      "mobility": 81
     },
     "nikita": {
-      "zone": "yard"
+      "zone": "shelter_main_room",
+      "stress": 49,
+      "mood": 50,
+      "hunger": 30,
+      "fatigue": 48,
+      "health": 90,
+      "pain": 7,
+      "clarity": 65,
+      "mobility": 84
     },
     "rita": {
-      "zone": "shelter_main_room"
+      "zone": "shelter_main_room",
+      "stress": 37,
+      "mood": 46,
+      "hunger": 34,
+      "fatigue": 47,
+      "health": 92,
+      "pain": 11,
+      "clarity": 71,
+      "mobility": 76
     }
-  },
-  "areas": {
-    "shelter_main_room": {
-      "label": "Shelter main room",
-      "temperature_feel": "cool",
-      "visibility": "good_enough",
-      "occupants": [
-        "anya",
-        "rita"
-      ]
-    },
-    "yard": {
-      "label": "Yard",
-      "temperature_feel": "cold_and_damp",
-      "visibility": "falling_light",
-      "occupants": [
-        "nikita"
-      ]
-    },
-    "pump_shed": {
-      "label": "Pump shed",
-      "temperature_feel": "cold",
-      "visibility": "dim",
-      "occupants": []
-    },
-    "wood_lean_to": {
-      "label": "Wood lean-to",
-      "temperature_feel": "cold",
-      "visibility": "dim",
-      "occupants": []
-    }
-  },
-  "messages": [],
-  "pending_deliveries": [],
-  "pending_promises": []
+  }
 }

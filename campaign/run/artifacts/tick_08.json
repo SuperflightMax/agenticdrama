@@ -1,0 +1,8 @@
+{
+  "run_id": "test_smoke_reset_20260410_2125",
+  "tick": 8,
+  "episode": "ep01_unmet_promise_water_and_battery",
+  "summary": "Episode end-state: accountability has replaced ambiguity. The final emotional delta depends on whether Nikita returned with the promised water and battery or with a repaired explanation and partial salvage.",
+  "world_state": {"phase":"late_evening","pressure":"resolved_or_broken"},
+  "status": "episode_closed"
+}

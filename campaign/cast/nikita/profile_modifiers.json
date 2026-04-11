@@ -1,0 +1,50 @@
+{
+  "character_id": "nikita",
+  "profile_version": "1",
+  "trust_sensitivity": {
+    "description": "Nikita is sensitive to social acceptance and group warmth. Avoids the admission beat because it feels like collapse.",
+    "baseline": "moderate",
+    "breakpoint_band": "shame activation under pressure",
+    "repair_threshold": "moderate — can recover via forward motion and partial solution faster than clean confession"
+  },
+  "attention_bias": {
+    "notice_priority_1": "social warmth signals",
+    "notice_priority_2": "room energy and tension",
+    "notice_priority_3": "how he is perceived",
+    "ignore_filter": "practical task specifics when social tension is high"
+  },
+  "appraisal_lens": {
+    "when_safe": "engaging, quick, helpful — likes being the one who makes the room easier",
+    "when_pressured": "overcommits to reduce tension, delays bad news, re-enters with charm or half-solution",
+    "under_stress": "promises before checking cost, avoids hardest admission beat"
+  },
+  "emotional_recovery_style": {
+    "fast_fields": ["mood"],
+    "slow_fields": ["trust (repair slower than break)"],
+    "recovery_trigger": "forward motion on task, partial solution, charm re-entry",
+    "recovery_blocks": "being confronted directly about the gap without face-saving space"
+  },
+  "resistance_to_appraisal_distortion": {
+    "low_trust_context": "may mistake soothing move for completed responsibility",
+    "mechanistic_note": "not dishonest — vulnerable to promising faster than reality"
+  },
+  "relation_appraisal_bias": {
+    "toward_trust": "gives warmth-based trust, conditional on room energy",
+    "toward_resentment": "low — doesn't hold grudges but avoids acknowledgment",
+    "toward_affinity": "high — warmth is his primary social tool"
+  },
+  "motivation_mapping": {
+    "autonomy": "moderate",
+    "competence": "moderate — wants to be seen as capable",
+    "relatedness": "very_high — primary motivator, needs to keep connection alive"
+  },
+  "projection_risk": {
+    "description": "May project warmth and goodwill onto others, underestimating coldness or strategic self-interest",
+    "likelihood": "moderate"
+  },
+  "social_context_sensitivity": {
+    "group_pressure": "increases promise behavior under social tension",
+    "authority": "moderate — may over-promise to authority figures",
+    "intimacy": "high — wants to be liked and accepted, especially by close contacts"
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "run_id": "test_smoke_reset_20260410_2125",
+  "tick": 5,
+  "episode": "ep01_unmet_promise_water_and_battery",
+  "summary": "The promise is now being tested by time, not wording. If Nikita returns with the items, trust can stabilize; if not, resentment sharpens fast.",
+  "world_state": {"phase":"late_evening","pressure":"verification"},
+  "status": "advanced"
+}

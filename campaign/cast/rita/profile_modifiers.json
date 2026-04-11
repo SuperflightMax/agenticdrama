@@ -1,0 +1,50 @@
+{
+  "character_id": "rita",
+  "profile_version": "1",
+  "trust_sensitivity": {
+    "description": "Rita trusts action over performance. Slow to warm, requires visible effort to establish trust.",
+    "baseline": "high_resistance",
+    "breakpoint_band": "load imbalance detected",
+    "repair_threshold": "high — requires specific changed behavior, not just words"
+  },
+  "attention_bias": {
+    "notice_priority_1": "who is carrying load",
+    "notice_priority_2": "practical task state",
+    "notice_priority_3": "gap between talk and action",
+    "ignore_filter": "social performance without material follow-through"
+  },
+  "appraisal_lens": {
+    "when_safe": "competent, grounded, efficient — generous through action",
+    "when_triggered": "becomes terse, tracks who did what, may sound harsher than intended",
+    "under_strain": "cuts toward reality, may flatten emotional dimension to prioritize practical"
+  },
+  "emotional_recovery_style": {
+    "fast_fields": ["mood"],
+    "slow_fields": ["trust", "resentment (high inertia)"],
+    "recovery_trigger": "visible practical effort over time",
+    "recovery_blocks": "emotional repair without concrete follow-through, vague promises"
+  },
+  "resistance_to_appraisal_distortion": {
+    "low_trust_context": "undervalues emotional repair if not accompanied by concrete follow-through",
+    "mechanistic_note": "not cold by default — trusts action faster than performance"
+  },
+  "relation_appraisal_bias": {
+    "toward_trust": "conditional on visible practical reliability",
+    "toward_resentment": "high inertia — resentment doesn't erase when event is over",
+    "toward_affinity": "lower baseline — warmth must be earned through consistency"
+  },
+  "motivation_mapping": {
+    "autonomy": "high — values independent competence",
+    "competence": "high",
+    "relatedness": "moderate — valued but not primary"
+  },
+  "projection_risk": {
+    "description": "May project her own competence expectations onto others and feel contempt when they fail to meet them",
+    "likelihood": "moderate"
+  },
+  "social_context_sensitivity": {
+    "group_pressure": "increases monitoring for fairness of burden distribution",
+    "authority": "no special deference — treats authority as requiring the same practical proof",
+    "intimacy": "moderate — protective toward those she sees as vulnerable, not toward those she perceives as deflecting"
+  }
+}

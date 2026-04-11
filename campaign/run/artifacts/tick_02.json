@@ -1,0 +1,42 @@
+{
+  "run_id": "test_smoke_reset_20260410_2125",
+  "tick": 2,
+  "episode": "ep01_unmet_promise_water_and_battery",
+  "applied_player_responses": {
+    "anya": {
+      "speech": "water and battery — he said before dark, right?",
+      "intent": "press_for_promise_confirmation"
+    },
+    "nikita": {
+      "speech": "I'm on it — water and battery, coming back with both.",
+      "intent": "practical_task_urgency"
+    },
+    "rita": {
+      "speech": "so what's actually left to do before dark — who's on what?",
+      "intent": "task_clarity"
+    }
+  },
+  "consequence_summary": {
+    "anya": {
+      "state_shift": {"stress": 2, "mood": -1, "clarity": -1},
+      "relation_shift": {"nikita.trust": -1, "nikita.resentment": 1},
+      "note": "Her question locks the promise into shared reality, which sharpens the gap if Nikita returns without concrete proof."
+    },
+    "nikita": {
+      "state_shift": {"stress": 2, "mood": -1},
+      "relation_shift": {"anya.trust": 0, "anya.affinity": 0},
+      "note": "Forward-motion speech helps, but it does not yet repair anything. Action is still needed."
+    },
+    "rita": {
+      "state_shift": {"stress": 1, "mood": 0},
+      "relation_shift": {"anya.trust": 0, "nikita.trust": 0},
+      "note": "She converts the moment into concrete load-sharing language, reducing ambiguity slightly."
+    }
+  },
+  "world_update": {
+    "phase": "late_evening",
+    "active_pressure": "shared_clarity_needed",
+    "narrative_effect": "The room has moved from vague tension into explicit accountability."
+  },
+  "status": "tick_2_ready"
+}

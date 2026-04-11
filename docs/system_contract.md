@@ -14,6 +14,12 @@ This project simulates how behavior emerges from:
 - action pulls,
 not from story logic.
 
+The intended method is not pure math with no interpretation and not smart-DM improvisation with no hard substrate.
+The intended method is layered:
+- formal mechanics provide the causal base,
+- Run DM interprets complex resulting configurations into lived subjective packets,
+- but Run DM must not invent the base mechanics on the fly when docs are supposed to define them.
+
 Required chain:
 
 world event  

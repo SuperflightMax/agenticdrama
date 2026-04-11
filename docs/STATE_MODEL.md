@@ -14,6 +14,25 @@ Use this together with:
 - `rules.md`
 - campaign-specific `SIMULATION_RULES.md`
 
+## 0. Boundary between math and DM interpretation
+
+The purpose of state math is to provide a reliable causal substrate, not to fully replace DM interpretation.
+
+So the intended layering is:
+- math / mechanics define stable state meaning, bands, modifiers, update logic, and constraints
+- Run DM interprets the resulting configuration into a lived subjective moment and concrete packet
+
+Important rule:
+- math should not be asked to pre-interpret every complex human situation by itself
+- DM should not be forced to invent the underlying mechanics from scratch
+
+The target is:
+- enough formal structure that DM has real ground under its feet,
+- enough interpretive freedom that complex combinations can still be rendered as believable lived experience.
+
+If an effect can already be derived from the shared mechanics plus DM interpretation, do not add a new special parameter too quickly.
+If DM keeps having to improvise the same missing base logic, formalize that base logic in docs.
+
 ## 1. Core principle
 
 State does not change directly because the world changed.

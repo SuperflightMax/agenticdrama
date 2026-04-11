@@ -149,6 +149,7 @@ Typical effects:
 - irritability and shortness increase
 - clarity may drop under sustained pain
 - protective / avoidant action pulls rise
+- at high bands pain can capture foreground priority so strongly that other motives remain present but become hard to act on
 
 ### 3.7 clarity (higher = better)
 Meaning:
@@ -198,12 +199,24 @@ These are default tendencies, not hard equations.
 Effects should be treated as non-linear by default.
 The jump from one band to the next usually matters more than a small number change inside the same band.
 
+Important rule:
+- equal numeric deltas do not imply equal lived effect
+- the same +20 shift can be almost negligible in one range and overwhelming in another
+- very high values can become dominance thresholds where one field starts capturing attention, action selection, and interpretive bandwidth disproportionately
+
 ### For higher-is-worse fields: hunger, fatigue, stress, pain
 - `0..19`: minimal pressure, usually background only
 - `20..39`: noticeable pressure, influences salience but does not dominate
 - `40..59`: active pressure, regularly shapes attention and appraisal
 - `60..79`: strong pressure, clearly narrows options and tolerance
 - `80..100`: critical pressure, strongly distorts perception and pushes immediate coping behavior
+
+Influence curve should usually steepen toward the top bands.
+Example intuition:
+- moving pain from `0` to `20` may change little
+- moving pain from `40` to `60` may become clearly behavior-shaping
+- moving pain from `60` to `80` may feel like entry into a different regime
+- moving pain from `80` to `95` may cause near-total foreground capture where many other concerns temporarily fade
 
 ### For higher-is-better fields: mood, health, clarity, mobility
 - `0..19`: severe impairment / collapse band
@@ -362,6 +375,7 @@ These are default cross-field tendencies Run DM should apply unless a campaign o
 - high stress tends to drag clarity down
 - low clarity makes stress harder to regulate because interpretation becomes cruder
 - combination effect: more tunnel vision, worse nuance, faster leap from cue to suspicion
+- near upper bands this combination may become non-linearly stronger, approaching capture of the whole interpretive field
 
 ### 5.2 fatigue x clarity
 - high fatigue lowers planning depth and interpretive precision
@@ -401,6 +415,11 @@ Default tendencies:
 - high hunger -> resource and fairness cues gain weight
 - high pain -> bodily and effort-related cues gain weight
 - low clarity -> worse distinction between cue and interpretation
+
+Capture rule:
+- some very high-band states do not merely bias perception, they begin to dominate it
+- in such cases other concerns are not erased from existence, but they lose effective priority
+- Run DM should model this as foreground capture, not as total deletion of the rest of the psyche
 
 ## 9. Decision effects
 

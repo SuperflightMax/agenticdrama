@@ -5,6 +5,13 @@
 The core truth lives in:
 - `docs/simulation_agents_life_core.md`
 - `docs/MEMORY_MODEL.md`
+- `docs/STATE_MODEL.md`
+- `docs/RELATION_MODEL.md`
+- `docs/APPRAISAL_MODEL.md`
+- `docs/UPDATE_RULES.md`
+- `docs/CHARACTER_PROFILE_SCHEMA.md`
+- `docs/PACKET_CONTRACT.md`
+- `docs/CALIBRATION_SCENARIOS.md`
 
 This project simulates how behavior emerges from:
 - state,
@@ -13,12 +20,6 @@ This project simulates how behavior emerges from:
 - appraisal,
 - action pulls,
 not from story logic.
-
-The intended method is not pure math with no interpretation and not smart-DM improvisation with no hard substrate.
-The intended method is layered:
-- formal mechanics provide the causal base,
-- Run DM interprets complex resulting configurations into lived subjective packets,
-- but Run DM must not invent the base mechanics on the fly when docs are supposed to define them.
 
 Required chain:
 
@@ -83,6 +84,13 @@ No model decisions.
 ### Project truth
 - `docs/simulation_agents_life_core.md`
 - `docs/MEMORY_MODEL.md`
+- `docs/STATE_MODEL.md`
+- `docs/RELATION_MODEL.md`
+- `docs/APPRAISAL_MODEL.md`
+- `docs/UPDATE_RULES.md`
+- `docs/CHARACTER_PROFILE_SCHEMA.md`
+- `docs/PACKET_CONTRACT.md`
+- `docs/CALIBRATION_SCENARIOS.md`
 - `docs/CAMPAIGN_TEMPLATE_SPEC.md`
 - `docs/RUN_ARTIFACTS_SPEC.md`
 - `docs/RUNTIME_WORKFLOW.md`

@@ -37,17 +37,17 @@ The point is not to generate a scene, but to build a believable mechanism for th
 
 Behavior does not arise directly from a world event, but from a chain:
 
-**world event
-→ sensory cues
-→ attention selection
-→ matching against current state, learned patterns, and memory imprints
-→ fast significance appraisal
-→ confirmation or shift of state
-→ change in salience, world feel, and action pulls
-→ thoughts / impulses / interpretations
-→ decision
-→ action
-→ consequences
+**world event  
+→ sensory cues  
+→ attention selection  
+→ matching against current state, learned patterns, relations, and memory imprints  
+→ fast significance appraisal  
+→ confirmation or shift of state / relations  
+→ change in salience, world feel, and action pulls  
+→ thoughts / impulses / interpretations  
+→ decision  
+→ action  
+→ consequences  
 → new state changes and new imprints**
 
 The key requirement is: **do not break this causal chain**.
@@ -61,6 +61,7 @@ State is a product of:
 - already active state,
 - learned patterns,
 - memory,
+- relation context,
 - accumulated internal processes.
 
 The world gives a signal.
@@ -84,33 +85,6 @@ An imprint may include:
 
 Memory stores not objective truth, but the lived version of the world.
 
-## How memory forms
-
-Memory forms automatically.
-An agent cannot reliably decide to remember something by force of will.
-
-Memory strength depends on **accumulated state change**:
-- a sharp strong spike can create a strong imprint,
-- prolonged pressure or repeated experience can also create a strong imprint,
-- weak flat episodes barely consolidate.
-
-Strong memory comes not only from peaks, but from accumulated change over time.
-
-## Example imprint format
-
-```json
-{
-  "id": "imprint_001",
-  "cues": ["river", "p2", "promise", "food"],
-  "state_signature": ["hope", "tension", "hurt", "drop in trust"],
-  "evaluation": "p2 betrayed me",
-  "fragments": ["I trusted him", "he gave it to p1"],
-  "strength": 82,
-  "valence": "negative",
-  "clarity": "vivid"
-}
-```
-
 ## How memory affects behavior
 
 An imprint does not have to surface as an explicit recollection.
@@ -129,14 +103,14 @@ It can simply change appraisal of the present situation.
 ## Appraisal
 
 Instead of vague “emotional coloring”, the project uses **appraisal**:
-a fast evaluation of the meaning and significance of the current signal through state, patterns, and activated memory imprints.
+a fast evaluation of the meaning and significance of the current signal through state, patterns, relations, and activated memory imprints.
 
 This is not necessarily reflective analysis.
 It can be an immediate:
 - “this does not feel safe”
-- “the light pulls me”
-- “something is wrong”
-- “I do not trust him”
+- “something is off”
+- “I do not trust him here”
+- “this is unfair”
 - “it feels calmer near her”
 
 Appraisal can be useful or harmful, accurate or wrong.
@@ -165,14 +139,14 @@ DM is needed as:
 - mediator of the objective world,
 - consequence engine,
 - subjective appraisal module,
-- mechanism that recalculates how state and memory distort perception and significance.
+- mechanism that recalculates how state, relations, and memory distort perception and significance.
 
 DM should compute:
 1. which cues are available in the world,
 2. what the agent actually notices,
 3. which imprints and patterns activate,
 4. what appraisal arises,
-5. how this shifts state,
+5. how this shifts state and relations,
 6. which world feel, salience, and action pulls emerge from that.
 
 ## What DM may do
@@ -218,93 +192,43 @@ and all of that happens not because roles were assigned, but because the model a
 
 The correct result is not an “interesting plot”, but convincing causal behavior.
 
-## Why runs exist
+## Formal substrate documents
 
-Runs do not exist for the story itself.
-A run is a **test stand for the model**.
+The detailed simulation substrate lives in:
+- `docs/STATE_MODEL.md`
+- `docs/RELATION_MODEL.md`
+- `docs/MEMORY_MODEL.md`
+- `docs/APPRAISAL_MODEL.md`
+- `docs/UPDATE_RULES.md`
+- `docs/CHARACTER_PROFILE_SCHEMA.md`
+- `docs/PACKET_CONTRACT.md`
+- `docs/CALIBRATION_SCENARIOS.md`
 
-A run checks:
-- whether the causal chain holds,
-- whether DM replaces characters,
-- whether state really changes perception,
-- whether memory really activates and affects appraisal,
-- whether decisions arise naturally,
-- whether story steering intrudes where the model should work,
-- whether the pace feels natural instead of forced.
+Interpretive prompts, bootstraps, and runtime procedures should derive from those documents instead of improvising replacements.
+If a bootstrap, prompt, or convenience instruction conflicts with those contracts, the contracts win.
 
-The purpose of a run is not “what came out”, but **how it came out and what it grew from**.
+## Good run criterion
 
-## What counts as a good run
-
-A good run is not the one with “many events” or a “dramatic arc”.
-
-A good run is one where you can see:
+A good run is not the one with “many events” or a dramatic arc.
+A good run is the one where it is possible to trace:
 - which cues came from the world,
-- what the agent noticed,
-- which imprints / patterns activated,
-- what appraisal arose,
-- how state shifted,
-- which impulses appeared,
+- which were actually noticed,
+- which memories / relation hooks activated,
+- which appraisal arose,
+- how state and relation fields shifted,
+- which action pulls became strong,
 - why the agent chose that action.
 
-A good run is **diagnostics of the model in motion**.
+## Anti-patterns
 
-## What counts as a bad run
-
-A bad run is when:
-- DM handwrites behavior,
-- characters arrive at useful points too conveniently,
-- thoughts are presented as world facts,
-- decisions appear without the intermediate internal mechanics,
-- memory affects nothing,
-- state exists in numbers but does no work,
-- the pacing feels pushed toward an arc or a tick limit.
-
-Such a run may still be “interesting”, but it is not useful for model development.
-
-## Why repeated runs matter
-
-Repeated runs are needed to:
-- expose systemic flaws,
-- verify that fixes improve honesty,
-- see which errors repeat,
-- distinguish a lucky episode from a genuinely working mechanism,
-- test the model over longer stretches.
-
-One run shows an episode.
-A series of runs shows **whether the model has an internal logic of its own**.
-
-## Criterion of simulation quality
-
-A good simulation is not the one where “it got interesting”.
-A good simulation is one where you can trace:
-
-**why this particular agent,
-in this particular state,
-with this memory and these patterns,
-saw the situation this way,
-and therefore did this.**
-
-Even if the action was mistaken, harmful, or absurd, that is acceptable if it genuinely grew from the model.
-
-## Main anti-patterns
-
-Do not allow:
+Forbidden:
 - story steering instead of causality,
-- replacement of character agency by the author,
-- subjective thoughts presented as world facts,
-- behavior because “the scene wants it”,
-- breaking the loop between body, state, perception, and action,
-- a model where memory and state exist numerically but do not influence appraisal and decisions.
+- replacing character agency with author convenience,
+- presenting subjective thought as world fact,
+- letting state / memory / relations exist only decoratively,
+- claiming a model layer was used when it was silently skipped,
+- using pretty output as proof that the model worked.
 
-## Practical meaning of all this work
+## One-line summary
 
-All work around the model, DM, logs, query/response structure, and longer runs exists for one reason:
-
-**so that agent behavior emerges from internal causality rather than from an author's wish to obtain a beautiful scene.**
-
-That is the core meaning of the project.
-
-## Short one-line summary
-
-**We do not model actions directly. We model how an agent's state, memory, and patterns transform the same world into a subjective reality — and behavior emerges from that reality.**
+**We do not model actions directly. We model how state, memory, relations, and learned patterns turn the same world into a subjective reality — and behavior emerges from that.**

@@ -1,37 +1,32 @@
 # UPDATE_RULES.md — how state and relations update
 
-## Purpose
-
-This document defines the update mechanics for both state fields and relation fields.
-It complements STATE_MODEL.md and RELATION_MODEL.md with the mechanics of how changes actually happen.
+This document defines the transfer mechanics for both state fields and relation fields.
+It complements `STATE_MODEL.md`, `RELATION_MODEL.md`, and `MEMORY_MODEL.md` with the mechanics of how changes actually happen.
 
 Use together with:
 - `docs/STATE_MODEL.md`
 - `docs/RELATION_MODEL.md`
 - `docs/MEMORY_MODEL.md`
-- `rules.md`
-
----
+- `docs/APPRAISAL_MODEL.md`
+- `docs/CHARACTER_PROFILE_SCHEMA.md`
+- `docs/PACKET_CONTRACT.md`
 
 ## 1. The core update principle
 
 No field updates from a raw world event.
 A field updates only after:
 
-**world event → available cues → noticed cues → appraisal → field shift**
+**world event → available cues → noticed cues → activated memory / relation hooks → appraisal → field shift**
 
 Run DM must preserve this order.
 
----
-
-## 2. When does appraisal become a field update
+## 2. When appraisal becomes a field update
 
 Not every appraisal leads to a field update.
 A field shift happens when:
-
-1. The cue was noticed and appraised as meaningful by the character
-2. The appraisal carried sufficient weight for this character at this moment
-3. The resulting shift is large enough to cross a meaningful threshold
+1. the cue was noticed and appraised as meaningful by the character
+2. the appraisal carried sufficient weight for this character at this moment
+3. the resulting shift is large enough to cross a meaningful threshold or accumulate with existing pressure
 
 A field may update when:
 - an event has sufficient weight for this character
@@ -40,21 +35,19 @@ A field may update when:
 - a memory imprint was activated that shifted the felt state
 - an acute regime switched on or off
 
----
-
 ## 3. Update sources
 
-### State fields update from:
-- immediate bodily/environmental signal (pain spike, cold shock, sudden relief, exhaustion)
+### 3.1 State fields update from
+- immediate bodily/environmental signal
 - accumulated strain over several ticks
 - sharp spike or shock
 - memory-triggered state reinstatement
 - buffer/compensator collapse
 - acute regime switch
 
-### Relation fields update from:
+### 3.2 Relation fields update from
 - concrete behavior or its absence
-- timing (delay, early return, unexplained absence)
+- timing
 - visible effort or its absence
 - acknowledgment or dismissal
 - repair attempt or failure to repair
@@ -62,140 +55,201 @@ A field may update when:
 - warmth or coldness in tone or contact
 - exposure or misuse of vulnerability
 
----
+## 4. Default update math
 
-## 4. Update magnitudes
+### 4.1 Generic raw shift formula
 
-Three default tiers:
+For any field:
 
-**Slight:** 1-5
-- minor cue, weak signal, or first hint of pattern
-- usually does not cross band boundaries
+```text
+raw_shift =
+  drive *
+  susceptibility *
+  source_strength *
+  band_multiplier *
+  combo_multiplier *
+  inertia_multiplier *
+  evidence_multiplier
+```
 
-**Moderate:** 6-12
-- clear meaningful cue hitting a live sensitivity
-- pattern recognition
-- first acknowledgment or repair gesture
+Where:
+- `drive` comes from appraisal dimensions mapped to that field
+- `susceptibility` comes from the character profile
+- `source_strength` reflects cue strength and whether this is direct signal, accumulation, or memory reinstatement
+- `band_multiplier` becomes steeper near critical bands
+- `combo_multiplier` amplifies aligned simultaneous pressures
+- `inertia_multiplier` represents stickiness or worsening bias of the current field
+- `evidence_multiplier` mainly matters for relation updates and discounts weak evidence
 
-**Major:** 13-25
-- shock, repeated accumulated pressure, heavily memory-loaded cue
-- major breach or major repair
-- buffer collapse
-- regime switch
+### 4.2 Point conversion
 
-**Important rules:**
-- Deltas do not add linearly in the same way at every range
-- Near band boundaries, a moderate delta can cross the band
-- Multiple aligned pressures in the same direction produce disproportionately larger effect
-- Combination effects (e.g., high stress + low trust + low clarity) are stronger than sum-of-parts
+```text
+if raw_shift < 0.08:
+  delta_points = 0
+else:
+  delta_points = round(25 * raw_shift ^ 1.15)
+```
 
----
+Default magnitude interpretation:
+- slight: `1..5`
+- moderate: `6..12`
+- major: `13..25`
 
-## 5. Temporal rules
+The magnitude tier is derived from `raw_shift`, not chosen narratively.
 
-### Speed of change varies by field type
+### 4.3 Direction
 
-**Fast-reactive fields** may shift from single events:
+Each update must state direction explicitly:
+- worsening pressure field → `+`
+- relieving pressure field → `-`
+- worsening capacity field → `-`
+- improving capacity field → `+`
+- trust gain → `+`
+- resentment gain → `+`
+- affinity gain → `+`
+
+## 5. Field-specific default speed rules
+
+### 5.1 Fast-reactive fields
+May shift from single events:
 - mood
 - pain
-- acute arousal
-- some buffers/modulators
-- affinity (most volatile relation field)
+- acute arousal / buffers / temporary support feelings
+- affinity
 
-**Slow-accumulating fields** change gradually and have inertia:
+### 5.2 Slow-accumulating fields
+Change gradually and have more inertia:
 - stress
 - fatigue
 - hunger
 - health
 - trust
-- resentment (has strong inertia once established)
+- resentment
 
-### Practical implications:
-- A single event may sharply move mood but barely touch stress
-- The same event may later influence slower fields through changed recovery rate, interpretation, or behavior
-- Recovery from slow fields is usually slower than recovery from fast fields
-- Fast field changes do not automatically change slow field values
+Practical rule:
+- a single event may sharply move mood but barely touch stress
+- the same event may later influence slower fields through changed recovery rate, interpretation, or behavior
 
----
+## 6. Band multipliers and non-linearity
 
-## 6. Buffer and compensator collapse
+Crossing a band boundary matters more than a small delta inside the same band.
 
-A special case of update source.
+Default heuristic:
+- band 0 → `0.90`
+- band 1 → `1.00`
+- band 2 → `1.08`
+- band 3 → `1.18`
+- band 4 → `1.30`
 
-Buffer collapse ≠ raw pressure increase.
+Apply the current band of the affected field.
+If the shift crosses into a worse band, apply a small additional crossing bonus up to `+0.10` raw equivalent.
 
-When a compensator (hope, safety, control, perceived support, trust in provider) collapses:
+## 7. Inertia and recovery resistance
+
+### 7.1 Pressure fields
+- already-high stress rises more easily and falls more slowly
+- already-high fatigue keeps reducing recovery bandwidth
+- already-high resentment resists reduction strongly
+
+### 7.2 Capacity fields
+- already-low clarity is easier to reduce further under aligned pressure
+- already-low mood discounts positive signals
+- already-low mobility makes additional costs matter more
+
+### 7.3 Default multipliers
+
+For worsening in a bad current band:
+- `1.05..1.35`
+
+For recovery in a bad current band:
+- `0.65..0.95`
+
+Use stronger resistance for:
+- resentment reduction
+- trust rebuilding after major breach
+
+## 8. Buffer and compensator collapse
+
+A special update source.
+
+Buffer collapse is not the same as a raw pressure increase.
+When a compensator collapses:
 - the underlying chronic load was already there
 - it was being masked or managed by the buffer
 - when the buffer disappears, the load becomes visible
-- the apparent severity may jump even without a new event
+- apparent severity may jump even without a new large objective event
 
-Behavioral signals:
-- mood may crash suddenly
-- tolerance may drop suddenly
-- the person may look as if something "broke" even though the chronic load did not increase — it was revealed
+Examples of buffers:
+- hope
+- perceived support
+- perceived control
+- trust in provider
+- belief in near-term relief
 
----
-
-## 7. Memory-triggered reinstatement
+## 9. Memory-triggered reinstatement
 
 A field may shift because a current cue reactivated an old imprint.
 
-This means:
-- a present cue is mild but matches an old strong imprint
-- the imprint brings back the old state pattern partially or fully
-- the apparent severity of the current moment may not match the objective weight of the cue alone
+Rules:
+- the cue must match a meaningful imprint
+- the imprint activation must be visible in the packet
+- reinstatement may amplify or bias the present update
+- reinstatement must not replace the current cue set entirely
 
-This is why the same objective event can produce very different reactions in the same person at different times.
+Default source strength guidance:
+- light activation: `0.9`
+- meaningful activation: `1.0`
+- partial reinstatement: `1.1..1.25`
 
----
+## 10. Acute regime switch
 
-## 8. Relation-specific update rules
+When acute survival mode turns on:
+- stress drive is amplified
+- clarity reduction becomes easier
+- attention capacity reduces
+- protective / emergency action pulls get boosted
 
-### Trust
-- Builds slowly through consistent follow-through under pressure
-- Breaks faster than it builds
-- Requires behavioral evidence to rebuild, not just words
-- Inertia: once trust is broken, it takes sustained effort to rebuild
+When the mode turns off:
+- do not fully erase existing stress or resentment
+- only remove the regime bonus and allow ordinary recovery rules again
 
-### Resentment
-- Builds from perceived unfairness, broken promises, dismissals
-- Does not erase when the event is over — has strong inertia
-- Requires specific acknowledgment + matching repair to reduce
-- Reducing resentment is usually harder than building it
+## 11. Relation-specific update rules
 
-### Affinity
-- Most volatile — can shift relatively quickly in either direction
-- Builds from positive contact, warmth, shared moments
-- Reduces from coldness, perceived misuse, indifference
-- Can act as buffer for trust or resentment issues
+### 11.1 Trust
+- builds slowly through consistent follow-through under pressure
+- breaks faster than it builds
+- requires behavioral evidence to rebuild, not just words
+- repeated small failures stack into major breaks
 
----
+### 11.2 Resentment
+- builds from perceived unfairness, broken promises, dismissals
+- does not erase when the event is over
+- reducing resentment is usually harder than building it
+- requires specific acknowledgment plus matching repair
 
-## 9. Non-linearity and combination effects
+### 11.3 Affinity
+- most volatile relation field
+- positive moments can move it faster than trust
+- warmth does not automatically repair trust or erase resentment
 
-Same principle as STATE_MODEL:
+## 12. Update significance in logs
 
-- Multiple aligned pressures produce stronger-than-additive appraisal distortion
-- Crossing a band boundary matters more than a small delta inside the same band
-- Combination effects near upper bands become non-linear
+A shift is significant enough to expose explicitly when at least one is true:
+- it crosses a band boundary
+- it changes attention bias or appraisal direction
+- it changes available action pulls
+- it changes the read of another person
+- it contributes to memory formation
+- it activates or deactivates acute survival mode
 
-Examples:
-- high stress + low trust + low clarity → disproportionate narrowing of interpretation
-- high resentment + another betrayal → may produce jump larger than the sum of parts
-- high affinity + repair attempt → softening faster than either alone would suggest
-- high fatigue + high stress → recovery is slower even after relief
+## 13. What Run DM must not do
 
----
-
-## 10. What Run DM must not do
-
-- Do not update fields without a behavioral or meaningful cue
-- Do not skip the appraisal step
-- Do not treat story convenience as sufficient cause for field changes
-- Do not let a "dramatic scene" substitute for behavioral grounding
-- Do not erase resentment without specific acknowledgment having happened
-- Do not increase trust from words alone without behavior
-- Do not treat fast field changes as automatically changing slow fields
-- Do not claim a field update happened when the character did not notice or appraise the cue
-- Do not use field updates as reward/punishment for narrative pacing
+- do not update fields without a noticed and appraised cue
+- do not skip the appraisal step
+- do not treat story convenience as sufficient cause for field changes
+- do not let a dramatic scene substitute for behavioral grounding
+- do not erase resentment without specific acknowledgment having happened
+- do not increase trust from words alone without behavior
+- do not treat fast field changes as automatically changing slow fields
+- do not claim a field update happened when the character did not notice or appraise the cue
+- do not use field updates as reward/punishment for narrative pacing

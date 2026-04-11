@@ -72,6 +72,7 @@ Rules:
 - enough detail to reconstruct what was rendered and what was returned.
 
 For significant ticks, include at least:
+- a proof chain compatible with `docs/PACKET_CONTRACT.md` (noticed cues, activated imprints if any, appraisal summary, state / relation shifts, action pulls),
 - perceived-state render or equivalent,
 - `player_response`,
 - consequence / update events,
@@ -85,7 +86,8 @@ Purpose:
 Rules:
 - one JSON object per line,
 - store the world-state slice that matters for continuity,
-- include player state slices and relevant world notes.
+- include player state slices and relevant world notes,
+- preserve enough machine-readable detail to prove major field changes and regime switches even if the proof object is split between files.
 
 ## 6. `metadata.json`
 
